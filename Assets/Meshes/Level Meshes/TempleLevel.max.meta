@@ -1,0 +1,220 @@
+fileFormatVersion: 2
+guid: 9053bb00c6f360c40a5042bb342d10fb
+timeCreated: 1461684276
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: Bird statue001
+    100002: Birthday cake
+    100004: crumble pile
+    100006: dust 1
+    100008: Dust 2
+    100010: Dust plane 1
+    100012: dust plane 2
+    100014: Hall 1
+    100016: Hall 2
+    100018: Leaves
+    100020: Pillar 006
+    100022: Pillar 1
+    100024: Pillar 2
+    100026: Pillar 4
+    100028: Pillar 5
+    100030: Pillar3
+    100032: Room 1
+    100034: Room 2
+    100036: Staff
+    100038: Stairs
+    100040: Stairs 2
+    100042: //RootNode
+    100044: Vine 1
+    100046: Vine 2
+    100048: Vine 5
+    100050: vine CLUSTER
+    100052: Vine plane
+    100054: Vine plane 1
+    100056: Vine plane 2
+    100058: Vine plane 3
+    400000: Bird statue001
+    400002: Birthday cake
+    400004: crumble pile
+    400006: dust 1
+    400008: Dust 2
+    400010: Dust plane 1
+    400012: dust plane 2
+    400014: Hall 1
+    400016: Hall 2
+    400018: Leaves
+    400020: Pillar 006
+    400022: Pillar 1
+    400024: Pillar 2
+    400026: Pillar 4
+    400028: Pillar 5
+    400030: Pillar3
+    400032: Room 1
+    400034: Room 2
+    400036: Staff
+    400038: Stairs
+    400040: Stairs 2
+    400042: //RootNode
+    400044: Vine 1
+    400046: Vine 2
+    400048: Vine 5
+    400050: vine CLUSTER
+    400052: Vine plane
+    400054: Vine plane 1
+    400056: Vine plane 2
+    400058: Vine plane 3
+    2300000: Bird statue001
+    2300002: Birthday cake
+    2300004: crumble pile
+    2300006: dust 1
+    2300008: Dust 2
+    2300010: Dust plane 1
+    2300012: dust plane 2
+    2300014: Hall 1
+    2300016: Hall 2
+    2300018: Leaves
+    2300020: Pillar 006
+    2300022: Pillar 1
+    2300024: Pillar 2
+    2300026: Pillar 4
+    2300028: Pillar 5
+    2300030: Pillar3
+    2300032: Room 1
+    2300034: Room 2
+    2300036: Staff
+    2300038: Stairs
+    2300040: Stairs 2
+    2300042: Vine 1
+    2300044: Vine 2
+    2300046: Vine 5
+    2300048: vine CLUSTER
+    2300050: Vine plane
+    2300052: Vine plane 1
+    2300054: Vine plane 2
+    2300056: Vine plane 3
+    3300000: Bird statue001
+    3300002: Birthday cake
+    3300004: crumble pile
+    3300006: dust 1
+    3300008: Dust 2
+    3300010: Dust plane 1
+    3300012: dust plane 2
+    3300014: Hall 1
+    3300016: Hall 2
+    3300018: Leaves
+    3300020: Pillar 006
+    3300022: Pillar 1
+    3300024: Pillar 2
+    3300026: Pillar 4
+    3300028: Pillar 5
+    3300030: Pillar3
+    3300032: Room 1
+    3300034: Room 2
+    3300036: Staff
+    3300038: Stairs
+    3300040: Stairs 2
+    3300042: Vine 1
+    3300044: Vine 2
+    3300046: Vine 5
+    3300048: vine CLUSTER
+    3300050: Vine plane
+    3300052: Vine plane 1
+    3300054: Vine plane 2
+    3300056: Vine plane 3
+    4300000: Pillar 006
+    4300002: crumble pile
+    4300004: Vine 5
+    4300006: Bird statue001
+    4300008: Pillar 5
+    4300010: Pillar 4
+    4300012: Stairs 2
+    4300014: Room 2
+    4300016: Hall 2
+    4300018: Pillar 2
+    4300020: Pillar3
+    4300022: Vine 2
+    4300024: Vine 1
+    4300026: Pillar 1
+    4300028: Stairs
+    4300030: Hall 1
+    4300032: Room 1
+    4300034: Birthday cake
+    4300036: Staff
+    4300038: dust 1
+    4300040: Dust 2
+    4300042: vine CLUSTER
+    4300044: Leaves
+    4300046: Vine plane
+    4300048: Dust plane 1
+    4300050: dust plane 2
+    4300052: Vine plane 1
+    4300054: Vine plane 2
+    4300056: Vine plane 3
+    7400000: Take 001
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .5
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
