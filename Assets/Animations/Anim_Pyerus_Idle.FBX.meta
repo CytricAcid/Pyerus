@@ -135,7 +135,7 @@ ModelImporter:
     400124: PyerusRigTail7
     400126: PyerusRigTail8
     400128: PyerusRigTail9
-    7400000: Anim_Pyerus_Idle
+    7400000: Anim_Pyerus_oldIdle
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -158,7 +158,7 @@ ModelImporter:
     extraExposedTransformPaths: []
     clipAnimations:
     - serializedVersion: 16
-      name: Anim_Pyerus_Idle
+      name: Anim_Pyerus_oldIdle
       takeName: Take 001
       firstFrame: 0
       lastFrame: 37
