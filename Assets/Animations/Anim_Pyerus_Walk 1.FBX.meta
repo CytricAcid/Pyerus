@@ -292,25 +292,25 @@ ModelImporter:
       - path: PyerusRigPelvis/PyerusRigSpine1/PyerusRigSpine2/PyerusRigRibCage/PyerusRigRArm1/PyerusRigRArm2/PyerusRigRArmPalm/PyerusRigRArmDigit31/PyerusRigRArmDigit32/PyerusRigRArmDigit33
         weight: 1
       - path: PyerusRigPelvis/PyerusRigTail1
-        weight: 1
+        weight: 0
       - path: PyerusRigPelvis/PyerusRigTail1/PyerusRigTail2
-        weight: 1
+        weight: 0
       - path: PyerusRigPelvis/PyerusRigTail1/PyerusRigTail2/PyerusRigTail3
-        weight: 1
+        weight: 0
       - path: PyerusRigPelvis/PyerusRigTail1/PyerusRigTail2/PyerusRigTail3/PyerusRigTail4
-        weight: 1
+        weight: 0
       - path: PyerusRigPelvis/PyerusRigTail1/PyerusRigTail2/PyerusRigTail3/PyerusRigTail4/PyerusRigTail5
-        weight: 1
+        weight: 0
       - path: PyerusRigPelvis/PyerusRigTail1/PyerusRigTail2/PyerusRigTail3/PyerusRigTail4/PyerusRigTail5/PyerusRigTail6
-        weight: 1
+        weight: 0
       - path: PyerusRigPelvis/PyerusRigTail1/PyerusRigTail2/PyerusRigTail3/PyerusRigTail4/PyerusRigTail5/PyerusRigTail6/PyerusRigTail7
-        weight: 1
+        weight: 0
       - path: PyerusRigPelvis/PyerusRigTail1/PyerusRigTail2/PyerusRigTail3/PyerusRigTail4/PyerusRigTail5/PyerusRigTail6/PyerusRigTail7/PyerusRigTail8
-        weight: 1
+        weight: 0
       - path: PyerusRigPelvis/PyerusRigTail1/PyerusRigTail2/PyerusRigTail3/PyerusRigTail4/PyerusRigTail5/PyerusRigTail6/PyerusRigTail7/PyerusRigTail8/PyerusRigTail9
-        weight: 1
+        weight: 0
       - path: PyerusRigPelvis/PyerusRigTail1/PyerusRigTail2/PyerusRigTail3/PyerusRigTail4/PyerusRigTail5/PyerusRigTail6/PyerusRigTail7/PyerusRigTail8/PyerusRigTail9/PyerusRigTail10
-        weight: 1
+        weight: 0
       maskType: 0
       maskSource: {instanceID: 0}
     isReadable: 1
