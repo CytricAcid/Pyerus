@@ -1025,6 +1025,7 @@ namespace AC
 				if (AccurateDestination () && !CanBeDirectControlled () && charState == CharState.Decelerate)
 				{
 					AccurateAcc (moveSpeed, true);
+					moveSpeed = 0f;
 				}
 				else
 				{
@@ -1036,9 +1037,9 @@ namespace AC
 			if (moveSpeed <= 0.0002f) // was 0f
 			{
 				moveSpeed = 0f;
-
 				if (charState != CharState.Custom)
 				{
+
 					charState = CharState.Idle;
 				}
 			}
@@ -1067,6 +1068,7 @@ namespace AC
 		{
 			if (deceleration <= 0f)
 			{
+				print ("hi1");
 				return acceleration;
 			}
 			return deceleration;
