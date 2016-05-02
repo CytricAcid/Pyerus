@@ -148,6 +148,11 @@ namespace AC
 				charState = CharState.Decelerate;
 			}
 
+			if (IsGrounded ()) 
+			{
+				isJumping = false;
+			}
+			/*
 			if (isJumping)
 			{
 				if (IsGrounded ())
@@ -155,7 +160,8 @@ namespace AC
 					isJumping = false;
 				}
 			}
-			
+			*/
+
 			if (isTilting)
 			{
 				actualTilt = Mathf.Lerp (actualTilt, targetTilt, AdvGame.Interpolate (tiltStartTime, tiltSpeed, MoveMethod.Smooth, null));
@@ -176,6 +182,13 @@ namespace AC
 		
 		private bool IsGrounded ()
 		{
+			if (Physics.Raycast (transform.position, new Vector3 (0f, 1f, 0f), 5f)) 
+			{
+				print ("hi");
+				return true;
+			}
+
+
 			if (_characterController != null)
 			{
 				return _characterController.isGrounded;
@@ -185,12 +198,11 @@ namespace AC
 			{
 				return false;
 			}
-			
+
 			if (_collider != null)
 			{
-				return Physics.CheckCapsule (transform.position + new Vector3 (0f, _collider.bounds.size.y, 0f), transform.position + new Vector3 (0f, _collider.bounds.size.x / 4f, 0f), _collider.bounds.size.x / 2f);
+				return Physics.CheckCapsule (transform.position + new Vector3 (0f, _collider.bounds.size.y, 0f), transform.position + new Vector3 (0f, _collider.bounds.size.y / 4f, 0f), _collider.bounds.size.x / 2f); //return Physics.CheckCapsule (transform.position + new Vector3 (0f, _collider.bounds.size.y, 0f), transform.position + new Vector3 (0f, _collider.bounds.size.x / 4f, 0f), _collider.bounds.size.x / 2f);
 			}
-			
 			ACDebug.Log ("Player has no Collider component");
 			return false;
 		}

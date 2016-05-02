@@ -1068,7 +1068,6 @@ namespace AC
 		{
 			if (deceleration <= 0f)
 			{
-				print ("hi1");
 				return acceleration;
 			}
 			return deceleration;
