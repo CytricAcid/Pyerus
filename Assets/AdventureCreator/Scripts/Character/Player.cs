@@ -35,6 +35,8 @@ namespace AC
 		/** The DetectHotspots component used if SettingsManager's hotspotDetection = HotspotDetection.PlayerVicinity */
 		public DetectHotspots hotspotDetector;
 
+		public bool isDoubleJump;
+
 		private bool lockedPath;
 		private bool isTilting = false;
 		private float actualTilt;
@@ -44,6 +46,7 @@ namespace AC
 		
 		private bool lockHotspotHeadTurning = false;
 		private Transform fpCam;
+	
 
 
 		private void Awake ()
@@ -148,19 +151,21 @@ namespace AC
 				charState = CharState.Decelerate;
 			}
 
-			if (IsGrounded ()) 
-			{
-				isJumping = false;
-			}
-			/*
 			if (isJumping)
 			{
 				if (IsGrounded ())
 				{
 					isJumping = false;
+					isDoubleJump = false;
 				}
 			}
-			*/
+
+			if (IsGrounded())
+			{
+				isJumping = false;
+				isDoubleJump = false;
+			}
+
 
 			if (isTilting)
 			{
@@ -182,22 +187,19 @@ namespace AC
 		
 		private bool IsGrounded ()
 		{
-			if (Physics.Raycast (transform.position, new Vector3 (0f, 1f, 0f), 5f)) 
-			{
-				print ("hi");
-				return true;
-			}
-
 
 			if (_characterController != null)
 			{
 				return _characterController.isGrounded;
 			}
 
+
+
 			if (_rigidbody != null && Mathf.Abs (_rigidbody.velocity.y) > 0.1f)
 			{
 				return false;
 			}
+
 
 			if (_collider != null)
 			{
@@ -205,6 +207,7 @@ namespace AC
 			}
 			ACDebug.Log ("Player has no Collider component");
 			return false;
+
 		}
 
 
@@ -254,17 +257,18 @@ namespace AC
 		 */
 		public void Jump ()
 		{
-			if (isJumping)
+			if (isDoubleJump)
 			{
 				return;
 			}
 			
-			if (IsGrounded () && activePath == null)
+			if (isJumping && isDoubleJump == false && activePath == null)
 			{
 				if (_rigidbody != null)
 				{
+					print ("hi4");
 					_rigidbody.velocity = new Vector3 (0f, KickStarter.settingsManager.jumpSpeed, 0f);
-					isJumping = true;
+					isDoubleJump = true;
 				}
 				else
 				{
@@ -274,8 +278,33 @@ namespace AC
 					}
 				}
 			}
+			if (isJumping)
+			{
+				print ("hi2");
+				return;
+			}
+			
+			if (IsGrounded () && activePath == null)
+			{
+				if (_rigidbody != null)
+				{
+					_rigidbody.velocity = new Vector3 (0f, KickStarter.settingsManager.jumpSpeed, 0f);
+					isJumping = true;
+					isDoubleJump = false;
+
+				}
+				else
+				{
+					if (motionControl == MotionControl.Automatic)
+					{
+						ACDebug.Log ("Player cannot jump without a Rigidbody component.");
+					}
+
+				}
+			}
 		}
 		
+
 		
 		private bool IsMovingToHotspot ()
 		{
