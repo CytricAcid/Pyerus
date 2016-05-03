@@ -1,0 +1,524 @@
+fileFormatVersion: 2
+guid: 8f8a1b5d22df5e74b98727837b79419c
+timeCreated: 1462300363
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: NyxRigChestFloofL1
+    100004: NyxRigChestFloofL2
+    100006: NyxRigChestFloofL3
+    100008: NyxRigChestFloofR1
+    100010: NyxRigChestFloofR2
+    100012: NyxRigChestFloofR3
+    100014: NyxRigEarL
+    100016: NyxRigEarLFloof1_1
+    100018: NyxRigEarLFloof1_2
+    100020: NyxRigEarLFloof2_1
+    100022: NyxRigEarLFloof2_2
+    100024: NyxRigEarLFloof3_1
+    100026: NyxRigEarLFloof3_2
+    100028: NyxRigEarLFloof4_1
+    100030: NyxRigEarLFloof4_2
+    100032: NyxRigEarR
+    100034: NyxRigEarRFloof1_1
+    100036: NyxRigEarRFloof1_2
+    100038: NyxRigEarRFloof2_1
+    100040: NyxRigEarRFloof2_2
+    100042: NyxRigEarRFloof3_1
+    100044: NyxRigEarRFloof3_2
+    100046: NyxRigEarRFloof4_1
+    100048: NyxRigEarRFloof4_2
+    100050: NyxRigHead
+    100052: NyxRigHeadFloof1_1
+    100054: NyxRigHeadFloof1_2
+    100056: NyxRigHeadFloof1_3
+    100058: NyxRigHeadFloof2_1
+    100060: NyxRigHeadFloof2_2
+    100062: NyxRigHeadFloof2_3
+    100064: NyxRigHeadFloof3_1
+    100066: NyxRigHeadFloof3_2
+    100068: NyxRigHeadFloof3_3
+    100070: NyxRigHeadFloof4_1
+    100072: NyxRigHeadFloof4_2
+    100074: NyxRigHeadFloof5_1
+    100076: NyxRigHeadFloof5_2
+    100078: NyxRigLArm1
+    100080: NyxRigLArm2
+    100082: NyxRigLArmCollarbone
+    100084: NyxRigLArmDigit11
+    100086: NyxRigLArmDigit12
+    100088: NyxRigLArmDigit21
+    100090: NyxRigLArmDigit22
+    100092: NyxRigLArmDigit31
+    100094: NyxRigLArmDigit32
+    100096: NyxRigLArmPalm
+    100098: NyxRigLLeg1
+    100100: NyxRigLLeg2
+    100102: NyxRigLLegAnkle
+    100104: NyxRigLLegDigit11
+    100106: NyxRigLLegDigit21
+    100108: NyxRigLLegDigit31
+    100110: NyxRigLLegPlatform
+    100112: NyxRigLTailFloof4_1_1
+    100114: NyxRigLTailFloof4_1_2
+    100116: NyxRigLTailFloof4_1_3
+    100118: NyxRigLTailFloof4_2_1
+    100120: NyxRigLTailFloof4_2_2
+    100122: NyxRigLTailFloof4_3_1
+    100124: NyxRigLTailFloof4_3_2
+    100126: NyxRigPelvis
+    100128: NyxRigRArm1
+    100130: NyxRigRArm2
+    100132: NyxRigRArmCollarbone
+    100134: NyxRigRArmDigit11
+    100136: NyxRigRArmDigit12
+    100138: NyxRigRArmDigit21
+    100140: NyxRigRArmDigit22
+    100142: NyxRigRArmDigit31
+    100144: NyxRigRArmDigit32
+    100146: NyxRigRArmPalm
+    100148: NyxRigRibCage
+    100150: NyxRigRLeg1
+    100152: NyxRigRLeg2
+    100154: NyxRigRLegAnkle
+    100156: NyxRigRLegDigit11
+    100158: NyxRigRLegDigit21
+    100160: NyxRigRLegDigit31
+    100162: NyxRigRLegPlatform
+    100164: NyxRigRTailFloof4_1_1
+    100166: NyxRigRTailFloof4_1_2
+    100168: NyxRigRTailFloof4_1_3
+    100170: NyxRigRTailFloof4_2_1
+    100172: NyxRigRTailFloof4_2_2
+    100174: NyxRigRTailFloof4_3_1
+    100176: NyxRigRTailFloof4_3_2
+    100178: NyxRigSpine1
+    100180: NyxRigSpine2
+    100182: NyxRigSpine3
+    100184: NyxRigSpine4
+    100186: NyxRigTail1
+    100188: NyxRigTail2
+    100190: NyxRigTail3
+    100192: NyxRigTail4
+    100194: NyxRigTail5
+    100196: NyxRigTail6
+    100198: NyxRigTail7
+    100200: NyxRigTail8
+    100202: NyxRigTailFloof1_1
+    100204: NyxRigTailFloof1_2
+    100206: NyxRigTailFloof2_1
+    100208: NyxRigTailFloof2_2
+    100210: NyxRigTailFloof3
+    400000: //RootNode
+    400002: NyxRigChestFloofL1
+    400004: NyxRigChestFloofL2
+    400006: NyxRigChestFloofL3
+    400008: NyxRigChestFloofR1
+    400010: NyxRigChestFloofR2
+    400012: NyxRigChestFloofR3
+    400014: NyxRigEarL
+    400016: NyxRigEarLFloof1_1
+    400018: NyxRigEarLFloof1_2
+    400020: NyxRigEarLFloof2_1
+    400022: NyxRigEarLFloof2_2
+    400024: NyxRigEarLFloof3_1
+    400026: NyxRigEarLFloof3_2
+    400028: NyxRigEarLFloof4_1
+    400030: NyxRigEarLFloof4_2
+    400032: NyxRigEarR
+    400034: NyxRigEarRFloof1_1
+    400036: NyxRigEarRFloof1_2
+    400038: NyxRigEarRFloof2_1
+    400040: NyxRigEarRFloof2_2
+    400042: NyxRigEarRFloof3_1
+    400044: NyxRigEarRFloof3_2
+    400046: NyxRigEarRFloof4_1
+    400048: NyxRigEarRFloof4_2
+    400050: NyxRigHead
+    400052: NyxRigHeadFloof1_1
+    400054: NyxRigHeadFloof1_2
+    400056: NyxRigHeadFloof1_3
+    400058: NyxRigHeadFloof2_1
+    400060: NyxRigHeadFloof2_2
+    400062: NyxRigHeadFloof2_3
+    400064: NyxRigHeadFloof3_1
+    400066: NyxRigHeadFloof3_2
+    400068: NyxRigHeadFloof3_3
+    400070: NyxRigHeadFloof4_1
+    400072: NyxRigHeadFloof4_2
+    400074: NyxRigHeadFloof5_1
+    400076: NyxRigHeadFloof5_2
+    400078: NyxRigLArm1
+    400080: NyxRigLArm2
+    400082: NyxRigLArmCollarbone
+    400084: NyxRigLArmDigit11
+    400086: NyxRigLArmDigit12
+    400088: NyxRigLArmDigit21
+    400090: NyxRigLArmDigit22
+    400092: NyxRigLArmDigit31
+    400094: NyxRigLArmDigit32
+    400096: NyxRigLArmPalm
+    400098: NyxRigLLeg1
+    400100: NyxRigLLeg2
+    400102: NyxRigLLegAnkle
+    400104: NyxRigLLegDigit11
+    400106: NyxRigLLegDigit21
+    400108: NyxRigLLegDigit31
+    400110: NyxRigLLegPlatform
+    400112: NyxRigLTailFloof4_1_1
+    400114: NyxRigLTailFloof4_1_2
+    400116: NyxRigLTailFloof4_1_3
+    400118: NyxRigLTailFloof4_2_1
+    400120: NyxRigLTailFloof4_2_2
+    400122: NyxRigLTailFloof4_3_1
+    400124: NyxRigLTailFloof4_3_2
+    400126: NyxRigPelvis
+    400128: NyxRigRArm1
+    400130: NyxRigRArm2
+    400132: NyxRigRArmCollarbone
+    400134: NyxRigRArmDigit11
+    400136: NyxRigRArmDigit12
+    400138: NyxRigRArmDigit21
+    400140: NyxRigRArmDigit22
+    400142: NyxRigRArmDigit31
+    400144: NyxRigRArmDigit32
+    400146: NyxRigRArmPalm
+    400148: NyxRigRibCage
+    400150: NyxRigRLeg1
+    400152: NyxRigRLeg2
+    400154: NyxRigRLegAnkle
+    400156: NyxRigRLegDigit11
+    400158: NyxRigRLegDigit21
+    400160: NyxRigRLegDigit31
+    400162: NyxRigRLegPlatform
+    400164: NyxRigRTailFloof4_1_1
+    400166: NyxRigRTailFloof4_1_2
+    400168: NyxRigRTailFloof4_1_3
+    400170: NyxRigRTailFloof4_2_1
+    400172: NyxRigRTailFloof4_2_2
+    400174: NyxRigRTailFloof4_3_1
+    400176: NyxRigRTailFloof4_3_2
+    400178: NyxRigSpine1
+    400180: NyxRigSpine2
+    400182: NyxRigSpine3
+    400184: NyxRigSpine4
+    400186: NyxRigTail1
+    400188: NyxRigTail2
+    400190: NyxRigTail3
+    400192: NyxRigTail4
+    400194: NyxRigTail5
+    400196: NyxRigTail6
+    400198: NyxRigTail7
+    400200: NyxRigTail8
+    400202: NyxRigTailFloof1_1
+    400204: NyxRigTailFloof1_2
+    400206: NyxRigTailFloof2_1
+    400208: NyxRigTailFloof2_2
+    400210: NyxRigTailFloof3
+    7400000: Anim_Nyx_Idle
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 0
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Anim_Nyx_Idle
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 60
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: NyxRigLLegPlatform
+        weight: 1
+      - path: NyxRigPelvis
+        weight: 1
+      - path: NyxRigPelvis/NyxRigLLeg1
+        weight: 1
+      - path: NyxRigPelvis/NyxRigLLeg1/NyxRigLLeg2
+        weight: 1
+      - path: NyxRigPelvis/NyxRigLLeg1/NyxRigLLeg2/NyxRigLLegAnkle
+        weight: 1
+      - path: NyxRigPelvis/NyxRigLLeg1/NyxRigLLeg2/NyxRigLLegAnkle/NyxRigLLegDigit11
+        weight: 1
+      - path: NyxRigPelvis/NyxRigLLeg1/NyxRigLLeg2/NyxRigLLegAnkle/NyxRigLLegDigit21
+        weight: 1
+      - path: NyxRigPelvis/NyxRigLLeg1/NyxRigLLeg2/NyxRigLLegAnkle/NyxRigLLegDigit31
+        weight: 1
+      - path: NyxRigPelvis/NyxRigRLeg1
+        weight: 1
+      - path: NyxRigPelvis/NyxRigRLeg1/NyxRigRLeg2
+        weight: 1
+      - path: NyxRigPelvis/NyxRigRLeg1/NyxRigRLeg2/NyxRigRLegAnkle
+        weight: 1
+      - path: NyxRigPelvis/NyxRigRLeg1/NyxRigRLeg2/NyxRigRLegAnkle/NyxRigRLegDigit11
+        weight: 1
+      - path: NyxRigPelvis/NyxRigRLeg1/NyxRigRLeg2/NyxRigRLegAnkle/NyxRigRLegDigit21
+        weight: 1
+      - path: NyxRigPelvis/NyxRigRLeg1/NyxRigRLeg2/NyxRigRLegAnkle/NyxRigRLegDigit31
+        weight: 1
+      - path: NyxRigPelvis/NyxRigSpine1
+        weight: 1
+      - path: NyxRigPelvis/NyxRigSpine1/NyxRigSpine2
+        weight: 1
+      - path: NyxRigPelvis/NyxRigSpine1/NyxRigSpine2/NyxRigSpine3
+        weight: 1
+      - path: NyxRigPelvis/NyxRigSpine1/NyxRigSpine2/NyxRigSpine3/NyxRigSpine4
+        weight: 1
+      - path: NyxRigPelvis/NyxRigSpine1/NyxRigSpine2/NyxRigSpine3/NyxRigSpine4/NyxRigRibCage
+        weight: 1
+      - path: NyxRigPelvis/NyxRigSpine1/NyxRigSpine2/NyxRigSpine3/NyxRigSpine4/NyxRigRibCage/NyxRigChestFloofL1
+        weight: 1
+      - path: NyxRigPelvis/NyxRigSpine1/NyxRigSpine2/NyxRigSpine3/NyxRigSpine4/NyxRigRibCage/NyxRigChestFloofL2
+        weight: 1
+      - path: NyxRigPelvis/NyxRigSpine1/NyxRigSpine2/NyxRigSpine3/NyxRigSpine4/NyxRigRibCage/NyxRigChestFloofL3
+        weight: 1
+      - path: NyxRigPelvis/NyxRigSpine1/NyxRigSpine2/NyxRigSpine3/NyxRigSpine4/NyxRigRibCage/NyxRigChestFloofR1
+        weight: 1
+      - path: NyxRigPelvis/NyxRigSpine1/NyxRigSpine2/NyxRigSpine3/NyxRigSpine4/NyxRigRibCage/NyxRigChestFloofR2
+        weight: 1
+      - path: NyxRigPelvis/NyxRigSpine1/NyxRigSpine2/NyxRigSpine3/NyxRigSpine4/NyxRigRibCage/NyxRigChestFloofR3
+        weight: 1
+      - path: NyxRigPelvis/NyxRigSpine1/NyxRigSpine2/NyxRigSpine3/NyxRigSpine4/NyxRigRibCage/NyxRigHead
+        weight: 1
+      - path: NyxRigPelvis/NyxRigSpine1/NyxRigSpine2/NyxRigSpine3/NyxRigSpine4/NyxRigRibCage/NyxRigHead/NyxRigEarL
+        weight: 1
+      - path: NyxRigPelvis/NyxRigSpine1/NyxRigSpine2/NyxRigSpine3/NyxRigSpine4/NyxRigRibCage/NyxRigHead/NyxRigEarL/NyxRigEarLFloof1_1
+        weight: 1
+      - path: NyxRigPelvis/NyxRigSpine1/NyxRigSpine2/NyxRigSpine3/NyxRigSpine4/NyxRigRibCage/NyxRigHead/NyxRigEarL/NyxRigEarLFloof1_1/NyxRigEarLFloof1_2
+        weight: 1
+      - path: NyxRigPelvis/NyxRigSpine1/NyxRigSpine2/NyxRigSpine3/NyxRigSpine4/NyxRigRibCage/NyxRigHead/NyxRigEarL/NyxRigEarLFloof2_1
+        weight: 1
+      - path: NyxRigPelvis/NyxRigSpine1/NyxRigSpine2/NyxRigSpine3/NyxRigSpine4/NyxRigRibCage/NyxRigHead/NyxRigEarL/NyxRigEarLFloof2_1/NyxRigEarLFloof2_2
+        weight: 1
+      - path: NyxRigPelvis/NyxRigSpine1/NyxRigSpine2/NyxRigSpine3/NyxRigSpine4/NyxRigRibCage/NyxRigHead/NyxRigEarL/NyxRigEarLFloof3_1
+        weight: 1
+      - path: NyxRigPelvis/NyxRigSpine1/NyxRigSpine2/NyxRigSpine3/NyxRigSpine4/NyxRigRibCage/NyxRigHead/NyxRigEarL/NyxRigEarLFloof3_1/NyxRigEarLFloof3_2
+        weight: 1
+      - path: NyxRigPelvis/NyxRigSpine1/NyxRigSpine2/NyxRigSpine3/NyxRigSpine4/NyxRigRibCage/NyxRigHead/NyxRigEarL/NyxRigEarLFloof4_1
+        weight: 1
+      - path: NyxRigPelvis/NyxRigSpine1/NyxRigSpine2/NyxRigSpine3/NyxRigSpine4/NyxRigRibCage/NyxRigHead/NyxRigEarL/NyxRigEarLFloof4_1/NyxRigEarLFloof4_2
+        weight: 1
+      - path: NyxRigPelvis/NyxRigSpine1/NyxRigSpine2/NyxRigSpine3/NyxRigSpine4/NyxRigRibCage/NyxRigHead/NyxRigEarR
+        weight: 1
+      - path: NyxRigPelvis/NyxRigSpine1/NyxRigSpine2/NyxRigSpine3/NyxRigSpine4/NyxRigRibCage/NyxRigHead/NyxRigEarR/NyxRigEarRFloof1_1
+        weight: 1
+      - path: NyxRigPelvis/NyxRigSpine1/NyxRigSpine2/NyxRigSpine3/NyxRigSpine4/NyxRigRibCage/NyxRigHead/NyxRigEarR/NyxRigEarRFloof1_1/NyxRigEarRFloof1_2
+        weight: 1
+      - path: NyxRigPelvis/NyxRigSpine1/NyxRigSpine2/NyxRigSpine3/NyxRigSpine4/NyxRigRibCage/NyxRigHead/NyxRigEarR/NyxRigEarRFloof2_1
+        weight: 1
+      - path: NyxRigPelvis/NyxRigSpine1/NyxRigSpine2/NyxRigSpine3/NyxRigSpine4/NyxRigRibCage/NyxRigHead/NyxRigEarR/NyxRigEarRFloof2_1/NyxRigEarRFloof2_2
+        weight: 1
+      - path: NyxRigPelvis/NyxRigSpine1/NyxRigSpine2/NyxRigSpine3/NyxRigSpine4/NyxRigRibCage/NyxRigHead/NyxRigEarR/NyxRigEarRFloof3_1
+        weight: 1
+      - path: NyxRigPelvis/NyxRigSpine1/NyxRigSpine2/NyxRigSpine3/NyxRigSpine4/NyxRigRibCage/NyxRigHead/NyxRigEarR/NyxRigEarRFloof3_1/NyxRigEarRFloof3_2
+        weight: 1
+      - path: NyxRigPelvis/NyxRigSpine1/NyxRigSpine2/NyxRigSpine3/NyxRigSpine4/NyxRigRibCage/NyxRigHead/NyxRigEarR/NyxRigEarRFloof4_1
+        weight: 1
+      - path: NyxRigPelvis/NyxRigSpine1/NyxRigSpine2/NyxRigSpine3/NyxRigSpine4/NyxRigRibCage/NyxRigHead/NyxRigEarR/NyxRigEarRFloof4_1/NyxRigEarRFloof4_2
+        weight: 1
+      - path: NyxRigPelvis/NyxRigSpine1/NyxRigSpine2/NyxRigSpine3/NyxRigSpine4/NyxRigRibCage/NyxRigHead/NyxRigHeadFloof1_1
+        weight: 1
+      - path: NyxRigPelvis/NyxRigSpine1/NyxRigSpine2/NyxRigSpine3/NyxRigSpine4/NyxRigRibCage/NyxRigHead/NyxRigHeadFloof1_1/NyxRigHeadFloof1_2
+        weight: 1
+      - path: NyxRigPelvis/NyxRigSpine1/NyxRigSpine2/NyxRigSpine3/NyxRigSpine4/NyxRigRibCage/NyxRigHead/NyxRigHeadFloof1_1/NyxRigHeadFloof1_2/NyxRigHeadFloof1_3
+        weight: 1
+      - path: NyxRigPelvis/NyxRigSpine1/NyxRigSpine2/NyxRigSpine3/NyxRigSpine4/NyxRigRibCage/NyxRigHead/NyxRigHeadFloof2_1
+        weight: 1
+      - path: NyxRigPelvis/NyxRigSpine1/NyxRigSpine2/NyxRigSpine3/NyxRigSpine4/NyxRigRibCage/NyxRigHead/NyxRigHeadFloof2_1/NyxRigHeadFloof2_2
+        weight: 1
+      - path: NyxRigPelvis/NyxRigSpine1/NyxRigSpine2/NyxRigSpine3/NyxRigSpine4/NyxRigRibCage/NyxRigHead/NyxRigHeadFloof2_1/NyxRigHeadFloof2_2/NyxRigHeadFloof2_3
+        weight: 1
+      - path: NyxRigPelvis/NyxRigSpine1/NyxRigSpine2/NyxRigSpine3/NyxRigSpine4/NyxRigRibCage/NyxRigHead/NyxRigHeadFloof3_1
+        weight: 1
+      - path: NyxRigPelvis/NyxRigSpine1/NyxRigSpine2/NyxRigSpine3/NyxRigSpine4/NyxRigRibCage/NyxRigHead/NyxRigHeadFloof3_1/NyxRigHeadFloof3_2
+        weight: 1
+      - path: NyxRigPelvis/NyxRigSpine1/NyxRigSpine2/NyxRigSpine3/NyxRigSpine4/NyxRigRibCage/NyxRigHead/NyxRigHeadFloof3_1/NyxRigHeadFloof3_2/NyxRigHeadFloof3_3
+        weight: 1
+      - path: NyxRigPelvis/NyxRigSpine1/NyxRigSpine2/NyxRigSpine3/NyxRigSpine4/NyxRigRibCage/NyxRigHead/NyxRigHeadFloof4_1
+        weight: 1
+      - path: NyxRigPelvis/NyxRigSpine1/NyxRigSpine2/NyxRigSpine3/NyxRigSpine4/NyxRigRibCage/NyxRigHead/NyxRigHeadFloof4_1/NyxRigHeadFloof4_2
+        weight: 1
+      - path: NyxRigPelvis/NyxRigSpine1/NyxRigSpine2/NyxRigSpine3/NyxRigSpine4/NyxRigRibCage/NyxRigHead/NyxRigHeadFloof5_1
+        weight: 1
+      - path: NyxRigPelvis/NyxRigSpine1/NyxRigSpine2/NyxRigSpine3/NyxRigSpine4/NyxRigRibCage/NyxRigHead/NyxRigHeadFloof5_1/NyxRigHeadFloof5_2
+        weight: 1
+      - path: NyxRigPelvis/NyxRigSpine1/NyxRigSpine2/NyxRigSpine3/NyxRigSpine4/NyxRigRibCage/NyxRigLArmCollarbone
+        weight: 1
+      - path: NyxRigPelvis/NyxRigSpine1/NyxRigSpine2/NyxRigSpine3/NyxRigSpine4/NyxRigRibCage/NyxRigLArmCollarbone/NyxRigLArm1
+        weight: 1
+      - path: NyxRigPelvis/NyxRigSpine1/NyxRigSpine2/NyxRigSpine3/NyxRigSpine4/NyxRigRibCage/NyxRigLArmCollarbone/NyxRigLArm1/NyxRigLArm2
+        weight: 1
+      - path: NyxRigPelvis/NyxRigSpine1/NyxRigSpine2/NyxRigSpine3/NyxRigSpine4/NyxRigRibCage/NyxRigLArmCollarbone/NyxRigLArm1/NyxRigLArm2/NyxRigLArmPalm
+        weight: 1
+      - path: NyxRigPelvis/NyxRigSpine1/NyxRigSpine2/NyxRigSpine3/NyxRigSpine4/NyxRigRibCage/NyxRigLArmCollarbone/NyxRigLArm1/NyxRigLArm2/NyxRigLArmPalm/NyxRigLArmDigit11
+        weight: 1
+      - path: NyxRigPelvis/NyxRigSpine1/NyxRigSpine2/NyxRigSpine3/NyxRigSpine4/NyxRigRibCage/NyxRigLArmCollarbone/NyxRigLArm1/NyxRigLArm2/NyxRigLArmPalm/NyxRigLArmDigit11/NyxRigLArmDigit12
+        weight: 1
+      - path: NyxRigPelvis/NyxRigSpine1/NyxRigSpine2/NyxRigSpine3/NyxRigSpine4/NyxRigRibCage/NyxRigLArmCollarbone/NyxRigLArm1/NyxRigLArm2/NyxRigLArmPalm/NyxRigLArmDigit21
+        weight: 1
+      - path: NyxRigPelvis/NyxRigSpine1/NyxRigSpine2/NyxRigSpine3/NyxRigSpine4/NyxRigRibCage/NyxRigLArmCollarbone/NyxRigLArm1/NyxRigLArm2/NyxRigLArmPalm/NyxRigLArmDigit21/NyxRigLArmDigit22
+        weight: 1
+      - path: NyxRigPelvis/NyxRigSpine1/NyxRigSpine2/NyxRigSpine3/NyxRigSpine4/NyxRigRibCage/NyxRigLArmCollarbone/NyxRigLArm1/NyxRigLArm2/NyxRigLArmPalm/NyxRigLArmDigit31
+        weight: 1
+      - path: NyxRigPelvis/NyxRigSpine1/NyxRigSpine2/NyxRigSpine3/NyxRigSpine4/NyxRigRibCage/NyxRigLArmCollarbone/NyxRigLArm1/NyxRigLArm2/NyxRigLArmPalm/NyxRigLArmDigit31/NyxRigLArmDigit32
+        weight: 1
+      - path: NyxRigPelvis/NyxRigSpine1/NyxRigSpine2/NyxRigSpine3/NyxRigSpine4/NyxRigRibCage/NyxRigRArmCollarbone
+        weight: 1
+      - path: NyxRigPelvis/NyxRigSpine1/NyxRigSpine2/NyxRigSpine3/NyxRigSpine4/NyxRigRibCage/NyxRigRArmCollarbone/NyxRigRArm1
+        weight: 1
+      - path: NyxRigPelvis/NyxRigSpine1/NyxRigSpine2/NyxRigSpine3/NyxRigSpine4/NyxRigRibCage/NyxRigRArmCollarbone/NyxRigRArm1/NyxRigRArm2
+        weight: 1
+      - path: NyxRigPelvis/NyxRigSpine1/NyxRigSpine2/NyxRigSpine3/NyxRigSpine4/NyxRigRibCage/NyxRigRArmCollarbone/NyxRigRArm1/NyxRigRArm2/NyxRigRArmPalm
+        weight: 1
+      - path: NyxRigPelvis/NyxRigSpine1/NyxRigSpine2/NyxRigSpine3/NyxRigSpine4/NyxRigRibCage/NyxRigRArmCollarbone/NyxRigRArm1/NyxRigRArm2/NyxRigRArmPalm/NyxRigRArmDigit11
+        weight: 1
+      - path: NyxRigPelvis/NyxRigSpine1/NyxRigSpine2/NyxRigSpine3/NyxRigSpine4/NyxRigRibCage/NyxRigRArmCollarbone/NyxRigRArm1/NyxRigRArm2/NyxRigRArmPalm/NyxRigRArmDigit11/NyxRigRArmDigit12
+        weight: 1
+      - path: NyxRigPelvis/NyxRigSpine1/NyxRigSpine2/NyxRigSpine3/NyxRigSpine4/NyxRigRibCage/NyxRigRArmCollarbone/NyxRigRArm1/NyxRigRArm2/NyxRigRArmPalm/NyxRigRArmDigit21
+        weight: 1
+      - path: NyxRigPelvis/NyxRigSpine1/NyxRigSpine2/NyxRigSpine3/NyxRigSpine4/NyxRigRibCage/NyxRigRArmCollarbone/NyxRigRArm1/NyxRigRArm2/NyxRigRArmPalm/NyxRigRArmDigit21/NyxRigRArmDigit22
+        weight: 1
+      - path: NyxRigPelvis/NyxRigSpine1/NyxRigSpine2/NyxRigSpine3/NyxRigSpine4/NyxRigRibCage/NyxRigRArmCollarbone/NyxRigRArm1/NyxRigRArm2/NyxRigRArmPalm/NyxRigRArmDigit31
+        weight: 1
+      - path: NyxRigPelvis/NyxRigSpine1/NyxRigSpine2/NyxRigSpine3/NyxRigSpine4/NyxRigRibCage/NyxRigRArmCollarbone/NyxRigRArm1/NyxRigRArm2/NyxRigRArmPalm/NyxRigRArmDigit31/NyxRigRArmDigit32
+        weight: 1
+      - path: NyxRigPelvis/NyxRigTail1
+        weight: 1
+      - path: NyxRigPelvis/NyxRigTail1/NyxRigTail2
+        weight: 1
+      - path: NyxRigPelvis/NyxRigTail1/NyxRigTail2/NyxRigTail3
+        weight: 1
+      - path: NyxRigPelvis/NyxRigTail1/NyxRigTail2/NyxRigTail3/NyxRigTail4
+        weight: 1
+      - path: NyxRigPelvis/NyxRigTail1/NyxRigTail2/NyxRigTail3/NyxRigTail4/NyxRigTail5
+        weight: 1
+      - path: NyxRigPelvis/NyxRigTail1/NyxRigTail2/NyxRigTail3/NyxRigTail4/NyxRigTail5/NyxRigTail6
+        weight: 1
+      - path: NyxRigPelvis/NyxRigTail1/NyxRigTail2/NyxRigTail3/NyxRigTail4/NyxRigTail5/NyxRigTail6/NyxRigTail7
+        weight: 1
+      - path: NyxRigPelvis/NyxRigTail1/NyxRigTail2/NyxRigTail3/NyxRigTail4/NyxRigTail5/NyxRigTail6/NyxRigTail7/NyxRigLTailFloof4_1_1
+        weight: 1
+      - path: NyxRigPelvis/NyxRigTail1/NyxRigTail2/NyxRigTail3/NyxRigTail4/NyxRigTail5/NyxRigTail6/NyxRigTail7/NyxRigLTailFloof4_1_1/NyxRigLTailFloof4_1_2
+        weight: 1
+      - path: NyxRigPelvis/NyxRigTail1/NyxRigTail2/NyxRigTail3/NyxRigTail4/NyxRigTail5/NyxRigTail6/NyxRigTail7/NyxRigLTailFloof4_1_1/NyxRigLTailFloof4_1_2/NyxRigLTailFloof4_1_3
+        weight: 1
+      - path: NyxRigPelvis/NyxRigTail1/NyxRigTail2/NyxRigTail3/NyxRigTail4/NyxRigTail5/NyxRigTail6/NyxRigTail7/NyxRigLTailFloof4_1_1/NyxRigLTailFloof4_2_1
+        weight: 1
+      - path: NyxRigPelvis/NyxRigTail1/NyxRigTail2/NyxRigTail3/NyxRigTail4/NyxRigTail5/NyxRigTail6/NyxRigTail7/NyxRigLTailFloof4_1_1/NyxRigLTailFloof4_2_1/NyxRigLTailFloof4_2_2
+        weight: 1
+      - path: NyxRigPelvis/NyxRigTail1/NyxRigTail2/NyxRigTail3/NyxRigTail4/NyxRigTail5/NyxRigTail6/NyxRigTail7/NyxRigLTailFloof4_1_1/NyxRigLTailFloof4_3_1
+        weight: 1
+      - path: NyxRigPelvis/NyxRigTail1/NyxRigTail2/NyxRigTail3/NyxRigTail4/NyxRigTail5/NyxRigTail6/NyxRigTail7/NyxRigLTailFloof4_1_1/NyxRigLTailFloof4_3_1/NyxRigLTailFloof4_3_2
+        weight: 1
+      - path: NyxRigPelvis/NyxRigTail1/NyxRigTail2/NyxRigTail3/NyxRigTail4/NyxRigTail5/NyxRigTail6/NyxRigTail7/NyxRigRTailFloof4_1_1
+        weight: 1
+      - path: NyxRigPelvis/NyxRigTail1/NyxRigTail2/NyxRigTail3/NyxRigTail4/NyxRigTail5/NyxRigTail6/NyxRigTail7/NyxRigRTailFloof4_1_1/NyxRigRTailFloof4_1_2
+        weight: 1
+      - path: NyxRigPelvis/NyxRigTail1/NyxRigTail2/NyxRigTail3/NyxRigTail4/NyxRigTail5/NyxRigTail6/NyxRigTail7/NyxRigRTailFloof4_1_1/NyxRigRTailFloof4_1_2/NyxRigRTailFloof4_1_3
+        weight: 1
+      - path: NyxRigPelvis/NyxRigTail1/NyxRigTail2/NyxRigTail3/NyxRigTail4/NyxRigTail5/NyxRigTail6/NyxRigTail7/NyxRigRTailFloof4_1_1/NyxRigRTailFloof4_2_1
+        weight: 1
+      - path: NyxRigPelvis/NyxRigTail1/NyxRigTail2/NyxRigTail3/NyxRigTail4/NyxRigTail5/NyxRigTail6/NyxRigTail7/NyxRigRTailFloof4_1_1/NyxRigRTailFloof4_2_1/NyxRigRTailFloof4_2_2
+        weight: 1
+      - path: NyxRigPelvis/NyxRigTail1/NyxRigTail2/NyxRigTail3/NyxRigTail4/NyxRigTail5/NyxRigTail6/NyxRigTail7/NyxRigRTailFloof4_1_1/NyxRigRTailFloof4_3_1
+        weight: 1
+      - path: NyxRigPelvis/NyxRigTail1/NyxRigTail2/NyxRigTail3/NyxRigTail4/NyxRigTail5/NyxRigTail6/NyxRigTail7/NyxRigRTailFloof4_1_1/NyxRigRTailFloof4_3_1/NyxRigRTailFloof4_3_2
+        weight: 1
+      - path: NyxRigPelvis/NyxRigTail1/NyxRigTail2/NyxRigTail3/NyxRigTail4/NyxRigTail5/NyxRigTail6/NyxRigTail7/NyxRigTail8
+        weight: 1
+      - path: NyxRigPelvis/NyxRigTail1/NyxRigTail2/NyxRigTail3/NyxRigTail4/NyxRigTail5/NyxRigTail6/NyxRigTail7/NyxRigTail8/NyxRigTailFloof1_1
+        weight: 1
+      - path: NyxRigPelvis/NyxRigTail1/NyxRigTail2/NyxRigTail3/NyxRigTail4/NyxRigTail5/NyxRigTail6/NyxRigTail7/NyxRigTail8/NyxRigTailFloof1_1/NyxRigTailFloof1_2
+        weight: 1
+      - path: NyxRigPelvis/NyxRigTail1/NyxRigTail2/NyxRigTail3/NyxRigTail4/NyxRigTail5/NyxRigTail6/NyxRigTail7/NyxRigTail8/NyxRigTailFloof2_1
+        weight: 1
+      - path: NyxRigPelvis/NyxRigTail1/NyxRigTail2/NyxRigTail3/NyxRigTail4/NyxRigTail5/NyxRigTail6/NyxRigTail7/NyxRigTail8/NyxRigTailFloof2_1/NyxRigTailFloof2_2
+        weight: 1
+      - path: NyxRigPelvis/NyxRigTail1/NyxRigTail2/NyxRigTail3/NyxRigTail4/NyxRigTail5/NyxRigTail6/NyxRigTail7/NyxRigTail8/NyxRigTailFloof3
+        weight: 1
+      - path: NyxRigRLegPlatform
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 1
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: 56d1da5f07cf1614283640eeac32e133,
+    type: 3}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
