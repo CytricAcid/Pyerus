@@ -39,7 +39,7 @@ namespace AC
 
 		private bool lockedPath;
 		private bool isTilting = false;
-		private float actualTilt;
+		public float actualTilt;
 		private float targetTilt;
 		private float tiltSpeed;
 		private float tiltStartTime;
@@ -185,7 +185,7 @@ namespace AC
 		}
 		
 		
-		private bool IsGrounded ()
+		public bool IsGrounded ()
 		{
 
 			if (_characterController != null)

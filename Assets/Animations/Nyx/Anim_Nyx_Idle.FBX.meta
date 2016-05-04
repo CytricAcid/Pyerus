@@ -111,6 +111,7 @@ ModelImporter:
     100206: NyxRigTailFloof2_1
     100208: NyxRigTailFloof2_2
     100210: NyxRigTailFloof3
+    100212: NyxRigBase
     400000: //RootNode
     400002: NyxRigChestFloofL1
     400004: NyxRigChestFloofL2
@@ -217,6 +218,7 @@ ModelImporter:
     400206: NyxRigTailFloof2_1
     400208: NyxRigTailFloof2_2
     400210: NyxRigTailFloof3
+    400212: NyxRigBase
     7400000: Anim_Nyx_Idle
     9500000: //RootNode
   materials:
