@@ -50,7 +50,7 @@ namespace AC
 		/**
 		 * Disables 3D and 2D colliders attached to the GameObject, and places it on the Deactivated (Ignore Raycast) layer - allowing Hotspot raycasts to pass through it.
 		 */
-		public void TurnOff ()
+		/*public void TurnOff ()
 		{
 			if (GetComponent <Collider>())
 			{
@@ -61,7 +61,7 @@ namespace AC
 				GetComponent <Collider2D>().enabled = false;
 			}
 			gameObject.layer = LayerMask.NameToLayer (KickStarter.settingsManager.deactivatedLayer);
-		}
+		}*/
 
 
 		#if UNITY_EDITOR

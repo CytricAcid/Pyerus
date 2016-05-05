@@ -36,6 +36,7 @@ namespace AC
 		public DetectHotspots hotspotDetector;
 
 		public bool isDoubleJump;
+		public float distToGround = 0.413f;
 
 		private bool lockedPath;
 		private bool isTilting = false;
@@ -51,6 +52,7 @@ namespace AC
 
 		private void Awake ()
 		{
+
 			if (soundChild && soundChild.gameObject.GetComponent <AudioSource>())
 			{
 				audioSource = soundChild.gameObject.GetComponent <AudioSource>();
@@ -187,24 +189,39 @@ namespace AC
 		
 		public bool IsGrounded ()
 		{
+			var layerMask = (1 << 9);
+			layerMask = ~layerMask;
 
 			if (_characterController != null)
 			{
 				return _characterController.isGrounded;
 			}
 
-
+			/*if (_rigidbody != null && Physics.Raycast (transform.position, -Vector3.up, 0f, layerMask))
+			{ 
+				return true;
+			}
 
 			if (_rigidbody != null && Mathf.Abs (_rigidbody.velocity.y) > 0.1f)
+			{
+				return false;
+			}*/
+			if (Physics.Raycast (transform.position, -Vector3.up, 0.1f, layerMask) == true)
+			{
+				return true;
+			}
+			if (Physics.Raycast (transform.position, -Vector3.up, 0.1f, layerMask) == false)
 			{
 				return false;
 			}
 
 
-			if (_collider != null)
+			/*if (_collider != null)
 			{
-				return Physics.CheckCapsule (transform.position + new Vector3 (0f, _collider.bounds.size.y, 0f), transform.position + new Vector3 (0f, _collider.bounds.size.y / 4f, 0f), _collider.bounds.size.x / 2f); //return Physics.CheckCapsule (transform.position + new Vector3 (0f, _collider.bounds.size.y, 0f), transform.position + new Vector3 (0f, _collider.bounds.size.x / 4f, 0f), _collider.bounds.size.x / 2f);
-			}
+				return Physics.Raycast (transform.position, -Vector3.up, 0, layerMask);//return Physics.CheckCapsule (transform.position + new Vector3 (0f, _collider.bounds.size.y, 0f), transform.position + new Vector3 (0f, _collider.bounds.size.y / 4f, 0f), _collider.bounds.size.x / 2f); //return Physics.CheckCapsule (transform.position + new Vector3 (0f, _collider.bounds.size.y, 0f), transform.position + new Vector3 (0f, _collider.bounds.size.x / 4f, 0f), _collider.bounds.size.x / 2f);
+			}*/
+
+
 			ACDebug.Log ("Player has no Collider component");
 			return false;
 
@@ -266,7 +283,6 @@ namespace AC
 			{
 				if (_rigidbody != null)
 				{
-					print ("hi4");
 					_rigidbody.velocity = new Vector3 (0f, KickStarter.settingsManager.jumpSpeed, 0f);
 					isDoubleJump = true;
 				}
@@ -280,7 +296,6 @@ namespace AC
 			}
 			if (isJumping)
 			{
-				print ("hi2");
 				return;
 			}
 			
