@@ -200,26 +200,28 @@ namespace AC
 			/*if (_rigidbody != null && Physics.Raycast (transform.position, -Vector3.up, 0f, layerMask))
 			{ 
 				return true;
-			}
+			}*/
 
-			if (_rigidbody != null && Mathf.Abs (_rigidbody.velocity.y) > 0.1f)
+			/*if (_rigidbody != null && Mathf.Abs (_rigidbody.velocity.y) > 0.1f)
 			{
 				return false;
 			}*/
+			/*
 			if (Physics.Raycast (transform.position, -Vector3.up, 0.1f, layerMask) == true)
 			{
 				return true;
-			}
-			if (Physics.Raycast (transform.position, -Vector3.up, 0.1f, layerMask) == false)
+			}*/
+
+			if (_rigidbody != null && Physics.Raycast (transform.position, -Vector3.up, 0.1f, layerMask) == false)
 			{
+				isJumping = true;
 				return false;
 			}
 
-
-			/*if (_collider != null)
+			if (_collider != null)
 			{
-				return Physics.Raycast (transform.position, -Vector3.up, 0, layerMask);//return Physics.CheckCapsule (transform.position + new Vector3 (0f, _collider.bounds.size.y, 0f), transform.position + new Vector3 (0f, _collider.bounds.size.y / 4f, 0f), _collider.bounds.size.x / 2f); //return Physics.CheckCapsule (transform.position + new Vector3 (0f, _collider.bounds.size.y, 0f), transform.position + new Vector3 (0f, _collider.bounds.size.x / 4f, 0f), _collider.bounds.size.x / 2f);
-			}*/
+				return Physics.CheckCapsule (transform.position + new Vector3 (0f, _collider.bounds.size.y, 0f), transform.position + new Vector3 (0f, _collider.bounds.size.y / 4f, 0f), _collider.bounds.size.x / 2f); //return Physics.CheckCapsule (transform.position + new Vector3 (0f, _collider.bounds.size.y, 0f), transform.position + new Vector3 (0f, _collider.bounds.size.x / 4f, 0f), _collider.bounds.size.x / 2f);
+			}
 
 
 			ACDebug.Log ("Player has no Collider component");

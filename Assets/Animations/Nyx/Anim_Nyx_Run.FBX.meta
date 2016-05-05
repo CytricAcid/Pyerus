@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 8f8a1b5d22df5e74b98727837b79419c
-timeCreated: 1462300363
+guid: 0933e861dbfc2be4da67627648c86d33
+timeCreated: 1462471136
 licenseType: Pro
 ModelImporter:
   serializedVersion: 18
@@ -111,9 +111,6 @@ ModelImporter:
     100206: NyxRigTailFloof2_1
     100208: NyxRigTailFloof2_2
     100210: NyxRigTailFloof3
-    100212: NyxRigBase
-    100214: Nyx
-    100216: Plane001
     400000: //RootNode
     400002: NyxRigChestFloofL1
     400004: NyxRigChestFloofL2
@@ -220,16 +217,8 @@ ModelImporter:
     400206: NyxRigTailFloof2_1
     400208: NyxRigTailFloof2_2
     400210: NyxRigTailFloof3
-    400212: NyxRigBase
-    400214: Nyx
-    400216: Plane001
-    2300000: Plane001
-    3300000: Plane001
-    4300000: Nyx
-    4300002: Plane001
-    7400000: Anim_Nyx_Idle
+    7400000: Anim_Nyx_Run
     9500000: //RootNode
-    13700000: Nyx
   materials:
     importMaterials: 1
     materialName: 0
@@ -243,7 +232,7 @@ ModelImporter:
     animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
-    animationCompression: 0
+    animationCompression: 1
     animationRotationError: .5
     animationPositionError: .5
     animationScaleError: .5
@@ -251,10 +240,10 @@ ModelImporter:
     extraExposedTransformPaths: []
     clipAnimations:
     - serializedVersion: 16
-      name: Anim_Nyx_Idle
+      name: Anim_Nyx_Run
       takeName: Take 001
       firstFrame: 0
-      lastFrame: 60
+      lastFrame: 30
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
