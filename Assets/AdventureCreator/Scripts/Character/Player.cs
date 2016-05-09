@@ -29,6 +29,8 @@ namespace AC
 		public AnimationClip jumpAnim;
 		/** The name of the "Jump" boolean parameter, if using Mecanim animation */
 		public string jumpParameter = "Jump";
+		public string djumpParameter = "DJump";
+
 
 		/** A unique identifier */
 		public int ID;
@@ -287,6 +289,7 @@ namespace AC
 				{
 					_rigidbody.velocity = new Vector3 (0f, KickStarter.settingsManager.jumpSpeed, 0f);
 					isDoubleJump = true;
+					GetAnimEngine ().PlayDJump ();
 				}
 				else
 				{
@@ -306,6 +309,7 @@ namespace AC
 				if (_rigidbody != null)
 				{
 					_rigidbody.velocity = new Vector3 (0f, KickStarter.settingsManager.jumpSpeed, 0f);
+					GetAnimEngine ().PlayJump ();
 					isJumping = true;
 					isDoubleJump = false;
 

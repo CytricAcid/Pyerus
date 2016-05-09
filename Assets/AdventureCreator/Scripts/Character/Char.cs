@@ -718,13 +718,13 @@ namespace AC
 				ProcessLipSync ();
 			}
 			
-			if (isJumping)
+			/*if (isJumping)
 			{
 				animEngine.PlayJump ();
 				StopStandardAudio ();
 			}
 			else
-			{
+			{*/
 				if (charState == CharState.Idle || charState == CharState.Decelerate)
 				{
 					if (IsTurning ())
@@ -771,7 +771,7 @@ namespace AC
 				}
 				
 				animEngine.PlayVertical ();
-			}
+		
 		}
 		
 		

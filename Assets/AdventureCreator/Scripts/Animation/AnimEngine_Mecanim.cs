@@ -86,6 +86,7 @@ namespace AC
 			{
 				Player player = (Player) character;
 				player.jumpParameter = EditorGUILayout.TextField ("Jump bool:", player.jumpParameter);
+				player.djumpParameter = EditorGUILayout.TextField ("DJump bool:", player.djumpParameter);
 			}
 			character.talkingAnimation = TalkingAnimation.Standard;
 
@@ -770,6 +771,29 @@ namespace AC
 					character.GetAnimator ().SetBool (player.jumpParameter, true);
 				}
 
+				if (character.talkParameter != "")
+				{
+					character.GetAnimator ().SetBool (character.talkParameter, false);
+				}
+			}
+		}
+
+		public override void PlayDJump ()
+		{
+			if (character.GetAnimator () == null)
+			{
+				return;
+			}
+			
+			if (character is Player)
+			{
+				Player player = (Player) character;
+				
+				if (player.djumpParameter != "")
+				{
+					character.GetAnimator ().SetBool (player.djumpParameter, true);
+				}
+				
 				if (character.talkParameter != "")
 				{
 					character.GetAnimator ().SetBool (character.talkParameter, false);

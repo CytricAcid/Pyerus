@@ -164,6 +164,10 @@ namespace AC
 			PlayIdle ();
 		}
 
+		public virtual void PlayDJump ()
+		{ 
+			PlayIdle ();
+		}
 		/**
 		 * Plays the character's 'Spot-turn left' animation.
 		 */
