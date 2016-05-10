@@ -168,6 +168,7 @@ namespace AC
 			{
 				isJumping = false;
 				isDoubleJump = false;
+				//_rigidbody.AddForce(Vector3.up*50f); //FIGURE THIS DAMN THING OUT
 			}
 
 
