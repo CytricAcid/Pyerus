@@ -473,6 +473,10 @@ namespace AC
 		{
 			MoveRigidbody ();
 			DoTurn (true);
+			if(KickStarter.player.GetComponent<Player> ().isGliding == true)
+			{
+				_rigidbody.velocity = (transform.forward * 200f * Time.deltaTime)+(-Vector3.up * 20f * Time.deltaTime);
+			}
 		}
 
 

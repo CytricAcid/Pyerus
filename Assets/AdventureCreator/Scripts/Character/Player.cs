@@ -38,6 +38,7 @@ namespace AC
 		public DetectHotspots hotspotDetector;
 
 		public bool isDoubleJump;
+		public bool isGliding;
 		public float distToGround = 0.413f;
 
 		private bool lockedPath;
@@ -161,6 +162,9 @@ namespace AC
 				{
 					isJumping = false;
 					isDoubleJump = false;
+					isGliding = false;
+					//KickStarter.settingsManager.directMovementType = DirectMovementType.RelativeToCamera;
+					turnSpeed = 50f;
 				}
 			}
 
@@ -168,7 +172,7 @@ namespace AC
 			{
 				isJumping = false;
 				isDoubleJump = false;
-				//_rigidbody.AddForce(Vector3.up*50f); //FIGURE THIS DAMN THING OUT
+
 			}
 
 
@@ -194,6 +198,7 @@ namespace AC
 		{
 			var layerMask = (1 << 9);
 			layerMask = ~layerMask;
+			RaycastHit hit;
 
 			if (_characterController != null)
 			{
@@ -216,6 +221,7 @@ namespace AC
 			}*/
 
 			if (_rigidbody != null && Physics.Raycast (transform.position, -Vector3.up, 0.1f, layerMask) == false)
+			//if (_rigidbody != null && Physics.SphereCast (transform.position, 0.15f, -Vector3.up, out hit, 0.1f, layerMask) == false)
 			{
 				isJumping = true;
 				return false;
@@ -231,6 +237,8 @@ namespace AC
 			return false;
 
 		}
+
+
 
 
 		/**
@@ -279,6 +287,30 @@ namespace AC
 		 */
 		public void Jump ()
 		{
+
+			if (isGliding)
+			{
+				isGliding = false;
+			}
+			
+			if (isDoubleJump == true && isGliding == false && activePath == null)
+			{
+				if (_rigidbody != null)
+				{
+					turnSpeed = 3f;
+					//KickStarter.settingsManager.directMovementType = DirectMovementType.TankControls;
+					isGliding = true; //find a way to make Pyerus use tank controls while gliding
+				}
+				else
+				{
+					if (motionControl == MotionControl.Automatic)
+					{
+						ACDebug.Log ("Player cannot jump without a Rigidbody component.");
+					}
+				}
+			}
+
+
 			if (isDoubleJump)
 			{
 				return;
@@ -300,6 +332,8 @@ namespace AC
 					}
 				}
 			}
+
+
 			if (isJumping)
 			{
 				return;
@@ -433,10 +467,16 @@ namespace AC
 			{
 				if (this is Player && KickStarter.settingsManager.magnitudeAffectsDirect && KickStarter.settingsManager.movementMethod == MovementMethod.Direct && KickStarter.stateHandler.gameState == GameState.Normal && !IsMovingToHotspot ())
 				{
-					targetSpeed -= (1f - KickStarter.playerInput.GetMoveKeys ().magnitude) / 2f;
+						targetSpeed -= (1f - KickStarter.playerInput.GetMoveKeys ().magnitude) / 2f;
 				}
-
-				moveSpeed = Mathf.Lerp (moveSpeed, targetSpeed, Time.deltaTime * acceleration);
+				if (isGliding == false)
+				{
+					moveSpeed = Mathf.Lerp (moveSpeed, targetSpeed, Time.deltaTime * acceleration);
+				}
+				else
+				{
+					moveSpeed = 0f;
+				}
 			}
 		}
 		
