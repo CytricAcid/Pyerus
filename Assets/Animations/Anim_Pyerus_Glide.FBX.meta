@@ -1,0 +1,487 @@
+fileFormatVersion: 2
+guid: bec4ebf212549f147849a9f9e6c3cb8f
+timeCreated: 1463091428
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: PyerusRigChestFloof
+    100004: PyerusRigChestFloof2
+    100006: PyerusRigCrest1_1
+    100008: PyerusRigCrest1_2
+    100010: PyerusRigCrest2_1
+    100012: PyerusRigCrest2_2
+    100014: PyerusRigCrest3_1
+    100016: PyerusRigCrest3_2
+    100018: PyerusRigCrest4_1
+    100020: PyerusRigCrest4_2
+    100022: PyerusRigEyelashL
+    100024: PyerusRigEyelashR
+    100026: PyerusRigHead
+    100028: PyerusRigJaw
+    100030: PyerusRigLArm1
+    100032: PyerusRigLArm2
+    100034: PyerusRigLArmDigit11
+    100036: PyerusRigLArmDigit12
+    100038: PyerusRigLArmDigit13
+    100040: PyerusRigLArmDigit21
+    100042: PyerusRigLArmDigit22
+    100044: PyerusRigLArmDigit23
+    100046: PyerusRigLArmDigit31
+    100048: PyerusRigLArmDigit32
+    100050: PyerusRigLArmDigit33
+    100052: PyerusRigLArmIKTarget
+    100054: PyerusRigLArmPalm
+    100056: PyerusRigLLeg1
+    100058: PyerusRigLLeg2
+    100060: PyerusRigLLeg3
+    100062: PyerusRigLLegAnkle
+    100064: PyerusRigLLegDigit11
+    100066: PyerusRigLLegDigit12
+    100068: PyerusRigLLegDigit21
+    100070: PyerusRigLLegDigit22
+    100072: PyerusRigLLegDigit31
+    100074: PyerusRigLLegDigit32
+    100076: PyerusRigLLegPlatform
+    100078: PyerusRigNeck
+    100080: PyerusRigNeckSpine1
+    100082: PyerusRigNeckSpine2
+    100084: PyerusRigNeckSpine3
+    100086: PyerusRigPelvis
+    100088: PyerusRigRArm1
+    100090: PyerusRigRArm2
+    100092: PyerusRigRArmDigit11
+    100094: PyerusRigRArmDigit12
+    100096: PyerusRigRArmDigit13
+    100098: PyerusRigRArmDigit21
+    100100: PyerusRigRArmDigit22
+    100102: PyerusRigRArmDigit23
+    100104: PyerusRigRArmDigit31
+    100106: PyerusRigRArmDigit32
+    100108: PyerusRigRArmDigit33
+    100110: PyerusRigRArmIKTarget
+    100112: PyerusRigRArmPalm
+    100114: PyerusRigRibCage
+    100116: PyerusRigRLeg1
+    100118: PyerusRigRLeg2
+    100120: PyerusRigRLeg3
+    100122: PyerusRigRLegAnkle
+    100124: PyerusRigRLegDigit11
+    100126: PyerusRigRLegDigit12
+    100128: PyerusRigRLegDigit21
+    100130: PyerusRigRLegDigit22
+    100132: PyerusRigRLegDigit31
+    100134: PyerusRigRLegDigit32
+    100136: PyerusRigRLegPlatform
+    100138: PyerusRigSpine1
+    100140: PyerusRigSpine2
+    100142: PyerusRigTail1
+    100144: PyerusRigTail10
+    100146: PyerusRigTail2
+    100148: PyerusRigTail3
+    100150: PyerusRigTail4
+    100152: PyerusRigTail5
+    100154: PyerusRigTail6
+    100156: PyerusRigTail7
+    100158: PyerusRigTail8
+    100160: PyerusRigTail9
+    100162: PyerusRigTailFloof1_1
+    100164: PyerusRigTailFloof1_2
+    100166: PyerusRigTailFloof2_1
+    100168: PyerusRigTailFloof2_2
+    100170: PyerusRigTailFloof3_1
+    100172: PyerusRigTailFloof3_2
+    100174: PyerusRigTailFloof4_1
+    100176: PyerusRigTailFloof4_2
+    100178: PyerusRigTailFloof5_1
+    100180: PyerusRigTailFloof5_2
+    100182: PyerusRigTailFloof6_1
+    100184: PyerusRigTailFloof6_2
+    100186: PyerusRigTailFloof7_1
+    100188: PyerusRigTailFloof7_2
+    100190: PyerusRigTailFloof8_1
+    100192: PyerusRigTailFloof8_2
+    400000: //RootNode
+    400002: PyerusRigChestFloof
+    400004: PyerusRigChestFloof2
+    400006: PyerusRigCrest1_1
+    400008: PyerusRigCrest1_2
+    400010: PyerusRigCrest2_1
+    400012: PyerusRigCrest2_2
+    400014: PyerusRigCrest3_1
+    400016: PyerusRigCrest3_2
+    400018: PyerusRigCrest4_1
+    400020: PyerusRigCrest4_2
+    400022: PyerusRigEyelashL
+    400024: PyerusRigEyelashR
+    400026: PyerusRigHead
+    400028: PyerusRigJaw
+    400030: PyerusRigLArm1
+    400032: PyerusRigLArm2
+    400034: PyerusRigLArmDigit11
+    400036: PyerusRigLArmDigit12
+    400038: PyerusRigLArmDigit13
+    400040: PyerusRigLArmDigit21
+    400042: PyerusRigLArmDigit22
+    400044: PyerusRigLArmDigit23
+    400046: PyerusRigLArmDigit31
+    400048: PyerusRigLArmDigit32
+    400050: PyerusRigLArmDigit33
+    400052: PyerusRigLArmIKTarget
+    400054: PyerusRigLArmPalm
+    400056: PyerusRigLLeg1
+    400058: PyerusRigLLeg2
+    400060: PyerusRigLLeg3
+    400062: PyerusRigLLegAnkle
+    400064: PyerusRigLLegDigit11
+    400066: PyerusRigLLegDigit12
+    400068: PyerusRigLLegDigit21
+    400070: PyerusRigLLegDigit22
+    400072: PyerusRigLLegDigit31
+    400074: PyerusRigLLegDigit32
+    400076: PyerusRigLLegPlatform
+    400078: PyerusRigNeck
+    400080: PyerusRigNeckSpine1
+    400082: PyerusRigNeckSpine2
+    400084: PyerusRigNeckSpine3
+    400086: PyerusRigPelvis
+    400088: PyerusRigRArm1
+    400090: PyerusRigRArm2
+    400092: PyerusRigRArmDigit11
+    400094: PyerusRigRArmDigit12
+    400096: PyerusRigRArmDigit13
+    400098: PyerusRigRArmDigit21
+    400100: PyerusRigRArmDigit22
+    400102: PyerusRigRArmDigit23
+    400104: PyerusRigRArmDigit31
+    400106: PyerusRigRArmDigit32
+    400108: PyerusRigRArmDigit33
+    400110: PyerusRigRArmIKTarget
+    400112: PyerusRigRArmPalm
+    400114: PyerusRigRibCage
+    400116: PyerusRigRLeg1
+    400118: PyerusRigRLeg2
+    400120: PyerusRigRLeg3
+    400122: PyerusRigRLegAnkle
+    400124: PyerusRigRLegDigit11
+    400126: PyerusRigRLegDigit12
+    400128: PyerusRigRLegDigit21
+    400130: PyerusRigRLegDigit22
+    400132: PyerusRigRLegDigit31
+    400134: PyerusRigRLegDigit32
+    400136: PyerusRigRLegPlatform
+    400138: PyerusRigSpine1
+    400140: PyerusRigSpine2
+    400142: PyerusRigTail1
+    400144: PyerusRigTail10
+    400146: PyerusRigTail2
+    400148: PyerusRigTail3
+    400150: PyerusRigTail4
+    400152: PyerusRigTail5
+    400154: PyerusRigTail6
+    400156: PyerusRigTail7
+    400158: PyerusRigTail8
+    400160: PyerusRigTail9
+    400162: PyerusRigTailFloof1_1
+    400164: PyerusRigTailFloof1_2
+    400166: PyerusRigTailFloof2_1
+    400168: PyerusRigTailFloof2_2
+    400170: PyerusRigTailFloof3_1
+    400172: PyerusRigTailFloof3_2
+    400174: PyerusRigTailFloof4_1
+    400176: PyerusRigTailFloof4_2
+    400178: PyerusRigTailFloof5_1
+    400180: PyerusRigTailFloof5_2
+    400182: PyerusRigTailFloof6_1
+    400184: PyerusRigTailFloof6_2
+    400186: PyerusRigTailFloof7_1
+    400188: PyerusRigTailFloof7_2
+    400190: PyerusRigTailFloof8_1
+    400192: PyerusRigTailFloof8_2
+    7400000: Anim_Pyerus_Glide
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Anim_Pyerus_Glide
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 19
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: PyerusRigLArmIKTarget
+        weight: 1
+      - path: PyerusRigLLegPlatform
+        weight: 1
+      - path: PyerusRigPelvis
+        weight: 1
+      - path: PyerusRigPelvis/PyerusRigLLeg1
+        weight: 1
+      - path: PyerusRigPelvis/PyerusRigLLeg1/PyerusRigLLeg2
+        weight: 1
+      - path: PyerusRigPelvis/PyerusRigLLeg1/PyerusRigLLeg2/PyerusRigLLeg3
+        weight: 1
+      - path: PyerusRigPelvis/PyerusRigLLeg1/PyerusRigLLeg2/PyerusRigLLeg3/PyerusRigLLegAnkle
+        weight: 1
+      - path: PyerusRigPelvis/PyerusRigLLeg1/PyerusRigLLeg2/PyerusRigLLeg3/PyerusRigLLegAnkle/PyerusRigLLegDigit11
+        weight: 1
+      - path: PyerusRigPelvis/PyerusRigLLeg1/PyerusRigLLeg2/PyerusRigLLeg3/PyerusRigLLegAnkle/PyerusRigLLegDigit11/PyerusRigLLegDigit12
+        weight: 1
+      - path: PyerusRigPelvis/PyerusRigLLeg1/PyerusRigLLeg2/PyerusRigLLeg3/PyerusRigLLegAnkle/PyerusRigLLegDigit21
+        weight: 1
+      - path: PyerusRigPelvis/PyerusRigLLeg1/PyerusRigLLeg2/PyerusRigLLeg3/PyerusRigLLegAnkle/PyerusRigLLegDigit21/PyerusRigLLegDigit22
+        weight: 1
+      - path: PyerusRigPelvis/PyerusRigLLeg1/PyerusRigLLeg2/PyerusRigLLeg3/PyerusRigLLegAnkle/PyerusRigLLegDigit31
+        weight: 1
+      - path: PyerusRigPelvis/PyerusRigLLeg1/PyerusRigLLeg2/PyerusRigLLeg3/PyerusRigLLegAnkle/PyerusRigLLegDigit31/PyerusRigLLegDigit32
+        weight: 1
+      - path: PyerusRigPelvis/PyerusRigRLeg1
+        weight: 1
+      - path: PyerusRigPelvis/PyerusRigRLeg1/PyerusRigRLeg2
+        weight: 1
+      - path: PyerusRigPelvis/PyerusRigRLeg1/PyerusRigRLeg2/PyerusRigRLeg3
+        weight: 1
+      - path: PyerusRigPelvis/PyerusRigRLeg1/PyerusRigRLeg2/PyerusRigRLeg3/PyerusRigRLegAnkle
+        weight: 1
+      - path: PyerusRigPelvis/PyerusRigRLeg1/PyerusRigRLeg2/PyerusRigRLeg3/PyerusRigRLegAnkle/PyerusRigRLegDigit11
+        weight: 1
+      - path: PyerusRigPelvis/PyerusRigRLeg1/PyerusRigRLeg2/PyerusRigRLeg3/PyerusRigRLegAnkle/PyerusRigRLegDigit11/PyerusRigRLegDigit12
+        weight: 1
+      - path: PyerusRigPelvis/PyerusRigRLeg1/PyerusRigRLeg2/PyerusRigRLeg3/PyerusRigRLegAnkle/PyerusRigRLegDigit21
+        weight: 1
+      - path: PyerusRigPelvis/PyerusRigRLeg1/PyerusRigRLeg2/PyerusRigRLeg3/PyerusRigRLegAnkle/PyerusRigRLegDigit21/PyerusRigRLegDigit22
+        weight: 1
+      - path: PyerusRigPelvis/PyerusRigRLeg1/PyerusRigRLeg2/PyerusRigRLeg3/PyerusRigRLegAnkle/PyerusRigRLegDigit31
+        weight: 1
+      - path: PyerusRigPelvis/PyerusRigRLeg1/PyerusRigRLeg2/PyerusRigRLeg3/PyerusRigRLegAnkle/PyerusRigRLegDigit31/PyerusRigRLegDigit32
+        weight: 1
+      - path: PyerusRigPelvis/PyerusRigSpine1
+        weight: 1
+      - path: PyerusRigPelvis/PyerusRigSpine1/PyerusRigSpine2
+        weight: 1
+      - path: PyerusRigPelvis/PyerusRigSpine1/PyerusRigSpine2/PyerusRigRibCage
+        weight: 1
+      - path: PyerusRigPelvis/PyerusRigSpine1/PyerusRigSpine2/PyerusRigRibCage/PyerusRigChestFloof
+        weight: 1
+      - path: PyerusRigPelvis/PyerusRigSpine1/PyerusRigSpine2/PyerusRigRibCage/PyerusRigChestFloof/PyerusRigChestFloof2
+        weight: 1
+      - path: PyerusRigPelvis/PyerusRigSpine1/PyerusRigSpine2/PyerusRigRibCage/PyerusRigLArm1
+        weight: 1
+      - path: PyerusRigPelvis/PyerusRigSpine1/PyerusRigSpine2/PyerusRigRibCage/PyerusRigLArm1/PyerusRigLArm2
+        weight: 1
+      - path: PyerusRigPelvis/PyerusRigSpine1/PyerusRigSpine2/PyerusRigRibCage/PyerusRigLArm1/PyerusRigLArm2/PyerusRigLArmPalm
+        weight: 1
+      - path: PyerusRigPelvis/PyerusRigSpine1/PyerusRigSpine2/PyerusRigRibCage/PyerusRigLArm1/PyerusRigLArm2/PyerusRigLArmPalm/PyerusRigLArmDigit11
+        weight: 1
+      - path: PyerusRigPelvis/PyerusRigSpine1/PyerusRigSpine2/PyerusRigRibCage/PyerusRigLArm1/PyerusRigLArm2/PyerusRigLArmPalm/PyerusRigLArmDigit11/PyerusRigLArmDigit12
+        weight: 1
+      - path: PyerusRigPelvis/PyerusRigSpine1/PyerusRigSpine2/PyerusRigRibCage/PyerusRigLArm1/PyerusRigLArm2/PyerusRigLArmPalm/PyerusRigLArmDigit11/PyerusRigLArmDigit12/PyerusRigLArmDigit13
+        weight: 1
+      - path: PyerusRigPelvis/PyerusRigSpine1/PyerusRigSpine2/PyerusRigRibCage/PyerusRigLArm1/PyerusRigLArm2/PyerusRigLArmPalm/PyerusRigLArmDigit21
+        weight: 1
+      - path: PyerusRigPelvis/PyerusRigSpine1/PyerusRigSpine2/PyerusRigRibCage/PyerusRigLArm1/PyerusRigLArm2/PyerusRigLArmPalm/PyerusRigLArmDigit21/PyerusRigLArmDigit22
+        weight: 1
+      - path: PyerusRigPelvis/PyerusRigSpine1/PyerusRigSpine2/PyerusRigRibCage/PyerusRigLArm1/PyerusRigLArm2/PyerusRigLArmPalm/PyerusRigLArmDigit21/PyerusRigLArmDigit22/PyerusRigLArmDigit23
+        weight: 1
+      - path: PyerusRigPelvis/PyerusRigSpine1/PyerusRigSpine2/PyerusRigRibCage/PyerusRigLArm1/PyerusRigLArm2/PyerusRigLArmPalm/PyerusRigLArmDigit31
+        weight: 1
+      - path: PyerusRigPelvis/PyerusRigSpine1/PyerusRigSpine2/PyerusRigRibCage/PyerusRigLArm1/PyerusRigLArm2/PyerusRigLArmPalm/PyerusRigLArmDigit31/PyerusRigLArmDigit32
+        weight: 1
+      - path: PyerusRigPelvis/PyerusRigSpine1/PyerusRigSpine2/PyerusRigRibCage/PyerusRigLArm1/PyerusRigLArm2/PyerusRigLArmPalm/PyerusRigLArmDigit31/PyerusRigLArmDigit32/PyerusRigLArmDigit33
+        weight: 1
+      - path: PyerusRigPelvis/PyerusRigSpine1/PyerusRigSpine2/PyerusRigRibCage/PyerusRigNeckSpine1
+        weight: 1
+      - path: PyerusRigPelvis/PyerusRigSpine1/PyerusRigSpine2/PyerusRigRibCage/PyerusRigNeckSpine1/PyerusRigNeckSpine2
+        weight: 1
+      - path: PyerusRigPelvis/PyerusRigSpine1/PyerusRigSpine2/PyerusRigRibCage/PyerusRigNeckSpine1/PyerusRigNeckSpine2/PyerusRigNeckSpine3
+        weight: 1
+      - path: PyerusRigPelvis/PyerusRigSpine1/PyerusRigSpine2/PyerusRigRibCage/PyerusRigNeckSpine1/PyerusRigNeckSpine2/PyerusRigNeckSpine3/PyerusRigNeck
+        weight: 1
+      - path: PyerusRigPelvis/PyerusRigSpine1/PyerusRigSpine2/PyerusRigRibCage/PyerusRigNeckSpine1/PyerusRigNeckSpine2/PyerusRigNeckSpine3/PyerusRigNeck/PyerusRigHead
+        weight: 1
+      - path: PyerusRigPelvis/PyerusRigSpine1/PyerusRigSpine2/PyerusRigRibCage/PyerusRigNeckSpine1/PyerusRigNeckSpine2/PyerusRigNeckSpine3/PyerusRigNeck/PyerusRigHead/PyerusRigCrest1_1
+        weight: 1
+      - path: PyerusRigPelvis/PyerusRigSpine1/PyerusRigSpine2/PyerusRigRibCage/PyerusRigNeckSpine1/PyerusRigNeckSpine2/PyerusRigNeckSpine3/PyerusRigNeck/PyerusRigHead/PyerusRigCrest1_1/PyerusRigCrest1_2
+        weight: 1
+      - path: PyerusRigPelvis/PyerusRigSpine1/PyerusRigSpine2/PyerusRigRibCage/PyerusRigNeckSpine1/PyerusRigNeckSpine2/PyerusRigNeckSpine3/PyerusRigNeck/PyerusRigHead/PyerusRigCrest2_1
+        weight: 1
+      - path: PyerusRigPelvis/PyerusRigSpine1/PyerusRigSpine2/PyerusRigRibCage/PyerusRigNeckSpine1/PyerusRigNeckSpine2/PyerusRigNeckSpine3/PyerusRigNeck/PyerusRigHead/PyerusRigCrest2_1/PyerusRigCrest2_2
+        weight: 1
+      - path: PyerusRigPelvis/PyerusRigSpine1/PyerusRigSpine2/PyerusRigRibCage/PyerusRigNeckSpine1/PyerusRigNeckSpine2/PyerusRigNeckSpine3/PyerusRigNeck/PyerusRigHead/PyerusRigCrest3_1
+        weight: 1
+      - path: PyerusRigPelvis/PyerusRigSpine1/PyerusRigSpine2/PyerusRigRibCage/PyerusRigNeckSpine1/PyerusRigNeckSpine2/PyerusRigNeckSpine3/PyerusRigNeck/PyerusRigHead/PyerusRigCrest3_1/PyerusRigCrest3_2
+        weight: 1
+      - path: PyerusRigPelvis/PyerusRigSpine1/PyerusRigSpine2/PyerusRigRibCage/PyerusRigNeckSpine1/PyerusRigNeckSpine2/PyerusRigNeckSpine3/PyerusRigNeck/PyerusRigHead/PyerusRigCrest4_1
+        weight: 1
+      - path: PyerusRigPelvis/PyerusRigSpine1/PyerusRigSpine2/PyerusRigRibCage/PyerusRigNeckSpine1/PyerusRigNeckSpine2/PyerusRigNeckSpine3/PyerusRigNeck/PyerusRigHead/PyerusRigCrest4_1/PyerusRigCrest4_2
+        weight: 1
+      - path: PyerusRigPelvis/PyerusRigSpine1/PyerusRigSpine2/PyerusRigRibCage/PyerusRigNeckSpine1/PyerusRigNeckSpine2/PyerusRigNeckSpine3/PyerusRigNeck/PyerusRigHead/PyerusRigEyelashL
+        weight: 1
+      - path: PyerusRigPelvis/PyerusRigSpine1/PyerusRigSpine2/PyerusRigRibCage/PyerusRigNeckSpine1/PyerusRigNeckSpine2/PyerusRigNeckSpine3/PyerusRigNeck/PyerusRigHead/PyerusRigEyelashR
+        weight: 1
+      - path: PyerusRigPelvis/PyerusRigSpine1/PyerusRigSpine2/PyerusRigRibCage/PyerusRigNeckSpine1/PyerusRigNeckSpine2/PyerusRigNeckSpine3/PyerusRigNeck/PyerusRigHead/PyerusRigJaw
+        weight: 1
+      - path: PyerusRigPelvis/PyerusRigSpine1/PyerusRigSpine2/PyerusRigRibCage/PyerusRigRArm1
+        weight: 1
+      - path: PyerusRigPelvis/PyerusRigSpine1/PyerusRigSpine2/PyerusRigRibCage/PyerusRigRArm1/PyerusRigRArm2
+        weight: 1
+      - path: PyerusRigPelvis/PyerusRigSpine1/PyerusRigSpine2/PyerusRigRibCage/PyerusRigRArm1/PyerusRigRArm2/PyerusRigRArmPalm
+        weight: 1
+      - path: PyerusRigPelvis/PyerusRigSpine1/PyerusRigSpine2/PyerusRigRibCage/PyerusRigRArm1/PyerusRigRArm2/PyerusRigRArmPalm/PyerusRigRArmDigit11
+        weight: 1
+      - path: PyerusRigPelvis/PyerusRigSpine1/PyerusRigSpine2/PyerusRigRibCage/PyerusRigRArm1/PyerusRigRArm2/PyerusRigRArmPalm/PyerusRigRArmDigit11/PyerusRigRArmDigit12
+        weight: 1
+      - path: PyerusRigPelvis/PyerusRigSpine1/PyerusRigSpine2/PyerusRigRibCage/PyerusRigRArm1/PyerusRigRArm2/PyerusRigRArmPalm/PyerusRigRArmDigit11/PyerusRigRArmDigit12/PyerusRigRArmDigit13
+        weight: 1
+      - path: PyerusRigPelvis/PyerusRigSpine1/PyerusRigSpine2/PyerusRigRibCage/PyerusRigRArm1/PyerusRigRArm2/PyerusRigRArmPalm/PyerusRigRArmDigit21
+        weight: 1
+      - path: PyerusRigPelvis/PyerusRigSpine1/PyerusRigSpine2/PyerusRigRibCage/PyerusRigRArm1/PyerusRigRArm2/PyerusRigRArmPalm/PyerusRigRArmDigit21/PyerusRigRArmDigit22
+        weight: 1
+      - path: PyerusRigPelvis/PyerusRigSpine1/PyerusRigSpine2/PyerusRigRibCage/PyerusRigRArm1/PyerusRigRArm2/PyerusRigRArmPalm/PyerusRigRArmDigit21/PyerusRigRArmDigit22/PyerusRigRArmDigit23
+        weight: 1
+      - path: PyerusRigPelvis/PyerusRigSpine1/PyerusRigSpine2/PyerusRigRibCage/PyerusRigRArm1/PyerusRigRArm2/PyerusRigRArmPalm/PyerusRigRArmDigit31
+        weight: 1
+      - path: PyerusRigPelvis/PyerusRigSpine1/PyerusRigSpine2/PyerusRigRibCage/PyerusRigRArm1/PyerusRigRArm2/PyerusRigRArmPalm/PyerusRigRArmDigit31/PyerusRigRArmDigit32
+        weight: 1
+      - path: PyerusRigPelvis/PyerusRigSpine1/PyerusRigSpine2/PyerusRigRibCage/PyerusRigRArm1/PyerusRigRArm2/PyerusRigRArmPalm/PyerusRigRArmDigit31/PyerusRigRArmDigit32/PyerusRigRArmDigit33
+        weight: 1
+      - path: PyerusRigPelvis/PyerusRigTail1
+        weight: 1
+      - path: PyerusRigPelvis/PyerusRigTail1/PyerusRigTail2
+        weight: 1
+      - path: PyerusRigPelvis/PyerusRigTail1/PyerusRigTail2/PyerusRigTail3
+        weight: 1
+      - path: PyerusRigPelvis/PyerusRigTail1/PyerusRigTail2/PyerusRigTail3/PyerusRigTail4
+        weight: 1
+      - path: PyerusRigPelvis/PyerusRigTail1/PyerusRigTail2/PyerusRigTail3/PyerusRigTail4/PyerusRigTail5
+        weight: 1
+      - path: PyerusRigPelvis/PyerusRigTail1/PyerusRigTail2/PyerusRigTail3/PyerusRigTail4/PyerusRigTail5/PyerusRigTail6
+        weight: 1
+      - path: PyerusRigPelvis/PyerusRigTail1/PyerusRigTail2/PyerusRigTail3/PyerusRigTail4/PyerusRigTail5/PyerusRigTail6/PyerusRigTail7
+        weight: 1
+      - path: PyerusRigPelvis/PyerusRigTail1/PyerusRigTail2/PyerusRigTail3/PyerusRigTail4/PyerusRigTail5/PyerusRigTail6/PyerusRigTail7/PyerusRigTail8
+        weight: 1
+      - path: PyerusRigPelvis/PyerusRigTail1/PyerusRigTail2/PyerusRigTail3/PyerusRigTail4/PyerusRigTail5/PyerusRigTail6/PyerusRigTail7/PyerusRigTail8/PyerusRigTail9
+        weight: 1
+      - path: PyerusRigPelvis/PyerusRigTail1/PyerusRigTail2/PyerusRigTail3/PyerusRigTail4/PyerusRigTail5/PyerusRigTail6/PyerusRigTail7/PyerusRigTail8/PyerusRigTail9/PyerusRigTail10
+        weight: 1
+      - path: PyerusRigPelvis/PyerusRigTail1/PyerusRigTail2/PyerusRigTail3/PyerusRigTail4/PyerusRigTail5/PyerusRigTail6/PyerusRigTail7/PyerusRigTail8/PyerusRigTail9/PyerusRigTail10/PyerusRigTailFloof1_1
+        weight: 1
+      - path: PyerusRigPelvis/PyerusRigTail1/PyerusRigTail2/PyerusRigTail3/PyerusRigTail4/PyerusRigTail5/PyerusRigTail6/PyerusRigTail7/PyerusRigTail8/PyerusRigTail9/PyerusRigTail10/PyerusRigTailFloof1_1/PyerusRigTailFloof1_2
+        weight: 1
+      - path: PyerusRigPelvis/PyerusRigTail1/PyerusRigTail2/PyerusRigTail3/PyerusRigTail4/PyerusRigTail5/PyerusRigTail6/PyerusRigTail7/PyerusRigTail8/PyerusRigTail9/PyerusRigTail10/PyerusRigTailFloof2_1
+        weight: 1
+      - path: PyerusRigPelvis/PyerusRigTail1/PyerusRigTail2/PyerusRigTail3/PyerusRigTail4/PyerusRigTail5/PyerusRigTail6/PyerusRigTail7/PyerusRigTail8/PyerusRigTail9/PyerusRigTail10/PyerusRigTailFloof2_1/PyerusRigTailFloof2_2
+        weight: 1
+      - path: PyerusRigPelvis/PyerusRigTail1/PyerusRigTail2/PyerusRigTail3/PyerusRigTail4/PyerusRigTail5/PyerusRigTail6/PyerusRigTail7/PyerusRigTail8/PyerusRigTail9/PyerusRigTail10/PyerusRigTailFloof3_1
+        weight: 1
+      - path: PyerusRigPelvis/PyerusRigTail1/PyerusRigTail2/PyerusRigTail3/PyerusRigTail4/PyerusRigTail5/PyerusRigTail6/PyerusRigTail7/PyerusRigTail8/PyerusRigTail9/PyerusRigTail10/PyerusRigTailFloof3_1/PyerusRigTailFloof3_2
+        weight: 1
+      - path: PyerusRigPelvis/PyerusRigTail1/PyerusRigTail2/PyerusRigTail3/PyerusRigTail4/PyerusRigTail5/PyerusRigTail6/PyerusRigTail7/PyerusRigTail8/PyerusRigTail9/PyerusRigTail10/PyerusRigTailFloof4_1
+        weight: 1
+      - path: PyerusRigPelvis/PyerusRigTail1/PyerusRigTail2/PyerusRigTail3/PyerusRigTail4/PyerusRigTail5/PyerusRigTail6/PyerusRigTail7/PyerusRigTail8/PyerusRigTail9/PyerusRigTail10/PyerusRigTailFloof4_1/PyerusRigTailFloof4_2
+        weight: 1
+      - path: PyerusRigPelvis/PyerusRigTail1/PyerusRigTail2/PyerusRigTail3/PyerusRigTail4/PyerusRigTail5/PyerusRigTail6/PyerusRigTail7/PyerusRigTail8/PyerusRigTail9/PyerusRigTail10/PyerusRigTailFloof5_1
+        weight: 1
+      - path: PyerusRigPelvis/PyerusRigTail1/PyerusRigTail2/PyerusRigTail3/PyerusRigTail4/PyerusRigTail5/PyerusRigTail6/PyerusRigTail7/PyerusRigTail8/PyerusRigTail9/PyerusRigTail10/PyerusRigTailFloof5_1/PyerusRigTailFloof5_2
+        weight: 1
+      - path: PyerusRigPelvis/PyerusRigTail1/PyerusRigTail2/PyerusRigTail3/PyerusRigTail4/PyerusRigTail5/PyerusRigTail6/PyerusRigTail7/PyerusRigTail8/PyerusRigTail9/PyerusRigTail10/PyerusRigTailFloof6_1
+        weight: 1
+      - path: PyerusRigPelvis/PyerusRigTail1/PyerusRigTail2/PyerusRigTail3/PyerusRigTail4/PyerusRigTail5/PyerusRigTail6/PyerusRigTail7/PyerusRigTail8/PyerusRigTail9/PyerusRigTail10/PyerusRigTailFloof6_1/PyerusRigTailFloof6_2
+        weight: 1
+      - path: PyerusRigPelvis/PyerusRigTail1/PyerusRigTail2/PyerusRigTail3/PyerusRigTail4/PyerusRigTail5/PyerusRigTail6/PyerusRigTail7/PyerusRigTail8/PyerusRigTail9/PyerusRigTail10/PyerusRigTailFloof7_1
+        weight: 1
+      - path: PyerusRigPelvis/PyerusRigTail1/PyerusRigTail2/PyerusRigTail3/PyerusRigTail4/PyerusRigTail5/PyerusRigTail6/PyerusRigTail7/PyerusRigTail8/PyerusRigTail9/PyerusRigTail10/PyerusRigTailFloof7_1/PyerusRigTailFloof7_2
+        weight: 1
+      - path: PyerusRigPelvis/PyerusRigTail1/PyerusRigTail2/PyerusRigTail3/PyerusRigTail4/PyerusRigTail5/PyerusRigTail6/PyerusRigTail7/PyerusRigTail8/PyerusRigTail9/PyerusRigTail10/PyerusRigTailFloof8_1
+        weight: 1
+      - path: PyerusRigPelvis/PyerusRigTail1/PyerusRigTail2/PyerusRigTail3/PyerusRigTail4/PyerusRigTail5/PyerusRigTail6/PyerusRigTail7/PyerusRigTail8/PyerusRigTail9/PyerusRigTail10/PyerusRigTailFloof8_1/PyerusRigTailFloof8_2
+        weight: 1
+      - path: PyerusRigRArmIKTarget
+        weight: 1
+      - path: PyerusRigRLegPlatform
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
