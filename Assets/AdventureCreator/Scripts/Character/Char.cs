@@ -475,7 +475,7 @@ namespace AC
 			DoTurn (true);
 			if(KickStarter.player.GetComponent<Player> ().isGliding == true)
 			{
-				_rigidbody.velocity = (transform.forward * 200f * Time.deltaTime)+(-Vector3.up * 20f * Time.deltaTime);
+				_rigidbody.velocity = (-Vector3.up * 20f * Time.deltaTime);
 			}
 		}
 
@@ -1022,7 +1022,7 @@ namespace AC
 		{
 			if (animEngine != null && animEngine.turningStyle == TurningStyle.Linear)
 			{
-				moveSpeed = Mathf.Lerp (moveSpeed, 0f, Time.deltaTime * GetDeceleration () * 3f);
+				moveSpeed = 0f;//Mathf.Lerp (moveSpeed, 0f, Time.deltaTime * GetDeceleration () * 3f);
 			}
 			else
 			{

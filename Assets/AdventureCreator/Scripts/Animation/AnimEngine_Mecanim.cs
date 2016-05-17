@@ -642,6 +642,8 @@ namespace AC
 				if (player.jumpParameter != "")
 				{
 					character.GetAnimator ().SetBool (player.jumpParameter, player.isJumping);
+					character.GetAnimator ().SetBool (player.djumpParameter, player.isDoubleJump);
+					character.GetAnimator ().SetBool (player.glideParameter, player.isGliding);
 				}
 			}
 		}
@@ -668,6 +670,8 @@ namespace AC
 				if (player.jumpParameter != "")
 				{
 					character.GetAnimator ().SetBool (player.jumpParameter, player.isJumping);
+					character.GetAnimator ().SetBool (player.djumpParameter, player.isDoubleJump);
+					character.GetAnimator ().SetBool (player.glideParameter, player.isGliding);
 				}
 			}
 		}
@@ -710,6 +714,8 @@ namespace AC
 				if (player.jumpParameter != "")
 				{
 					character.GetAnimator ().SetBool (player.jumpParameter, player.isJumping);
+					character.GetAnimator ().SetBool (player.djumpParameter, player.isDoubleJump);
+					character.GetAnimator ().SetBool (player.glideParameter, player.isGliding);
 				}
 			}
 		}
@@ -792,6 +798,29 @@ namespace AC
 				if (player.djumpParameter != "")
 				{
 					character.GetAnimator ().SetBool (player.djumpParameter, true);
+				}
+				
+				if (character.talkParameter != "")
+				{
+					character.GetAnimator ().SetBool (character.talkParameter, false);
+				}
+			}
+		}
+
+		public override void PlayGlide ()
+		{
+			if (character.GetAnimator () == null)
+			{
+				return;
+			}
+			
+			if (character is Player)
+			{
+				Player player = (Player) character;
+				
+				if (player.glideParameter != "")
+				{
+					character.GetAnimator ().SetBool (player.glideParameter, true);
 				}
 				
 				if (character.talkParameter != "")

@@ -30,6 +30,7 @@ namespace AC
 		/** The name of the "Jump" boolean parameter, if using Mecanim animation */
 		public string jumpParameter = "Jump";
 		public string djumpParameter = "DJump";
+		public string glideParameter = "Glide";
 
 
 		/** A unique identifier */
@@ -172,6 +173,8 @@ namespace AC
 			{
 				isJumping = false;
 				isDoubleJump = false;
+				isGliding = false;
+				turnSpeed = 50f;
 
 			}
 
@@ -288,32 +291,12 @@ namespace AC
 		public void Jump ()
 		{
 
-			if (isGliding)
-			{
-				isGliding = false;
-			}
-			
-			if (isDoubleJump == true && isGliding == false && activePath == null)
-			{
-				if (_rigidbody != null)
-				{
-					turnSpeed = 3f;
-					//KickStarter.settingsManager.directMovementType = DirectMovementType.TankControls;
-					isGliding = true; //find a way to make Pyerus use tank controls while gliding
-				}
-				else
-				{
-					if (motionControl == MotionControl.Automatic)
-					{
-						ACDebug.Log ("Player cannot jump without a Rigidbody component.");
-					}
-				}
-			}
-
 
 			if (isDoubleJump)
 			{
-				return;
+				GetAnimEngine ().PlayGlide ();
+				isGliding = true;
+				turnSpeed = 5f;
 			}
 			
 			if (isJumping && isDoubleJump == false && activePath == null)
@@ -344,7 +327,7 @@ namespace AC
 				if (_rigidbody != null)
 				{
 					_rigidbody.velocity = new Vector3 (0f, KickStarter.settingsManager.jumpSpeed, 0f);
-					GetAnimEngine ().PlayJump ();
+					//GetAnimEngine ().PlayJump ();
 					isJumping = true;
 					isDoubleJump = false;
 
@@ -360,6 +343,11 @@ namespace AC
 			}
 		}
 		
+
+		public void StopGlide ()
+		{
+		isGliding = false;
+		}
 
 		
 		private bool IsMovingToHotspot ()
@@ -469,13 +457,13 @@ namespace AC
 				{
 						targetSpeed -= (1f - KickStarter.playerInput.GetMoveKeys ().magnitude) / 2f;
 				}
-				if (isGliding == false)
+				if (isGliding == true)
 				{
-					moveSpeed = Mathf.Lerp (moveSpeed, targetSpeed, Time.deltaTime * acceleration);
+					moveSpeed = Mathf.Lerp (moveSpeed, targetSpeed * 1.5f, Time.deltaTime * acceleration);
 				}
 				else
 				{
-					moveSpeed = 0f;
+					moveSpeed = Mathf.Lerp (moveSpeed, targetSpeed, Time.deltaTime * acceleration);
 				}
 			}
 		}

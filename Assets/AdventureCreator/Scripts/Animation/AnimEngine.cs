@@ -168,6 +168,11 @@ namespace AC
 		{ 
 			PlayIdle ();
 		}
+
+		public virtual void PlayGlide ()
+		{ 
+			PlayIdle ();
+		}
 		/**
 		 * Plays the character's 'Spot-turn left' animation.
 		 */
