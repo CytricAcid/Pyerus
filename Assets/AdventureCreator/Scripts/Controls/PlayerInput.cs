@@ -1004,6 +1004,11 @@ namespace AC
 						KickStarter.player.Jump ();
 					}
 
+					if (InputGetButton ("Jump") && KickStarter.stateHandler.gameState == GameState.Normal)
+					{
+						KickStarter.player.Glide ();
+					}
+
 					if (!InputGetButton ("Jump") && KickStarter.stateHandler.gameState == GameState.Normal)
 					{
 						KickStarter.player.StopGlide ();

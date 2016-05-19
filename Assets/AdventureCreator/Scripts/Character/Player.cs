@@ -48,6 +48,7 @@ namespace AC
 		private float targetTilt;
 		private float tiltSpeed;
 		private float tiltStartTime;
+		private float decayTime = 0f;
 		
 		private bool lockHotspotHeadTurning = false;
 		private Transform fpCam;
@@ -121,6 +122,15 @@ namespace AC
 		 */
 		public override void _Update ()
 		{
+			if (decayTime != 0f)
+			{
+				decayTime -= Time.deltaTime;
+				if (decayTime <= 0f)
+				{
+					decayTime = 0f;
+				}
+			}
+
 			if (hotspotDetector)
 			{
 				hotspotDetector._Update ();
@@ -291,13 +301,6 @@ namespace AC
 		public void Jump ()
 		{
 
-
-			if (isDoubleJump)
-			{
-				GetAnimEngine ().PlayGlide ();
-				isGliding = true;
-				turnSpeed = 5f;
-			}
 			
 			if (isJumping && isDoubleJump == false && activePath == null)
 			{
@@ -306,6 +309,8 @@ namespace AC
 					_rigidbody.velocity = new Vector3 (0f, KickStarter.settingsManager.jumpSpeed, 0f);
 					isDoubleJump = true;
 					GetAnimEngine ().PlayDJump ();
+					decayTime = 0.1f;
+
 				}
 				else
 				{
@@ -341,6 +346,16 @@ namespace AC
 
 				}
 			}
+		}
+
+		public void Glide()
+		{
+			if (isDoubleJump && _rigidbody.velocity.y <= 0.5f && decayTime == 0f) {
+				GetAnimEngine ().PlayGlide ();
+				isGliding = true;
+				turnSpeed = 5f;
+			}
+			return;
 		}
 		
 

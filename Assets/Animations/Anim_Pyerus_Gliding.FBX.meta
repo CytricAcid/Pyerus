@@ -1,7 +1,7 @@
 fileFormatVersion: 2
-guid: f23fa7ac8eb8495428296e156bb279ad
-timeCreated: 1461861040
-licenseType: Pro
+guid: 85c3cead27ee9da41b415affa39fdf5e
+timeCreated: 1463620911
+licenseType: Free
 ModelImporter:
   serializedVersion: 18
   fileIDToRecycleName:
@@ -30,46 +30,48 @@ ModelImporter:
     100044: PyerusRigLLegDigit22
     100046: PyerusRigLLegDigit31
     100048: PyerusRigLLegDigit32
-    100050: PyerusRigNeck
-    100052: PyerusRigNeckSpine1
-    100054: PyerusRigNeckSpine2
-    100056: PyerusRigNeckSpine3
-    100058: PyerusRigPelvis
-    100060: PyerusRigRArm1
-    100062: PyerusRigRArm2
-    100064: PyerusRigRArmDigit11
-    100066: PyerusRigRArmDigit12
-    100068: PyerusRigRArmDigit13
-    100070: PyerusRigRArmDigit21
-    100072: PyerusRigRArmDigit22
-    100074: PyerusRigRArmDigit23
-    100076: PyerusRigRArmDigit31
-    100078: PyerusRigRArmDigit32
-    100080: PyerusRigRArmDigit33
-    100082: PyerusRigRArmPalm
-    100084: PyerusRigRibCage
-    100086: PyerusRigRLeg1
-    100088: PyerusRigRLeg2
-    100090: PyerusRigRLeg3
-    100092: PyerusRigRLegAnkle
-    100094: PyerusRigRLegDigit11
-    100096: PyerusRigRLegDigit12
-    100098: PyerusRigRLegDigit21
-    100100: PyerusRigRLegDigit22
-    100102: PyerusRigRLegDigit31
-    100104: PyerusRigRLegDigit32
-    100106: PyerusRigSpine1
-    100108: PyerusRigSpine2
-    100110: PyerusRigTail1
-    100112: PyerusRigTail10
-    100114: PyerusRigTail2
-    100116: PyerusRigTail3
-    100118: PyerusRigTail4
-    100120: PyerusRigTail5
-    100122: PyerusRigTail6
-    100124: PyerusRigTail7
-    100126: PyerusRigTail8
-    100128: PyerusRigTail9
+    100050: PyerusRigLLegPlatform
+    100052: PyerusRigNeck
+    100054: PyerusRigNeckSpine1
+    100056: PyerusRigNeckSpine2
+    100058: PyerusRigNeckSpine3
+    100060: PyerusRigPelvis
+    100062: PyerusRigRArm1
+    100064: PyerusRigRArm2
+    100066: PyerusRigRArmDigit11
+    100068: PyerusRigRArmDigit12
+    100070: PyerusRigRArmDigit13
+    100072: PyerusRigRArmDigit21
+    100074: PyerusRigRArmDigit22
+    100076: PyerusRigRArmDigit23
+    100078: PyerusRigRArmDigit31
+    100080: PyerusRigRArmDigit32
+    100082: PyerusRigRArmDigit33
+    100084: PyerusRigRArmPalm
+    100086: PyerusRigRibCage
+    100088: PyerusRigRLeg1
+    100090: PyerusRigRLeg2
+    100092: PyerusRigRLeg3
+    100094: PyerusRigRLegAnkle
+    100096: PyerusRigRLegDigit11
+    100098: PyerusRigRLegDigit12
+    100100: PyerusRigRLegDigit21
+    100102: PyerusRigRLegDigit22
+    100104: PyerusRigRLegDigit31
+    100106: PyerusRigRLegDigit32
+    100108: PyerusRigRLegPlatform
+    100110: PyerusRigSpine1
+    100112: PyerusRigSpine2
+    100114: PyerusRigTail1
+    100116: PyerusRigTail10
+    100118: PyerusRigTail2
+    100120: PyerusRigTail3
+    100122: PyerusRigTail4
+    100124: PyerusRigTail5
+    100126: PyerusRigTail6
+    100128: PyerusRigTail7
+    100130: PyerusRigTail8
+    100132: PyerusRigTail9
     400000: //RootNode
     400002: PyerusRigHead
     400004: PyerusRigJaw
@@ -95,47 +97,49 @@ ModelImporter:
     400044: PyerusRigLLegDigit22
     400046: PyerusRigLLegDigit31
     400048: PyerusRigLLegDigit32
-    400050: PyerusRigNeck
-    400052: PyerusRigNeckSpine1
-    400054: PyerusRigNeckSpine2
-    400056: PyerusRigNeckSpine3
-    400058: PyerusRigPelvis
-    400060: PyerusRigRArm1
-    400062: PyerusRigRArm2
-    400064: PyerusRigRArmDigit11
-    400066: PyerusRigRArmDigit12
-    400068: PyerusRigRArmDigit13
-    400070: PyerusRigRArmDigit21
-    400072: PyerusRigRArmDigit22
-    400074: PyerusRigRArmDigit23
-    400076: PyerusRigRArmDigit31
-    400078: PyerusRigRArmDigit32
-    400080: PyerusRigRArmDigit33
-    400082: PyerusRigRArmPalm
-    400084: PyerusRigRibCage
-    400086: PyerusRigRLeg1
-    400088: PyerusRigRLeg2
-    400090: PyerusRigRLeg3
-    400092: PyerusRigRLegAnkle
-    400094: PyerusRigRLegDigit11
-    400096: PyerusRigRLegDigit12
-    400098: PyerusRigRLegDigit21
-    400100: PyerusRigRLegDigit22
-    400102: PyerusRigRLegDigit31
-    400104: PyerusRigRLegDigit32
-    400106: PyerusRigSpine1
-    400108: PyerusRigSpine2
-    400110: PyerusRigTail1
-    400112: PyerusRigTail10
-    400114: PyerusRigTail2
-    400116: PyerusRigTail3
-    400118: PyerusRigTail4
-    400120: PyerusRigTail5
-    400122: PyerusRigTail6
-    400124: PyerusRigTail7
-    400126: PyerusRigTail8
-    400128: PyerusRigTail9
-    7400000: Anim_Pyerus_Walk
+    400050: PyerusRigLLegPlatform
+    400052: PyerusRigNeck
+    400054: PyerusRigNeckSpine1
+    400056: PyerusRigNeckSpine2
+    400058: PyerusRigNeckSpine3
+    400060: PyerusRigPelvis
+    400062: PyerusRigRArm1
+    400064: PyerusRigRArm2
+    400066: PyerusRigRArmDigit11
+    400068: PyerusRigRArmDigit12
+    400070: PyerusRigRArmDigit13
+    400072: PyerusRigRArmDigit21
+    400074: PyerusRigRArmDigit22
+    400076: PyerusRigRArmDigit23
+    400078: PyerusRigRArmDigit31
+    400080: PyerusRigRArmDigit32
+    400082: PyerusRigRArmDigit33
+    400084: PyerusRigRArmPalm
+    400086: PyerusRigRibCage
+    400088: PyerusRigRLeg1
+    400090: PyerusRigRLeg2
+    400092: PyerusRigRLeg3
+    400094: PyerusRigRLegAnkle
+    400096: PyerusRigRLegDigit11
+    400098: PyerusRigRLegDigit12
+    400100: PyerusRigRLegDigit21
+    400102: PyerusRigRLegDigit22
+    400104: PyerusRigRLegDigit31
+    400106: PyerusRigRLegDigit32
+    400108: PyerusRigRLegPlatform
+    400110: PyerusRigSpine1
+    400112: PyerusRigSpine2
+    400114: PyerusRigTail1
+    400116: PyerusRigTail10
+    400118: PyerusRigTail2
+    400120: PyerusRigTail3
+    400122: PyerusRigTail4
+    400124: PyerusRigTail5
+    400126: PyerusRigTail6
+    400128: PyerusRigTail7
+    400130: PyerusRigTail8
+    400132: PyerusRigTail9
+    7400000: Anim_Pyerus_Gliding
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -158,17 +162,17 @@ ModelImporter:
     extraExposedTransformPaths: []
     clipAnimations:
     - serializedVersion: 16
-      name: Anim_Pyerus_Walk
+      name: Anim_Pyerus_Gliding
       takeName: Take 001
       firstFrame: 0
-      lastFrame: 40
+      lastFrame: 30
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
       loop: 0
       loopTime: 1
-      loopBlend: 1
+      loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
       loopBlendPositionXZ: 0
@@ -182,6 +186,8 @@ ModelImporter:
       events: []
       transformMask:
       - path: 
+        weight: 1
+      - path: PyerusRigLLegPlatform
         weight: 1
       - path: PyerusRigPelvis
         weight: 1
@@ -310,6 +316,8 @@ ModelImporter:
       - path: PyerusRigPelvis/PyerusRigTail1/PyerusRigTail2/PyerusRigTail3/PyerusRigTail4/PyerusRigTail5/PyerusRigTail6/PyerusRigTail7/PyerusRigTail8/PyerusRigTail9
         weight: 1
       - path: PyerusRigPelvis/PyerusRigTail1/PyerusRigTail2/PyerusRigTail3/PyerusRigTail4/PyerusRigTail5/PyerusRigTail6/PyerusRigTail7/PyerusRigTail8/PyerusRigTail9/PyerusRigTail10
+        weight: 1
+      - path: PyerusRigRLegPlatform
         weight: 1
       maskType: 0
       maskSource: {instanceID: 0}
