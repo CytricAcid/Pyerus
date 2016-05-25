@@ -1,12 +1,13 @@
 fileFormatVersion: 2
 guid: e733012afd8cab94e9442bf7b14ce7f1
-timeCreated: 1461878626
-licenseType: Pro
+timeCreated: 1464211756
+licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
     21300000: SpriteSheet_Pyerus_0
     21300002: SpriteSheet_Pyerus_1
     21300004: SpriteSheet_Pyerus_2
+    21300006: SpriteSheet_Pyerus_3
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -61,7 +62,7 @@ TextureImporter:
         width: 123
         height: 123
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: SpriteSheet_Pyerus_1
       rect:
@@ -71,7 +72,7 @@ TextureImporter:
         width: 123
         height: 123
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: SpriteSheet_Pyerus_2
       rect:
@@ -81,7 +82,17 @@ TextureImporter:
         width: 123
         height: 123
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SpriteSheet_Pyerus_3
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 550
+        width: 15
+        height: 41
+      alignment: 0
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
