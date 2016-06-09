@@ -14,7 +14,7 @@ public class AshPoof : MonoBehaviour {
 	void Update () {
 		if (self) {
 			if (!self.IsAlive ()) {
-				Destroy (self);
+				Destroy (gameObject);
 			}
 		}
 	}
