@@ -211,7 +211,6 @@ namespace AC
 		{
 			var layerMask = (1 << 9);
 			layerMask = ~layerMask;
-			RaycastHit hit;
 
 			if (_characterController != null)
 			{
@@ -251,6 +250,32 @@ namespace AC
 
 		}
 
+		public bool IsGroundedParticle ()
+		{
+			var layerMask = (1 << 9);
+			layerMask = ~layerMask;
+			
+			if (_characterController != null)
+			{
+				return _characterController.isGrounded;
+			}
+			if (_rigidbody != null && Physics.Raycast (transform.position, -Vector3.up, 0f, layerMask) == false)
+				//if (_rigidbody != null && Physics.SphereCast (transform.position, 0.15f, -Vector3.up, out hit, 0.1f, layerMask) == false)
+			{
+				isJumping = true;
+				return false;
+			}
+			
+			if (_collider != null)
+			{
+				return Physics.CheckCapsule (transform.position + new Vector3 (0f, _collider.bounds.size.y, 0f), transform.position + new Vector3 (0f, _collider.bounds.size.y / 4f, 0f), _collider.bounds.size.x / 2f); //return Physics.CheckCapsule (transform.position + new Vector3 (0f, _collider.bounds.size.y, 0f), transform.position + new Vector3 (0f, _collider.bounds.size.x / 4f, 0f), _collider.bounds.size.x / 2f);
+			}
+			
+			
+			ACDebug.Log ("Player has no Collider component");
+			return false;
+
+		}
 
 
 
