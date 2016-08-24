@@ -4,6 +4,7 @@ using AC;
 
 public class JumpParticle : MonoBehaviour {
 	private Player Player;
+	public GameObject particle;
 	
 
 	// Use this for initialization
@@ -14,7 +15,7 @@ public class JumpParticle : MonoBehaviour {
 	void OnTriggerEnter (Collider other)
 	{
 		if (Player.IsGroundedParticle() == false) {
-			Instantiate (Resources.Load ("AshPoof"), Player.transform.position, transform.rotation);
+			Instantiate (particle, Player.transform.position, transform.rotation);
 		}
 	}
 	// Update is called once per frame
