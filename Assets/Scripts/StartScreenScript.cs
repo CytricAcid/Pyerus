@@ -3,6 +3,10 @@ using System.Collections;
 
 public class StartScreenScript : MonoBehaviour {
 
+	public GameObject startButton;
+	public GameObject controlsButton;
+	public GameObject controlsDialogue;
+
 	// Use this for initialization
 	public void GotoGame () {
 		Application.LoadLevel (0);
@@ -10,10 +14,14 @@ public class StartScreenScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	public void GotoControlMenu () {
-		Application.LoadLevel (1);
+		startButton.SetActive (false);
+		controlsButton.SetActive (false);
+		controlsDialogue.SetActive (true);
 	}
 
 	public void GotoMainMenu () {
-		Application.LoadLevel (2);
+		startButton.SetActive (true);
+		controlsButton.SetActive (true);
+		controlsDialogue.SetActive (false);
 	}
 }
