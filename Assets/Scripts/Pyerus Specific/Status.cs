@@ -19,19 +19,14 @@ public class Status : MonoBehaviour {
 
 	}
 
-	void OnTriggerEnter (Collider other)
+	public void StartDamage ()
 	{
-		if (other.tag == "Water") {
-			inWater = true;
-			StartCoroutine (WaterDamage ());
-		}
+		StartCoroutine (WaterDamage ());
 	}
-	void OnTriggerExit (Collider other)
+
+	public void StartRegen ()
 	{
-		if (other.tag == "Water") {
-			inWater = false;
-			StartCoroutine (HealthRegen ());
-		}
+		StartCoroutine (HealthRegen ());
 	}
 
 	IEnumerator WaterDamage ()
