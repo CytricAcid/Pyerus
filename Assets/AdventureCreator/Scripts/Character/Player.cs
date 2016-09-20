@@ -33,6 +33,7 @@ namespace AC
 		public string glideParameter = "Glide";
 
 
+
 		/** A unique identifier */
 		public int ID;
 		/** The DetectHotspots component used if SettingsManager's hotspotDetection = HotspotDetection.PlayerVicinity */
@@ -333,6 +334,7 @@ namespace AC
 				{
 					_rigidbody.velocity = new Vector3 (0f, KickStarter.settingsManager.jumpSpeed, 0f);
 					isDoubleJump = true;
+					GetComponent<Footsteps> ().JumpSound (.03f);
 					GetAnimEngine ().PlayDJump ();
 					decayTime = 0.1f;
 

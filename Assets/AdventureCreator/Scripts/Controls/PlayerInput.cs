@@ -1002,6 +1002,7 @@ namespace AC
 					if (InputGetButtonDown ("Jump") && KickStarter.stateHandler.gameState == GameState.Normal)
 					{
 						KickStarter.player.Jump ();
+						KickStarter.player.GetComponent<Footsteps> ().JumpSound (.03f);
 					}
 
 					if (InputGetButton ("Jump") && KickStarter.stateHandler.gameState == GameState.Normal)
