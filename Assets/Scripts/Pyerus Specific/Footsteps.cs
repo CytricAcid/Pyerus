@@ -5,6 +5,9 @@ public class Footsteps : MonoBehaviour {
 	public AudioClip[] footsteps;
 	public AudioClip jumpSound;
 
+	public float footstepVolume;
+	public float jumpVolume;
+
 	private AudioSource source;
 	// Use this for initialization
 	void Awake () {
@@ -12,14 +15,14 @@ public class Footsteps : MonoBehaviour {
 		source = GetComponent<AudioSource>();
 	}
 
-	void FootstepSounds (float volume)
+	void FootstepSounds ()
 	{
-		source.PlayOneShot (footsteps[Random.Range(0,footsteps.Length)],volume);
+		source.PlayOneShot (footsteps[Random.Range(0,footsteps.Length)],footstepVolume);
 	}
 
-	public void JumpSound (float volume)
+	public void JumpSound ()
 	{
-		source.PlayOneShot (jumpSound, volume);
+		source.PlayOneShot (jumpSound, jumpVolume);
 	}
 
 }

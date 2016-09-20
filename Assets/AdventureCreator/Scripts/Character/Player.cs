@@ -334,7 +334,7 @@ namespace AC
 				{
 					_rigidbody.velocity = new Vector3 (0f, KickStarter.settingsManager.jumpSpeed, 0f);
 					isDoubleJump = true;
-					GetComponent<Footsteps> ().JumpSound (.03f);
+					KickStarter.player.GetComponent<Footsteps> ().JumpSound ();
 					GetAnimEngine ().PlayDJump ();
 					decayTime = 0.1f;
 
