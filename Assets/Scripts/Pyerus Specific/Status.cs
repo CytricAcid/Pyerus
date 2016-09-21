@@ -7,17 +7,29 @@ public class Status : MonoBehaviour {
 	private Player Pyerus;
 	public int currentHealth;
 	public int maxHealth;
-	public int displayHealth;
 	public bool inWater;
 	public float waterDamageDelay;
+	public float healthRegenDelay;
+	private bool gameOver;
 
 	void Start ()
 	{
+		gameOver = false;
 		currentHealth = maxHealth;	
 		Pyerus = KickStarter.player;
 		StartCoroutine (HealthRegen ());
-
 	}
+
+	void Update ()
+	{
+		if (currentHealth < 1 && !gameOver) {
+			KickStarter.TurnOffAC ();
+			Destroy (Pyerus.gameObject, 3f);
+			Application.LoadLevel (1);
+			gameOver = true;
+		}
+	}
+
 
 	public void StartDamage ()
 	{
@@ -44,7 +56,7 @@ public class Status : MonoBehaviour {
 	{	
 		while (inWater == false) 
 		{
-			yield return new WaitForSeconds (1);	
+			yield return new WaitForSeconds (healthRegenDelay);	
 			if (maxHealth > currentHealth) {	
 				currentHealth++;
 				if (currentHealth > maxHealth) {

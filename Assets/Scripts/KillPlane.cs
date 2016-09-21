@@ -8,5 +8,6 @@ public class KillPlane : MonoBehaviour {
 	void OnTriggerEnter (Collider other) {
 		KickStarter.TurnOffAC ();
 		Destroy (other.gameObject,3f);
+		Application.LoadLevel (1);
 	}
 }
