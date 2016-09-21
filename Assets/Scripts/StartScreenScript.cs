@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using AC;
 
 public class StartScreenScript : MonoBehaviour {
 
@@ -9,7 +10,8 @@ public class StartScreenScript : MonoBehaviour {
 
 	// Use this for initialization
 	public void GotoGame () {
-		Application.LoadLevel (0);
+		KickStarter.TurnOnAC ();
+		UnityEngine.SceneManagement.SceneManager.LoadScene ("Level_Temple");
 	}
 	
 	// Update is called once per frame

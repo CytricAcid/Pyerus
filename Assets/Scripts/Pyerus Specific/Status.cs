@@ -25,7 +25,7 @@ public class Status : MonoBehaviour {
 		if (currentHealth < 1 && !gameOver) {
 			KickStarter.TurnOffAC ();
 			Destroy (Pyerus.gameObject, 3f);
-			Application.LoadLevel (1);
+			UnityEngine.SceneManagement.SceneManager.LoadScene ("StartMenu");
 			gameOver = true;
 		}
 	}
