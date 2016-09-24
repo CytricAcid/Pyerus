@@ -20,11 +20,11 @@ public class Status : MonoBehaviour {
 		StartCoroutine (HealthRegen ());
 	}
 
-	void Update ()
+	void FixedUpdate ()
 	{
 		if (currentHealth < 1 && !gameOver) {
-			KickStarter.TurnOffAC ();
-			Destroy (Pyerus.gameObject, 3f);
+			//KickStarter.TurnOffAC ();
+			//Destroy (Pyerus.gameObject, 3f);
 			UnityEngine.SceneManagement.SceneManager.LoadScene ("StartMenu");
 			gameOver = true;
 		}

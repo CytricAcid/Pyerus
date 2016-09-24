@@ -6,8 +6,8 @@ public class KillPlane : MonoBehaviour {
 
 	// Use this for initialization
 	void OnTriggerEnter (Collider other) {
-		KickStarter.TurnOffAC ();
-		Destroy (other.gameObject,3f);
+		//KickStarter.TurnOffAC ();
+		//Destroy (other.gameObject,3f);
 		UnityEngine.SceneManagement.SceneManager.LoadScene ("StartMenu");
 	}
 }

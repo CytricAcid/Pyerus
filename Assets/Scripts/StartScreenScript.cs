@@ -7,10 +7,12 @@ public class StartScreenScript : MonoBehaviour {
 	public GameObject startButton;
 	public GameObject controlsButton;
 	public GameObject controlsDialogue;
+	public void Update (){
+		Cursor.visible = true;
+	}
 
 	// Use this for initialization
 	public void GotoGame () {
-		KickStarter.TurnOnAC ();
 		UnityEngine.SceneManagement.SceneManager.LoadScene ("Level_Temple");
 	}
 	
