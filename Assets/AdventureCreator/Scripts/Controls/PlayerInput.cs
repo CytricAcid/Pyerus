@@ -917,7 +917,7 @@ namespace AC
 					if (activeArrows.arrowPromptType == ArrowPromptType.KeyOnly || activeArrows.arrowPromptType == ArrowPromptType.KeyAndClick)
 					{
 						//Vector2 normalizedVector = new Vector2 (InputGetAxis ("Horizontal"), InputGetAxis ("Vertical"));
-						Vector2 normalizedVector = new Vector2 (Mathf.Pow(InputGetAxis ("Horizontal"),3f), Mathf.Pow(InputGetAxis ("Vertical"),3f));
+						Vector2 normalizedVector = new Vector2 (Mathf.Pow(InputGetAxis ("Horizontal"),11f), Mathf.Pow(InputGetAxis ("Vertical"),11f));
 
 						if (normalizedVector.magnitude > 0f)
 						{
@@ -996,8 +996,8 @@ namespace AC
 					}
 					else
 					{
-						h = Mathf.Pow(InputGetAxis ("Horizontal"),3f);
-						v = Mathf.Pow(InputGetAxis ("Vertical"),3f);
+						h = Mathf.Pow(InputGetAxis ("Horizontal"),11f);
+						v = Mathf.Pow(InputGetAxis ("Vertical"),11f);
 					}
 
 					if (InputGetButtonDown ("Jump") && KickStarter.stateHandler.gameState == GameState.Normal)
