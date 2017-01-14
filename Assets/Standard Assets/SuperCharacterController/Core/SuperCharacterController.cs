@@ -96,8 +96,8 @@ public class SuperCharacterController : MonoBehaviour
     private List<Collider> ignoredColliders;
     private List<IgnoredCollider> ignoredColliderStack;
 
-    private const float Tolerance = 0.05f;
-    private const float TinyTolerance = 0.01f;
+    private const float Tolerance = 0.01f; //originally .05f
+    private const float TinyTolerance = 0.005f; //originally .01f
     private const string TemporaryLayer = "TempCast";
     private const int MaxPushbackIterations = 2;
     private int TemporaryLayerIndex;

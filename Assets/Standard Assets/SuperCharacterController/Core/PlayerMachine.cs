@@ -84,7 +84,7 @@ public class PlayerMachine : SuperStateMachine {
 
 	private bool MaintainingGround()
 	{
-		return controller.currentGround.IsGrounded(true, 0.1f);
+		return controller.currentGround.IsGrounded(true, 0.05f);
 	}
 
 	public void RotateGravity(Vector3 up)
@@ -236,7 +236,13 @@ public class PlayerMachine : SuperStateMachine {
 			return;
 		}
 
-		moveDirection -= controller.up * Gravity * Time.deltaTime;
+		Vector3 planarMoveDirection = Math3d.ProjectVectorOnPlane(controller.up, moveDirection);
+		Vector3 verticalMoveDirection = moveDirection - planarMoveDirection;
+
+		planarMoveDirection = Vector3.MoveTowards(planarMoveDirection, LocalMovement() * WalkSpeed, JumpAcceleration * Time.deltaTime);
+		verticalMoveDirection -= controller.up * Gravity * Time.deltaTime;
+
+		moveDirection = planarMoveDirection + verticalMoveDirection;
 
 	}
 }
