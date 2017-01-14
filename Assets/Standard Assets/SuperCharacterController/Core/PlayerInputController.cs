@@ -21,12 +21,14 @@ public class PlayerInputController : MonoBehaviour {
         Vector2 mouseInput = new Vector2(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"));
 
         bool jumpInput = Input.GetButtonDown("Jump");
+		bool jumpHeldInput = Input.GetButton ("Jump");
 
         Current = new PlayerInput()
         {
             MoveInput = moveInput,
             MouseInput = mouseInput,
-            JumpInput = jumpInput
+            JumpInput = jumpInput,
+			JumpHeldInput = jumpHeldInput
         };
 	}
 }
@@ -36,4 +38,5 @@ public struct PlayerInput
     public Vector3 MoveInput;
     public Vector2 MouseInput;
     public bool JumpInput;
+	public bool JumpHeldInput;
 }
