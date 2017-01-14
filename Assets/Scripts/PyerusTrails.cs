@@ -4,19 +4,22 @@ using AC;
 
 public class PyerusTrails : MonoBehaviour {
 
-	private Player Pyerus;
+	public GameObject PlayerTarget;    
+
+	private PlayerMachine machine;
+
 	private TrailRenderer trail;
 
 
 	// Use this for initialization
 	void Start () {
-		Pyerus = KickStarter.player;
+		machine = PlayerTarget.GetComponent<PlayerMachine>();
 		trail = GetComponent<TrailRenderer> ();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if(Pyerus.GetComponent<Player> ().isGliding == true && Pyerus.GetComponent<Player> ().GetMoveSpeed() > 0f)
+		if(System.Convert.ToInt32(machine.currentState) == 5 && machine.getVelocity() > 0f)
 		{
 			trail.enabled = true;
 		}

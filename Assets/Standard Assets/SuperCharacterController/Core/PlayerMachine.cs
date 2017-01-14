@@ -74,6 +74,11 @@ public class PlayerMachine : SuperStateMachine {
 		// This is run regardless of what state you're in
 	}
 
+	public float getVelocity()
+	{
+		return ((Mathf.Pow (moveDirection.x, 2)) + (Mathf.Pow (moveDirection.z, 2)));
+	}
+
 	protected override void LateGlobalSuperUpdate()
 	{
 		// Put any code in here you want to run AFTER the state's update function.
