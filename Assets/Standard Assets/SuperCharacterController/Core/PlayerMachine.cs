@@ -23,7 +23,7 @@ public class PlayerMachine : SuperStateMachine {
 	private SuperCharacterController controller;
 
 	// current velocity
-	private Vector3 moveDirection;
+	public Vector3 moveDirection;
 	// current direction our character's art is facing
 	public Vector3 lookDirection { get; private set; }
 
@@ -61,7 +61,9 @@ public class PlayerMachine : SuperStateMachine {
 		transform.position += moveDirection * Time.deltaTime;
 
 		// Rotate our mesh to face where we are "looking"
-		AnimatedMesh.rotation = Quaternion.LookRotation(lookDirection, controller.up);
+		if (moveDirection.x != 0 && moveDirection.z != 0) {
+			AnimatedMesh.rotation = Quaternion.LookRotation ((Math3d.ProjectVectorOnPlane (controller.up, moveDirection)), controller.up);
+		}
 	}
 
 	private bool AcquiringGround()
@@ -71,7 +73,7 @@ public class PlayerMachine : SuperStateMachine {
 
 	private bool MaintainingGround()
 	{
-		return controller.currentGround.IsGrounded(true, 0.5f);
+		return controller.currentGround.IsGrounded(true, 0.1f);
 	}
 
 	public void RotateGravity(Vector3 up)

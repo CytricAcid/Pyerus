@@ -17,11 +17,11 @@ public class PlayerMachineDebug : MonoBehaviour
 
 	void OnGUI()
 	{
-	    GUI.Box(new Rect(10, 10, 200, 100), "Player Machine");
+	    GUI.Box(new Rect(10, 10, 200, 100), "Player Machine"); // x, y, x max, y max
 
         GUI.TextField(new Rect(20, 40, 180, 20), string.Format("State: {0}", playerMachine.currentState));
         timeScale = GUI.HorizontalSlider(new Rect(20, 70, 180, 20), timeScale, 0.0f, 1.0f);
-
+		GUI.TextField (new Rect(20,80,180,20), string.Format("Look Direction: {0}", playerMachine.moveDirection));
         Time.timeScale = timeScale;
 	}
 }
