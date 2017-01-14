@@ -321,6 +321,12 @@ public class PlayerMachine : SuperStateMachine {
 			return;
 		}
 
+		if (input.Current.JumpInput && doubleJump == true)
+		{
+			currentState = PlayerStates.Glide;
+			return;
+		}
+
 		Vector3 planarMoveDirection = Math3d.ProjectVectorOnPlane(controller.up, moveDirection);
 		Vector3 verticalMoveDirection = moveDirection - planarMoveDirection;
 
