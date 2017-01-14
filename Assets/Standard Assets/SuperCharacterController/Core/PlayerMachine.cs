@@ -17,6 +17,11 @@ public class PlayerMachine : SuperStateMachine {
 	public float Gravity = 25.0f;
 	public float Friction = 20.0f;
 
+
+	Animator animator;
+
+	// Animation variables
+
 	// Add more states by comma separating them
 	enum PlayerStates { Idle, Walk, Jump, Fall }
 
@@ -42,6 +47,8 @@ public class PlayerMachine : SuperStateMachine {
 
 		// Set our currentState to idle on startup
 		currentState = PlayerStates.Idle;
+
+		animator = gameObject.GetComponent<Animator> ();
 	}
 
 	protected override void EarlyGlobalSuperUpdate()
@@ -56,6 +63,7 @@ public class PlayerMachine : SuperStateMachine {
 	{
 		// Put any code in here you want to run AFTER the state's update function.
 		// This is run regardless of what state you're in
+		animator.SetInteger ("State", System.Convert.ToInt32(currentState));
 
 		// Move the player by our velocity every frame
 		transform.position += moveDirection * Time.deltaTime;
@@ -64,6 +72,9 @@ public class PlayerMachine : SuperStateMachine {
 		if (moveDirection.x != 0 && moveDirection.z != 0) {
 			AnimatedMesh.rotation = Quaternion.LookRotation ((Math3d.ProjectVectorOnPlane (controller.up, moveDirection)), controller.up);
 		}
+
+		float trueVelocity = ((Mathf.Pow (moveDirection.x, 2)) + (Mathf.Pow (moveDirection.z, 2)));
+		animator.SetFloat ("Speed", trueVelocity);
 	}
 
 	private bool AcquiringGround()
@@ -226,5 +237,6 @@ public class PlayerMachine : SuperStateMachine {
 		}
 
 		moveDirection -= controller.up * Gravity * Time.deltaTime;
+
 	}
 }
