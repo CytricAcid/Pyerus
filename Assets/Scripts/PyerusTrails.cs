@@ -1,10 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
-using AC;
 
 public class PyerusTrails : MonoBehaviour {
 
-	public GameObject PlayerTarget;    
+	public GameObject PlayerTarget;    //eventually replace this with a superstate machine that gets the player automatically
 
 	private PlayerMachine machine;
 

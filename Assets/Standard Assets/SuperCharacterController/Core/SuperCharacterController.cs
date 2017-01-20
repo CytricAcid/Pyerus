@@ -96,10 +96,10 @@ public class SuperCharacterController : MonoBehaviour
     private List<Collider> ignoredColliders;
     private List<IgnoredCollider> ignoredColliderStack;
 
-    private const float Tolerance = 0.01f; //originally .05f
-    private const float TinyTolerance = 0.005f; //originally .01f
+    private const float Tolerance = 0.005f; //originally .05f
+    private const float TinyTolerance = 0.001f; //originally .01f
     private const string TemporaryLayer = "TempCast";
-    private const int MaxPushbackIterations = 2;
+    private const int MaxPushbackIterations = 10; //originally 5
     private int TemporaryLayerIndex;
     private float fixedDeltaTime;
 
@@ -118,7 +118,7 @@ public class SuperCharacterController : MonoBehaviour
 
         fixedDeltaTime = 1.0f / fixedUpdatesPerSecond;
 
-        heightScale = 1.0f;
+        heightScale = 1f; //originally 1.0f
 
         if (ownCollider)
             IgnoreCollider(ownCollider);
@@ -718,7 +718,7 @@ public class SuperCharacterController : MonoBehaviour
             }
             else
             {
-                Debug.LogError("[SuperCharacterComponent]: No ground was found below the player; player has escaped level");
+                //Debug.LogError("[SuperCharacterComponent]: No ground was found below the player; player has escaped level");
             }
         }
 

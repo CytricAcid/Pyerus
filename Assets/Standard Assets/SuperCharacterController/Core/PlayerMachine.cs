@@ -32,7 +32,7 @@ public class PlayerMachine : SuperStateMachine {
 	private SuperCharacterController controller;
 
 	// current velocity
-	public Vector3 moveDirection;
+	public Vector3 moveDirection { get; private set; }
 	// current direction our character's art is facing
 	public Vector3 lookDirection { get; private set; }
 
@@ -99,7 +99,7 @@ public class PlayerMachine : SuperStateMachine {
 
 	private bool AcquiringGround()
 	{
-		return controller.currentGround.IsGrounded(false, 0.01f);
+		return controller.currentGround.IsGrounded(false, 0.05f);
 	}
 
 	private bool MaintainingGround()
@@ -186,7 +186,7 @@ public class PlayerMachine : SuperStateMachine {
 		}
 
 		// Apply friction to slow us to a halt
-		moveDirection = Vector3.MoveTowards(moveDirection, Vector3.zero, Friction * Time.deltaTime);
+		moveDirection = Vector3.MoveTowards(moveDirection, Vector3.zero, Friction * Time.deltaTime); 
 	}
 
 	void Idle_ExitState()

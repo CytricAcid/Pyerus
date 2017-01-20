@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 using System.Collections;
-using AC;
 
 public class StartScreenScript : MonoBehaviour {
 
