@@ -1,4 +1,4 @@
-﻿// External release version 2.0.0
+// External release version 2.0.0
 
 using UnityEngine;
 using System;
@@ -28,6 +28,9 @@ public class SuperCharacterController : MonoBehaviour
 
     [SerializeField]
     bool debugPushbackMesssages;
+
+	[SerializeField]
+	bool debugCollisionSteps;
 
     /// <summary>
     /// Describes the Transform of the object we are standing on as well as it's CollisionType, as well
@@ -96,12 +99,13 @@ public class SuperCharacterController : MonoBehaviour
     private List<Collider> ignoredColliders;
     private List<IgnoredCollider> ignoredColliderStack;
 
-    private const float Tolerance = 0.005f; //originally .05f
-    private const float TinyTolerance = 0.001f; //originally .01f
+    private const float Tolerance = 0.01f; //originally .05f
+    private const float TinyTolerance = 0.005f; //originally .01f
     private const string TemporaryLayer = "TempCast";
-    private const int MaxPushbackIterations = 10; //originally 5
+    private const int MaxPushbackIterations = 2;
     private int TemporaryLayerIndex;
     private float fixedDeltaTime;
+	private float hRadius;
 
     private static SuperCollisionType defaultCollisionType;
 
@@ -118,7 +122,9 @@ public class SuperCharacterController : MonoBehaviour
 
         fixedDeltaTime = 1.0f / fixedUpdatesPerSecond;
 
-        heightScale = 1f; //originally 1.0f
+        heightScale = 1.0f;
+
+		hRadius = radius / 2;
 
         if (ownCollider)
             IgnoreCollider(ownCollider);
@@ -197,7 +203,38 @@ public class SuperCharacterController : MonoBehaviour
 
         gameObject.SendMessage("SuperUpdate", SendMessageOptions.DontRequireReceiver);
 
-        RecursivePushback(0, MaxPushbackIterations);
+
+		//Calculates the distance the character is trying to move
+		Vector3 vDistance = transform.position - initialPosition;
+		float distance = vDistance.magnitude;
+
+		//Calculates the number of the steps to consider during the collision detection relatively to the player radius
+		//If the player moves less than half its radius during a frame, only one step is needed
+		//If the player moves more than that we subdivide the movement of the character in various steps and we test each of them untill a collision is found. 
+
+		int steps = (int)(distance / hRadius) + 1;
+
+		for (int i = 0; i < steps; i++) { 
+			//Calculates the distance to travel at each collision test
+			float testDistance = i * hRadius + distance % hRadius;
+
+			Vector3 testPosition = initialPosition + (vDistance.normalized * testDistance);
+
+			transform.position = testPosition;
+
+			RecursivePushback(0, MaxPushbackIterations);
+
+			bool hasCollided = false;
+
+			//If the collision is detected during a step there's no need to keep checking
+			if (hasCollided) {
+				//Debug message
+				if(debugCollisionSteps)
+					Debug.Log ("Collision detected on step " + (i + 1) + " of " + steps );
+				
+				break;
+			}
+		}
 
         ProbeGround(2);
 
@@ -345,94 +382,92 @@ public class SuperCharacterController : MonoBehaviour
     /// Check if any of the CollisionSpheres are colliding with any walkable objects in the world.
     /// If they are, apply a proper pushback and retrieve the collision data
     /// </summary>
-    void RecursivePushback(int depth, int maxDepth)
-    {
-        PushIgnoredColliders();
+	void RecursivePushback(int depth, int maxDepth)
+	{
+		PushIgnoredColliders();
 
-        collisionData.Clear();
+		bool contact = false;
 
-        bool contact = false;
+		foreach (var sphere in spheres)
+		{
+			foreach (Collider col in Physics.OverlapSphere((SpherePosition(sphere)), radius, Walkable))
+			{
+				if (col.isTrigger)
+					continue;
 
-        foreach (var sphere in spheres)
-        {
-            foreach (Collider col in Physics.OverlapSphere((SpherePosition(sphere)), radius, Walkable))
-            {
-                if (col.isTrigger)
-                    continue;
+				Vector3 position = SpherePosition(sphere);
+				Vector3 contactPoint = SuperCollider.ClosestPointOnSurface(col, position, radius);
 
-                Vector3 position = SpherePosition(sphere);
-                Vector3 contactPoint = SuperCollider.ClosestPointOnSurface(col, position, radius);
+				if (contactPoint != Vector3.zero)
+				{
+					if (debugPushbackMesssages)
+						DebugDraw.DrawMarker(contactPoint, 2.0f, Color.cyan, 0.0f, false);
 
-                if (contactPoint != Vector3.zero)
-                {
-                    if (debugPushbackMesssages)
-                        DebugDraw.DrawMarker(contactPoint, 2.0f, Color.cyan, 0.0f, false);
+					Vector3 v = contactPoint - position;
 
-                    Vector3 v = contactPoint - position;
+					if (v != Vector3.zero)
+					{
+						// Cache the collider's layer so that we can cast against it
+						int layer = col.gameObject.layer;
 
-                    if (v != Vector3.zero)
-                    {
-                        // Cache the collider's layer so that we can cast against it
-                        int layer = col.gameObject.layer;
+						col.gameObject.layer = TemporaryLayerIndex;
 
-                        col.gameObject.layer = TemporaryLayerIndex;
+						// Check which side of the normal we are on
+						bool facingNormal = Physics.SphereCast(new Ray(position, v.normalized), TinyTolerance, v.magnitude + TinyTolerance, 1 << TemporaryLayerIndex);
 
-                        // Check which side of the normal we are on
-                        bool facingNormal = Physics.SphereCast(new Ray(position, v.normalized), TinyTolerance, v.magnitude + TinyTolerance, 1 << TemporaryLayerIndex);
+						col.gameObject.layer = layer;
 
-                        col.gameObject.layer = layer;
+						// Orient and scale our vector based on which side of the normal we are situated
+						if (facingNormal)
+						{
+							if (Vector3.Distance(position, contactPoint) < radius)
+							{
+								v = v.normalized * (radius - v.magnitude) * -1;
+							}
+							else
+							{
+								// A previously resolved collision has had a side effect that moved us outside this collider
+								continue;
+							}
+						}
+						else
+						{
+							v = v.normalized * (radius + v.magnitude);
+						}
 
-                        // Orient and scale our vector based on which side of the normal we are situated
-                        if (facingNormal)
-                        {
-                            if (Vector3.Distance(position, contactPoint) < radius)
-                            {
-                                v = v.normalized * (radius - v.magnitude) * -1;
-                            }
-                            else
-                            {
-                                // A previously resolved collision has had a side effect that moved us outside this collider
-                                continue;
-                            }
-                        }
-                        else
-                        {
-                            v = v.normalized * (radius + v.magnitude);
-                        }
+						contact = true;
 
-                        contact = true;
+						transform.position += v;
 
-                        transform.position += v;
+						col.gameObject.layer = TemporaryLayerIndex;
 
-                        col.gameObject.layer = TemporaryLayerIndex;
+						// Retrieve the surface normal of the collided point
+						RaycastHit normalHit;
 
-                        // Retrieve the surface normal of the collided point
-                        RaycastHit normalHit;
+						Physics.SphereCast(new Ray(position + v, contactPoint - (position + v)), TinyTolerance, out normalHit, 1 << TemporaryLayerIndex);
 
-                        Physics.SphereCast(new Ray(position + v, contactPoint - (position + v)), TinyTolerance, out normalHit, 1 << TemporaryLayerIndex);
+						col.gameObject.layer = layer;
 
-                        col.gameObject.layer = layer;
+						SuperCollisionType superColType = col.gameObject.GetComponent<SuperCollisionType>();
 
-                        SuperCollisionType superColType = col.gameObject.GetComponent<SuperCollisionType>();
+						if (superColType == null)
+							superColType = defaultCollisionType;
 
-                        if (superColType == null)
-                            superColType = defaultCollisionType;
+						// Our collision affected the collider; add it to the collision data
+						var collision = new SuperCollision()
+						{
+							collisionSphere = sphere,
+							superCollisionType = superColType,
+							gameObject = col.gameObject,
+							point = contactPoint,
+							normal = normalHit.normal
+						};
 
-                        // Our collision affected the collider; add it to the collision data
-                        var collision = new SuperCollision()
-                        {
-                            collisionSphere = sphere,
-                            superCollisionType = superColType,
-                            gameObject = col.gameObject,
-                            point = contactPoint,
-                            normal = normalHit.normal
-                        };
-
-                        collisionData.Add(collision);
-                    }
-                }
-            }
-        }
+						collisionData.Add(collision);
+					}
+				}
+			}
+		}
 
         PopIgnoredColliders();
 
@@ -718,7 +753,7 @@ public class SuperCharacterController : MonoBehaviour
             }
             else
             {
-                //Debug.LogError("[SuperCharacterComponent]: No ground was found below the player; player has escaped level");
+                Debug.LogError("[SuperCharacterComponent]: No ground was found below the player; player has escaped level");
             }
         }
 
