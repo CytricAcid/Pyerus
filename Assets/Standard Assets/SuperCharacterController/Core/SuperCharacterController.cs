@@ -99,8 +99,8 @@ public class SuperCharacterController : MonoBehaviour
     private List<Collider> ignoredColliders;
     private List<IgnoredCollider> ignoredColliderStack;
 
-    private const float Tolerance = 0.01f; //originally .05f
-    private const float TinyTolerance = 0.005f; //originally .01f
+    private const float Tolerance = 0.05f; //originally .05f
+    private const float TinyTolerance = 0.01f; //originally .01f
     private const string TemporaryLayer = "TempCast";
     private const int MaxPushbackIterations = 2;
     private int TemporaryLayerIndex;
@@ -122,7 +122,7 @@ public class SuperCharacterController : MonoBehaviour
 
         fixedDeltaTime = 1.0f / fixedUpdatesPerSecond;
 
-        heightScale = 1.0f;
+        heightScale = 10f;
 
 		hRadius = radius / 2;
 
@@ -224,16 +224,6 @@ public class SuperCharacterController : MonoBehaviour
 
 			RecursivePushback(0, MaxPushbackIterations);
 
-			bool hasCollided = false;
-
-			//If the collision is detected during a step there's no need to keep checking
-			if (hasCollided) {
-				//Debug message
-				if(debugCollisionSteps)
-					Debug.Log ("Collision detected on step " + (i + 1) + " of " + steps );
-				
-				break;
-			}
 		}
 
         ProbeGround(2);
@@ -599,8 +589,8 @@ public class SuperCharacterController : MonoBehaviour
         public Transform transform { get; private set; }
 
         private const float groundingUpperBoundAngle = 60.0f;
-        private const float groundingMaxPercentFromCenter = 0.85f;
-        private const float groundingMinPercentFromcenter = 0.50f;
+        private const float groundingMaxPercentFromCenter = 0.085f; //originally .85
+        private const float groundingMinPercentFromcenter = 0.050f; //originally .50
 
         /// <summary>
         /// Scan the surface below us for ground. Follow up the initial scan with subsequent scans
