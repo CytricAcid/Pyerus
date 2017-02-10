@@ -18,7 +18,7 @@ public class PlayerMachine : SuperStateMachine {
 	public float Friction = 20.0f;
 	public float GlideGravity = 5.0f;
 	private float defaultGravity;
-	private float inputDecay = 0f;
+	public float inputDecay { get; private set; }
 	private bool doubleJump;
 
 
@@ -40,6 +40,7 @@ public class PlayerMachine : SuperStateMachine {
 
 	void Start () {
 		// Put any code here you want to run ONCE, when the object is initialized
+		inputDecay = 0f;
 
 		input = gameObject.GetComponent<PlayerInputController>();
 
@@ -64,7 +65,7 @@ public class PlayerMachine : SuperStateMachine {
 
 		if (inputDecay != 0f)
 		{
-			inputDecay -= Time.deltaTime;
+			inputDecay -= controller.deltaTime;
 			if (inputDecay <= 0f)
 			{
 				inputDecay = 0f;
@@ -86,7 +87,7 @@ public class PlayerMachine : SuperStateMachine {
 		animator.SetInteger ("State", System.Convert.ToInt32(currentState));
 
 		// Move the player by our velocity every frame
-		transform.position += moveDirection * Time.deltaTime;
+		transform.position += moveDirection * controller.deltaTime;
 
 		// Rotate our mesh to face where we are "looking"
 		if (moveDirection.x != 0 && moveDirection.z != 0) {
@@ -186,7 +187,7 @@ public class PlayerMachine : SuperStateMachine {
 		}
 
 		// Apply friction to slow us to a halt
-		moveDirection = Vector3.MoveTowards(moveDirection, Vector3.zero, Friction * Time.deltaTime); 
+		moveDirection = Vector3.MoveTowards(moveDirection, Vector3.zero, Friction * controller.deltaTime); 
 	}
 
 	void Idle_ExitState()
@@ -214,7 +215,7 @@ public class PlayerMachine : SuperStateMachine {
 
 		if (input.Current.MoveInput != Vector3.zero)
 		{
-			moveDirection = Vector3.MoveTowards(moveDirection, LocalMovement() * WalkSpeed, WalkAcceleration * Time.deltaTime);
+			moveDirection = Vector3.MoveTowards(moveDirection, LocalMovement() * WalkSpeed, WalkAcceleration * controller.deltaTime);
 		}
 		else
 		{
@@ -233,12 +234,13 @@ public class PlayerMachine : SuperStateMachine {
 		controller.DisableSlopeLimit();
 
 		moveDirection += controller.up * CalculateJumpSpeed(JumpHeight, Gravity);
+		inputDecay = ( ((CalculateJumpSpeed(JumpHeight, Gravity) / (Gravity)) / 4));
 	}
 
 	void Jump_SuperUpdate()
 	{
 
-		if (input.Current.JumpInput && doubleJump == false)
+		if (input.Current.JumpInput && doubleJump == false && inputDecay == 0f)
 		{
 			currentState = PlayerStates.DoubleJump;
 			return;
@@ -253,8 +255,8 @@ public class PlayerMachine : SuperStateMachine {
 			return;            
 		}
 
-		planarMoveDirection = Vector3.MoveTowards(planarMoveDirection, LocalMovement() * WalkSpeed, JumpAcceleration * Time.deltaTime);
-		verticalMoveDirection -= controller.up * Gravity * Time.deltaTime;
+		planarMoveDirection = Vector3.MoveTowards(planarMoveDirection, LocalMovement() * WalkSpeed, JumpAcceleration * controller.deltaTime);
+		verticalMoveDirection -= controller.up * Gravity * controller.deltaTime;
 
 		moveDirection = planarMoveDirection + verticalMoveDirection;
 	}
@@ -266,7 +268,7 @@ public class PlayerMachine : SuperStateMachine {
 	void DoubleJump_EnterState()
 	{
 		moveDirection = controller.up * CalculateJumpSpeed(JumpHeight, Gravity);
-		inputDecay = ( (CalculateJumpSpeed(JumpHeight, Gravity) / (Gravity) )); //calculates the exact time the double jump reaches its apex
+		inputDecay = ( ((CalculateJumpSpeed(JumpHeight, Gravity) / (Gravity)) )); //calculates the exact time the double jump reaches its apex
 		doubleJump = true;
 	}
 
@@ -288,8 +290,8 @@ public class PlayerMachine : SuperStateMachine {
 			return;
 		}
 
-		planarMoveDirection = Vector3.MoveTowards(planarMoveDirection, LocalMovement() * WalkSpeed, JumpAcceleration * Time.deltaTime);
-		verticalMoveDirection -= controller.up * Gravity * Time.deltaTime;
+		planarMoveDirection = Vector3.MoveTowards(planarMoveDirection, LocalMovement() * WalkSpeed, JumpAcceleration * controller.deltaTime);
+		verticalMoveDirection -= controller.up * Gravity * controller.deltaTime;
 
 		moveDirection = planarMoveDirection + verticalMoveDirection;
 	}
@@ -330,8 +332,8 @@ public class PlayerMachine : SuperStateMachine {
 		Vector3 planarMoveDirection = Math3d.ProjectVectorOnPlane(controller.up, moveDirection);
 		Vector3 verticalMoveDirection = moveDirection - planarMoveDirection;
 
-		planarMoveDirection = Vector3.MoveTowards(planarMoveDirection, LocalMovement() * WalkSpeed, JumpAcceleration * Time.deltaTime);
-		verticalMoveDirection -= controller.up * Gravity * Time.deltaTime;
+		planarMoveDirection = Vector3.MoveTowards(planarMoveDirection, LocalMovement() * WalkSpeed, JumpAcceleration * controller.deltaTime);
+		verticalMoveDirection -= controller.up * Gravity * controller.deltaTime;
 
 		moveDirection = planarMoveDirection + verticalMoveDirection;
 
@@ -364,8 +366,8 @@ public class PlayerMachine : SuperStateMachine {
 		Vector3 planarMoveDirection = Math3d.ProjectVectorOnPlane(controller.up, moveDirection);
 		Vector3 verticalMoveDirection = moveDirection - planarMoveDirection;
 
-		planarMoveDirection = Vector3.MoveTowards(planarMoveDirection, LocalMovement() * WalkSpeed, JumpAcceleration * Time.deltaTime);
-		verticalMoveDirection = -controller.up * Gravity * Time.deltaTime;
+		planarMoveDirection = Vector3.MoveTowards(planarMoveDirection, LocalMovement() * WalkSpeed, JumpAcceleration * controller.deltaTime);
+		verticalMoveDirection = -controller.up * Gravity * controller.deltaTime;
 
 		moveDirection = planarMoveDirection + verticalMoveDirection;
 	}

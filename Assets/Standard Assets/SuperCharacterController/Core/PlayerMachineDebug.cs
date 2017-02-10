@@ -23,5 +23,7 @@ public class PlayerMachineDebug : MonoBehaviour
         timeScale = GUI.HorizontalSlider(new Rect(20, 70, 180, 20), timeScale, 0.0f, 1.0f);
 		GUI.TextField (new Rect(20,80,180,20), string.Format("Look Direction: {0}", playerMachine.moveDirection));
         Time.timeScale = timeScale;
+		GUI.TextField(new Rect(20, 120, 180, 20), string.Format("{0}", Time.deltaTime));
+		GUI.TextField(new Rect(20, 160, 180, 20), string.Format("{0}", playerMachine.inputDecay));
 	}
 }
