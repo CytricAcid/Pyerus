@@ -257,6 +257,7 @@ public class PlayerMachine : SuperStateMachine {
 
 		planarMoveDirection = Vector3.MoveTowards(planarMoveDirection, LocalMovement() * WalkSpeed, JumpAcceleration * controller.deltaTime);
 		verticalMoveDirection -= controller.up * Gravity * controller.deltaTime;
+		verticalMoveDirection.y = Mathf.Max (verticalMoveDirection.y, -7f);
 
 		moveDirection = planarMoveDirection + verticalMoveDirection;
 	}
@@ -292,6 +293,7 @@ public class PlayerMachine : SuperStateMachine {
 
 		planarMoveDirection = Vector3.MoveTowards(planarMoveDirection, LocalMovement() * WalkSpeed, JumpAcceleration * controller.deltaTime);
 		verticalMoveDirection -= controller.up * Gravity * controller.deltaTime;
+		verticalMoveDirection.y = Mathf.Max (verticalMoveDirection.y, -7f);
 
 		moveDirection = planarMoveDirection + verticalMoveDirection;
 	}
@@ -334,6 +336,7 @@ public class PlayerMachine : SuperStateMachine {
 
 		planarMoveDirection = Vector3.MoveTowards(planarMoveDirection, LocalMovement() * WalkSpeed, JumpAcceleration * controller.deltaTime);
 		verticalMoveDirection -= controller.up * Gravity * controller.deltaTime;
+		verticalMoveDirection.y = Mathf.Max (verticalMoveDirection.y, -7f);
 
 		moveDirection = planarMoveDirection + verticalMoveDirection;
 
@@ -362,6 +365,7 @@ public class PlayerMachine : SuperStateMachine {
 
 		planarMoveDirection = Vector3.MoveTowards(planarMoveDirection, LocalMovement() * WalkSpeed, JumpAcceleration * controller.deltaTime);
 		verticalMoveDirection = -controller.up * Gravity * controller.deltaTime;
+		verticalMoveDirection.y = Mathf.Max (verticalMoveDirection.y, -7f);
 
 		moveDirection = planarMoveDirection + verticalMoveDirection;
 
