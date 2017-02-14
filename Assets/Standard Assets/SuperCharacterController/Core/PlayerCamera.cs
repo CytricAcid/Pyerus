@@ -32,7 +32,7 @@ public class PlayerCamera : MonoBehaviour {
         Vector3 left = Vector3.Cross(machine.lookDirection, controller.up);
 
         transform.rotation = Quaternion.LookRotation(machine.lookDirection, controller.up);
-        transform.rotation = Quaternion.AngleAxis(yRotation, left) * transform.rotation;
+		transform.rotation = Quaternion.AngleAxis(yRotation, left) * transform.rotation;
 
         transform.position -= transform.forward * Distance;
         transform.position += controller.up * Height;
