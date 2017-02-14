@@ -355,13 +355,7 @@ public class PlayerMachine : SuperStateMachine {
 			currentState = PlayerStates.Fall;
 			return;
 		}
-
-		if (AcquiringGround())
-		{
-			moveDirection = Math3d.ProjectVectorOnPlane(controller.up, moveDirection);
-			currentState = PlayerStates.Idle;
-			return;
-		}
+			
 
 		Vector3 planarMoveDirection = Math3d.ProjectVectorOnPlane(controller.up, moveDirection);
 		Vector3 verticalMoveDirection = moveDirection - planarMoveDirection;
@@ -370,6 +364,13 @@ public class PlayerMachine : SuperStateMachine {
 		verticalMoveDirection = -controller.up * Gravity * controller.deltaTime;
 
 		moveDirection = planarMoveDirection + verticalMoveDirection;
+
+		if (AcquiringGround())
+		{
+			moveDirection = Math3d.ProjectVectorOnPlane(controller.up, moveDirection);
+			currentState = PlayerStates.Idle;
+			return;
+		}
 	}
 
 	void Glide_ExitState()

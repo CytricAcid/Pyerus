@@ -102,7 +102,7 @@ public class SuperCharacterController : MonoBehaviour
     private const float Tolerance = 0.05f; //originally .05f
     private const float TinyTolerance = 0.01f; //originally .01f
     private const string TemporaryLayer = "TempCast";
-    private const int MaxPushbackIterations = 2;
+    private const int MaxPushbackIterations = 6;
     private int TemporaryLayerIndex;
     private float fixedDeltaTime;
 	private float hRadius;
@@ -122,7 +122,7 @@ public class SuperCharacterController : MonoBehaviour
 
         fixedDeltaTime = 1.0f / fixedUpdatesPerSecond;
 
-        heightScale = 10f;
+        heightScale = 1f;
 
 		hRadius = radius / 2;
 
