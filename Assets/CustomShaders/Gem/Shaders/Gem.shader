@@ -1,3 +1,5 @@
+// Upgrade NOTE: replaced '_Object2World' with 'unity_ObjectToWorld'
+
 Shader "FX/Gem"
 {
 	Properties {
@@ -37,7 +39,7 @@ Shader "FX/Gem"
 				// reflect view direction along the normal, in view space.
 				float3 viewDir = normalize(ObjSpaceViewDir(v));
 				o.uv = -reflect(viewDir, n);
-				o.uv = mul(_Object2World, float4(o.uv,0));
+				o.uv = mul(unity_ObjectToWorld, float4(o.uv,0));
 				return o;
 			}
 
@@ -81,7 +83,7 @@ Shader "FX/Gem"
 				// reflect view direction along the normal, in view space.
 				float3 viewDir = normalize(ObjSpaceViewDir(v));
 				o.uv = -reflect(viewDir, n);
-				o.uv = mul(_Object2World, float4(o.uv,0));
+				o.uv = mul(unity_ObjectToWorld, float4(o.uv,0));
 				o.fresnel = 1.0 - saturate(dot(n,viewDir));
 				return o;
 			}
