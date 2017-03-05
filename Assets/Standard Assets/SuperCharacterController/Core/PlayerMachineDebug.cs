@@ -25,5 +25,6 @@ public class PlayerMachineDebug : MonoBehaviour
         Time.timeScale = timeScale;
 		GUI.TextField(new Rect(20, 120, 180, 20), string.Format("{0}", Time.deltaTime));
 		GUI.TextField(new Rect(20, 160, 180, 20), string.Format("{0}", playerMachine.inputDecay));
+		GUI.TextField(new Rect(20, 180, 180, 20), string.Format("{0}", playerMachine.Gravity));
 	}
 }

@@ -16,7 +16,7 @@ public class PlayerMachine : SuperStateMachine {
 	public float JumpHeight = 3.0f;
 	public float Gravity = 25.0f;
 	public float Friction = 20.0f;
-	public float GlideGravity = 5.0f;
+	public float GlideSpeed = -0.3f;
 	private float defaultGravity;
 	public float inputDecay { get; private set; }
 	private bool doubleJump;
@@ -346,13 +346,15 @@ public class PlayerMachine : SuperStateMachine {
 	/// Glide
 	/// </summary>
 
-	void Glide_EnterState()
-	{
-		Gravity = GlideGravity;
-	}
 
 	void Glide_SuperUpdate()
 	{
+		if (AcquiringGround())
+		{
+			moveDirection = Math3d.ProjectVectorOnPlane(controller.up, moveDirection);
+			currentState = PlayerStates.Idle;
+			return;
+		}
 		if (!input.Current.JumpHeldInput)
 		{
 			currentState = PlayerStates.Fall;
@@ -364,21 +366,12 @@ public class PlayerMachine : SuperStateMachine {
 		Vector3 verticalMoveDirection = moveDirection - planarMoveDirection;
 
 		planarMoveDirection = Vector3.MoveTowards(planarMoveDirection, LocalMovement() * WalkSpeed, JumpAcceleration * controller.deltaTime);
-		verticalMoveDirection = -controller.up * Gravity * controller.deltaTime;
-		verticalMoveDirection.y = Mathf.Max (verticalMoveDirection.y, -7f);
+		verticalMoveDirection -= controller.up * Gravity * controller.deltaTime;
+		verticalMoveDirection.y = Mathf.Max (verticalMoveDirection.y, GlideSpeed);
 
 		moveDirection = planarMoveDirection + verticalMoveDirection;
 
-		if (AcquiringGround())
-		{
-			moveDirection = Math3d.ProjectVectorOnPlane(controller.up, moveDirection);
-			currentState = PlayerStates.Idle;
-			return;
-		}
-	}
 
-	void Glide_ExitState()
-	{
-		Gravity = defaultGravity;
 	}
+		
 }
