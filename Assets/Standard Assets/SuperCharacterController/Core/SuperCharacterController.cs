@@ -589,8 +589,8 @@ public class SuperCharacterController : MonoBehaviour
         public Transform transform { get; private set; }
 
         private const float groundingUpperBoundAngle = 60.0f;
-        private const float groundingMaxPercentFromCenter = 0.085f; //originally .85
-        private const float groundingMinPercentFromcenter = 0.050f; //originally .50
+        private const float groundingMaxPercentFromCenter = 0.85f; //originally .85
+        private const float groundingMinPercentFromcenter = 0.50f; //originally .50
 
         /// <summary>
         /// Scan the surface below us for ground. Follow up the initial scan with subsequent scans
