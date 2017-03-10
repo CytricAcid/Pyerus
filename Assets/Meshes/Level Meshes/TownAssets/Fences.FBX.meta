@@ -1,16 +1,42 @@
 fileFormatVersion: 2
-guid: c1958cf1ca4db224e8b42c8171957a8d
-timeCreated: 1488320952
+guid: 6045ea5f5d244864eb32e23c9f1b2577
+timeCreated: 1489156212
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
-    100000: //RootNode
-    400000: //RootNode
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: TopoSurface001
-    4300002: Terrain
+    100000: FencePostType1_
+    100002: FencePostType2_
+    100004: FencePostType3_
+    100006: //RootNode
+    100008: FenceType1_
+    100010: FenceType2_
+    100012: FenceType3_
+    400000: FencePostType1_
+    400002: FencePostType2_
+    400004: FencePostType3_
+    400006: //RootNode
+    400008: FenceType1_
+    400010: FenceType2_
+    400012: FenceType3_
+    2300000: FencePostType1_
+    2300002: FencePostType2_
+    2300004: FencePostType3_
+    2300006: FenceType1_
+    2300008: FenceType2_
+    2300010: FenceType3_
+    3300000: FencePostType1_
+    3300002: FencePostType2_
+    3300004: FencePostType3_
+    3300006: FenceType1_
+    3300008: FenceType2_
+    3300010: FenceType3_
+    4300000: FenceType1_
+    4300002: FenceType2_
+    4300004: FenceType3_
+    4300006: FencePostType3_
+    4300008: FencePostType2_
+    4300010: FencePostType1_
   materials:
     importMaterials: 1
     materialName: 0
