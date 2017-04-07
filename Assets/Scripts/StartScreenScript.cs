@@ -12,7 +12,7 @@ public class StartScreenScript : MonoBehaviour {
 
 	// Use this for initialization
 	public void GotoGame () {
-		UnityEngine.SceneManagement.SceneManager.LoadScene ("Level_Temple");
+		UnityEngine.SceneManagement.SceneManager.LoadScene ("TestTown");
 	}
 	
 	// Update is called once per frame
