@@ -14,6 +14,7 @@ public class PlayerMachine : SuperStateMachine {
 	public float WalkAcceleration = 30.0f;
 	public float JumpAcceleration = 5.0f;
 	public float JumpHeight = 3.0f;
+	public float DoubleJumpHeight = 0.5f;
 	public float Gravity = 25.0f;
 	public float Friction = 20.0f;
 	public float GlideSpeed = -0.3f;
@@ -268,8 +269,8 @@ public class PlayerMachine : SuperStateMachine {
 
 	void DoubleJump_EnterState()
 	{
-		moveDirection = controller.up * CalculateJumpSpeed(JumpHeight, Gravity);
-		inputDecay = ( ((CalculateJumpSpeed(JumpHeight, Gravity) / (Gravity)) )); //calculates the exact time the double jump reaches its apex
+		moveDirection = controller.up * CalculateJumpSpeed(DoubleJumpHeight, Gravity);
+		inputDecay = ( ((CalculateJumpSpeed(DoubleJumpHeight, Gravity) / (Gravity)) + .1f )); //calculates the exact time the double jump reaches its apex
 		doubleJump = true;
 	}
 
