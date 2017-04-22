@@ -3,7 +3,9 @@ using System.Collections;
 
 public class FadeToLoadLevel : MonoBehaviour {
 
-	public string sceneToLoad;
+	public string levelToLoad;
+	public static int spawnPointIndexLoad = -1;
+	public int spawnPointIndexSet;
 	public GameObject UI;
 	UIFade UIFadeObject;
 	void Start() {
@@ -15,8 +17,16 @@ public class FadeToLoadLevel : MonoBehaviour {
 	}
 
 	void OnTriggerEnter(Collider other) {
-		UIFadeObject.levelToLoad = sceneToLoad;
 		UIFadeObject.FadeOut ();
 		other.GetComponent<PlayerInputController> ().enabled = false;
+	}
+	void Update ()
+	{
+		if (UIFade.isFinished == true)
+		{
+			spawnPointIndexLoad = spawnPointIndexSet;
+			UnityEngine.SceneManagement.SceneManager.LoadScene (levelToLoad);
+			UIFade.isFinished = false;
+		}
 	}
 }

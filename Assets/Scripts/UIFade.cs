@@ -4,14 +4,15 @@ using System.Collections;
 public class UIFade : MonoBehaviour {
 
 	public bool isTransparent;
-	public bool isFinished = false;
-	public string levelToLoad;
+	public static bool isFinished = false;
 	// Use this for initialization
 	public void FadeIn () {
+		StopAllCoroutines ();
 		StartCoroutine (DoFadeIn ());	
 	}
 
 	public void FadeOut () {
+		StopAllCoroutines ();
 		StartCoroutine (DoFadeOut ());	
 	}
 
@@ -34,7 +35,7 @@ public class UIFade : MonoBehaviour {
 		}
 		isTransparent = false;
 		canvasGroup.interactable = true;
-		UnityEngine.SceneManagement.SceneManager.LoadScene (levelToLoad);
+		isFinished = true;
 		yield return null;
 	}
 }
