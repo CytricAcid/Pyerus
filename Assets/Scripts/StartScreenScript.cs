@@ -12,6 +12,7 @@ public class StartScreenScript : MonoBehaviour {
 
 	// Use this for initialization
 	public void GotoGame () {
+		FadeToLoadLevel.spawnPointIndexLoad = 0;
 		UnityEngine.SceneManagement.SceneManager.LoadScene ("TestTown");
 	}
 	
