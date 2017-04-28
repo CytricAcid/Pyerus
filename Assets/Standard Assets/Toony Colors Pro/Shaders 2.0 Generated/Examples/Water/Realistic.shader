@@ -1,4 +1,6 @@
-﻿// Toony Colors Pro+Mobile 2
+﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
+// Toony Colors Pro+Mobile 2
 // (c) 2014-2017 Jean Moreno
 
 Shader "Toony Colors Pro 2/Examples/Water/Realistic"
@@ -212,7 +214,7 @@ Shader "Toony Colors Pro 2/Examples/Water/Realistic"
 			float xn = -_WaveHeight * (waveXZn.x + waveXZn.y);
 			float zn = -_WaveHeight * (waveXZn.z + waveXZn.w);
 			v.normal = normalize(float3(xn, 1, zn));
-			float4 pos = mul(UNITY_MATRIX_MVP, v.vertex);
+			float4 pos = UnityObjectToClipPos(v.vertex);
 			o.sPos = ComputeScreenPos(pos);
 			COMPUTE_EYEDEPTH(o.sPos.z);
 		}

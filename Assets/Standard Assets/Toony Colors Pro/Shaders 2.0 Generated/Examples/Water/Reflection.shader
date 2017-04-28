@@ -1,4 +1,6 @@
-﻿// Toony Colors Pro+Mobile 2
+﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
+// Toony Colors Pro+Mobile 2
 // (c) 2014-2017 Jean Moreno
 
 Shader "Toony Colors Pro 2/Examples/Water/Reflection"
@@ -174,7 +176,7 @@ Shader "Toony Colors Pro 2/Examples/Water/Reflection"
 			half2 mainTexcoords = worldPos.xz * 0.1;
 			o.texcoord.xy = TRANSFORM_TEX(mainTexcoords.xy, _MainTex);
 			o.bump_texcoord = mainTexcoords.xy + TIME.xx * _BumpSpeed.xy * 0.1;
-			float4 pos = mul(UNITY_MATRIX_MVP, v.vertex);
+			float4 pos = UnityObjectToClipPos(v.vertex);
 			o.sPos = ComputeScreenPos(pos);
 			COMPUTE_EYEDEPTH(o.sPos.z);
 		}

@@ -1,4 +1,6 @@
-﻿// Toony Colors Pro+Mobile 2
+﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
+// Toony Colors Pro+Mobile 2
 // (c) 2014-2017 Jean Moreno
 
 Shader "Toony Colors Pro 2/Examples/Default/Sketch"
@@ -182,7 +184,7 @@ Shader "Toony Colors Pro 2/Examples/Default/Sketch"
 			UNITY_INITIALIZE_OUTPUT(Input, o);
 			
 			//Sketch
-			float4 pos = mul(UNITY_MATRIX_MVP, v.vertex);
+			float4 pos = UnityObjectToClipPos(v.vertex);
 			o.sketchUv = ComputeScreenPos(pos);
 			o.sketchUv.xy = TRANSFORM_TEX(o.sketchUv, _SketchTex);
 		}

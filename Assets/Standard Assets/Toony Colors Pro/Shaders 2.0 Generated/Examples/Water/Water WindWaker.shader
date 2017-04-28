@@ -1,4 +1,6 @@
-﻿// Toony Colors Pro+Mobile 2
+﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
+// Toony Colors Pro+Mobile 2
 // (c) 2014-2017 Jean Moreno
 
 Shader "Toony Colors Pro 2/Examples/Water/Water WindWaker"
@@ -155,7 +157,7 @@ Shader "Toony Colors Pro 2/Examples/Water/Water WindWaker"
 			o.texcoord.xy = TRANSFORM_TEX(mainTexcoords.xy, _MainTex);
 			half2 x = ((v.vertex.xy+v.vertex.yz) * _UVWaveFrequency) + (TIME.xx * _UVWaveSpeed);
 			o.sinAnim = x;
-			float4 pos = mul(UNITY_MATRIX_MVP, v.vertex);
+			float4 pos = UnityObjectToClipPos(v.vertex);
 			o.sPos = ComputeScreenPos(pos);
 			COMPUTE_EYEDEPTH(o.sPos.z);
 		}
