@@ -33,7 +33,7 @@ public class PlayerMachine : SuperStateMachine {
 	private SuperCharacterController controller;
 
 	// current velocity
-	public Vector3 moveDirection { get; private set; }
+	public Vector3 moveDirection; //{ get; private set; }
 	// current direction our character's art is facing
 	public Vector3 lookDirection { get; private set; }
 
@@ -90,12 +90,14 @@ public class PlayerMachine : SuperStateMachine {
 		// Move the player by our velocity every frame
 		transform.position += moveDirection * controller.deltaTime;
 
+		float trueVelocity = ((Mathf.Pow (moveDirection.x, 2)) + (Mathf.Pow (moveDirection.z, 2)));
+
 		// Rotate our mesh to face where we are "looking"
-		if (moveDirection.x != 0 && moveDirection.z != 0) {
+		//if (moveDirection.x != 0 && moveDirection.z != 0) {
+		if (trueVelocity != 0) {
 			AnimatedMesh.rotation = Quaternion.LookRotation ((Math3d.ProjectVectorOnPlane (controller.up, moveDirection)), controller.up);
 		}
-
-		float trueVelocity = ((Mathf.Pow (moveDirection.x, 2)) + (Mathf.Pow (moveDirection.z, 2)));
+			
 		animator.SetFloat ("Speed", trueVelocity);
 	}
 
