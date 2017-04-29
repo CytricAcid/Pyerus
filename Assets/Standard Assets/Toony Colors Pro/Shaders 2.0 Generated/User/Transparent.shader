@@ -21,6 +21,9 @@ Shader "Toony Colors Pro 2/User/Transparent"
 	[TCP2Separator]
 	
 	[TCP2HeaderHelp(TRANSPARENCY)]
+		//Blending
+		[Enum(UnityEngine.Rendering.BlendMode)] _SrcBlendTCP2 ("Blending Source", Float) = 5
+		[Enum(UnityEngine.Rendering.BlendMode)] _DstBlendTCP2 ("Blending Dest", Float) = 10
 		//Alpha Testing
 		_Cutoff ("Alpha cutoff", Range(0,1)) = 0.5
 		
@@ -30,12 +33,13 @@ Shader "Toony Colors Pro 2/User/Transparent"
 	
 	SubShader
 	{
-		Tags {"Queue"="AlphaTest" "IgnoreProjector"="True" "RenderType"="TransparentCutout"}
+		Tags {"Queue"="Transparent" "IgnoreProjector"="True" "RenderType"="Transparent"}
+		Blend [_SrcBlendTCP2] [_DstBlendTCP2]
 		Cull Off
 		
 		CGPROGRAM
 		
-		#pragma surface surf ToonyColorsCustom 
+		#pragma surface surf ToonyColorsCustom addshadow keepalpha
 		#pragma target 3.0
 		
 		//================================================================
@@ -48,6 +52,7 @@ Shader "Toony Colors Pro 2/User/Transparent"
 		struct Input
 		{
 			half2 uv_MainTex;
+			float vFace : VFACE;
 		};
 		
 		//================================================================
@@ -68,11 +73,13 @@ Shader "Toony Colors Pro 2/User/Transparent"
 			half Specular;
 			fixed Gloss;
 			fixed Alpha;
+			float vFace;
 		};
 		
 		inline half4 LightingToonyColorsCustom (inout SurfaceOutputCustom s, half3 lightDir, half3 viewDir, half atten)
 		{
 			s.Normal = normalize(s.Normal);
+			s.Normal.z *= s.vFace;
 			fixed ndl = max(0, dot(s.Normal, lightDir));
 			fixed3 ramp = smoothstep(_RampThreshold-_RampSmooth*0.5, _RampThreshold+_RampSmooth*0.5, ndl);
 		#if !(POINT) && !(SPOT)
@@ -101,6 +108,9 @@ Shader "Toony Colors Pro 2/User/Transparent"
 			
 			//Cutout (Alpha Testing)
 			clip (o.Alpha - _Cutoff);
+			
+			//VFace Register (backface lighting)
+			o.vFace = IN.vFace;
 		}
 		
 		ENDCG
