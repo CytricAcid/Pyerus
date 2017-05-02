@@ -3,7 +3,8 @@ using System.Collections;
 
 public class TexturePan : MonoBehaviour {
 
-	public float scrollSpeed;
+	public float scrollSpeedX;
+    public float scrollSpeedY;
 	public Renderer rend;
 
 	void Start() {
@@ -12,7 +13,8 @@ public class TexturePan : MonoBehaviour {
 
 	void Update() 
 	{
-		float offset = Time.time * scrollSpeed;
-		rend.material.mainTextureOffset = new Vector2(offset, 0);
+		float offset = Time.time * scrollSpeedX;
+        float offset2 = Time.time * scrollSpeedY;
+		rend.material.mainTextureOffset = new Vector2(offset, offset2);
 	}
 }
