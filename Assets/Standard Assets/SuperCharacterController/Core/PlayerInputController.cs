@@ -22,7 +22,7 @@ public class PlayerInputController : MonoBehaviour {
 
         bool jumpInput = Input.GetButtonDown("Jump");
 		bool jumpHeldInput = Input.GetButton ("Jump");
-		bool actionInput = Input.GetButtonDown ("Return");
+		bool actionInput = Input.GetButtonDown ("Fire1");
 
         Current = new PlayerInput()
         {

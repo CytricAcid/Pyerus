@@ -18,8 +18,7 @@ public class FadeToLoadLevel : MonoBehaviour {
 
 	void OnTriggerEnter(Collider other) {
 		UIFadeObject.FadeOut ();
-		other.GetComponent<PlayerMachine> ().enabled = false;
-		other.GetComponent<PlayerInputController> ().enabled = false;
+		other.GetComponent<SuperCharacterController> ().enabled = false;
 	}
 	void Update ()
 	{

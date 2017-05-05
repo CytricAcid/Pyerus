@@ -21,6 +21,7 @@ public class PlayerMachine : SuperStateMachine {
 	private float defaultGravity;
 	public float inputDecay { get; private set; }
 	private bool doubleJump;
+	public Vector3 addedForce;
 
 
 	Animator animator;
@@ -114,6 +115,15 @@ public class PlayerMachine : SuperStateMachine {
 	public void RotateGravity(Vector3 up)
 	{
 		lookDirection = Quaternion.FromToRotation(transform.up, up) * lookDirection;
+	}
+
+	public void AddVelocity ()
+	{
+		controller.DisableClamping();
+		controller.DisableSlopeLimit();
+		currentState = PlayerStates.Jump;
+		moveDirection = controller.up * CalculateJumpSpeed(JumpHeight, Gravity);
+		currentState = PlayerStates.Fall;
 	}
 
 	/// <summary>
