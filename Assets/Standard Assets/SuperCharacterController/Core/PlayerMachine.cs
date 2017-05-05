@@ -121,9 +121,9 @@ public class PlayerMachine : SuperStateMachine {
 	{
 		controller.DisableClamping();
 		controller.DisableSlopeLimit();
-		currentState = PlayerStates.Jump;
-		moveDirection = controller.up * CalculateJumpSpeed(JumpHeight, Gravity);
-		currentState = PlayerStates.Fall;
+		moveDirection = (controller.up * CalculateJumpSpeed(JumpHeight, Gravity));
+		//currentState = PlayerStates.Fall;
+		return;
 	}
 
 	/// <summary>
