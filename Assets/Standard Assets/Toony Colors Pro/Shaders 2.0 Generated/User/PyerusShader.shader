@@ -1,7 +1,7 @@
 ﻿// Toony Colors Pro+Mobile 2
 // (c) 2014-2017 Jean Moreno
 
-Shader "Toony Colors Pro 2/User/My TCP2 Shader"
+Shader "Toony Colors Pro 2/User/PyerusShader"
 {
 	Properties
 	{

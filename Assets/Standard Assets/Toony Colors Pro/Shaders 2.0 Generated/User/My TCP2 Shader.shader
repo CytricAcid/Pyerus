@@ -34,6 +34,11 @@ Shader "Toony Colors Pro 2/User/My TCP2 Shader"
 		_RimMin ("Rim Min", Range(0,1)) = 0.5
 		_RimMax ("Rim Max", Range(0,1)) = 1.0
 	[TCP2Separator]
+	
+	[TCP2HeaderHelp(TRANSPARENCY)]
+		//Blending
+		[Enum(UnityEngine.Rendering.BlendMode)] _SrcBlendTCP2 ("Blending Source", Float) = 5
+		[Enum(UnityEngine.Rendering.BlendMode)] _DstBlendTCP2 ("Blending Dest", Float) = 10
 		
 		//Avoid compile error if the properties are ending with a drawer
 		[HideInInspector] __dummy__ ("unused", Float) = 0
@@ -41,11 +46,12 @@ Shader "Toony Colors Pro 2/User/My TCP2 Shader"
 	
 	SubShader
 	{
-		Tags { "RenderType"="Opaque" }
+		Tags {"Queue"="Transparent" "IgnoreProjector"="True" "RenderType"="Transparent"}
+		Blend [_SrcBlendTCP2] [_DstBlendTCP2]
 		
 		CGPROGRAM
 		
-		#pragma surface surf ToonyColorsCustom 
+		#pragma surface surf ToonyColorsCustom keepalpha
 		#pragma target 3.0
 		#pragma multi_compile TCP2_RAMPTEXT
 		
@@ -89,17 +95,19 @@ Shader "Toony Colors Pro 2/User/My TCP2 Shader"
 		inline half4 LightingToonyColorsCustom (inout SurfaceOutputCustom s, half3 lightDir, half3 viewDir, half atten)
 		{
 			s.Normal = normalize(s.Normal);
-			fixed ndl = max(0, dot(s.Normal, lightDir)*0.5 + 0.5);
+			fixed ndl = max(0, dot(s.Normal, lightDir));
 			fixed3 ramp = tex2D(_Ramp, fixed2(ndl,ndl));
-		#if !defined(UNITY_PASS_FORWARDBASE)
-			_SColor = fixed4(0,0,0,1);
+		#if !(POINT) && !(SPOT)
+			ramp *= atten;
 		#endif
 			_SColor = lerp(_HColor, _SColor, _SColor.a);	//Shadows intensity through alpha
 			ramp = lerp(_SColor.rgb, _HColor.rgb, ramp);
 			fixed4 c;
 			c.rgb = s.Albedo * _LightColor0.rgb * ramp;
 			c.a = s.Alpha;
+		#if (POINT || SPOT)
 			c.rgb *= atten;
+		#endif
 			return c;
 		}
 
@@ -121,7 +129,7 @@ Shader "Toony Colors Pro 2/User/My TCP2 Shader"
 			half rim = 1.0f - saturate( dot(viewDir, o.Normal) );
 			rim = smoothstep(_RimMin, _RimMax, rim);
 			rim *= mainTex.a;
-			o.Albedo = lerp(o.Albedo.rgb, _RimColor.rgb, rim * _RimColor.a);
+			o.Emission += (_RimColor.rgb * rim) * _RimColor.a;
 			
 			//Emission
 			o.Emission += mainTex.rgb * (mask1.a * _EmissionColor.a) * _EmissionColor.rgb;
