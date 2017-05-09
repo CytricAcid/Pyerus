@@ -225,7 +225,6 @@ Shader "Shaders/Water"
 			half foamTerm = (smoothstep(foam.r - _FoamSmooth, foam.r + _FoamSmooth, saturate(_FoamStrength - foamDepth)) * saturate(1 - foamDepth)) * _FoamColor.a;
 			//Alter color based on depth buffer (soft particles technique)
 			mainTex.rgb = lerp(_DepthColor.rgb, mainTex.rgb, saturate(_DepthDistance * depthDiff));	//N.V corrects the result based on view direction (depthDiff tends to not look consistent depending on view angle)));
-			_Color = lerp(fixed4(1,1,1,1), _Color, mainTex.a);
 			o.Albedo = lerp(mainTex.rgb * _Color.rgb, _FoamColor.rgb, foamTerm);
 			o.Alpha = mainTex.a * _Color.a;
 			o.Alpha = lerp(o.Alpha, _FoamColor.a, foamTerm);

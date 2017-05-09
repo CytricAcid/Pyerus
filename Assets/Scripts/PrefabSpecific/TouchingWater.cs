@@ -18,7 +18,6 @@ public class TouchingWater : MonoBehaviour {
 	// Use this for initialization
 	void OnTriggerEnter (Collider other) {
 		if (other.tag == "Player") {
-			print ("HI");
 			Pyerus.GetComponent<PlayerMachine> ().addedForce = Vector3.up * force;
 			Pyerus.GetComponent<PlayerMachine> ().AddVelocity();
 		}
