@@ -123,7 +123,7 @@ Shader "Toony Colors Pro 2/User/PyerusShader"
 			half rim = 1.0f - saturate( dot(viewDir, o.Normal) );
 			rim = smoothstep(_RimMin, _RimMax, rim);
 			rim *= mainTex.a;
-			o.Emission += (_RimColor.rgb * rim) * _RimColor.a;
+			o.Albedo = lerp(o.Albedo.rgb, _RimColor.rgb, rim * _RimColor.a);
 			
 			//Emission
 			o.Emission += mainTex.rgb * (mask1.a * _EmissionColor.a) * _EmissionColor.rgb;

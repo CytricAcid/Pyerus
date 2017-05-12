@@ -3,13 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class MothScript : MonoBehaviour {
-	public bool isCollected;
-	public bool spawnOnLevelStart;
-	// Use this for initialization
+	GeneralUI GameManager;
+	void Start ()
+	{
+		if ((GameManager == null) && (GameObject.Find ("GameManager") != null)) {
+			GameManager = GameObject.Find ("GameManager").GetComponent<GeneralUI> ();
+		} else {
+			print ("There is no Game Manager in the scene!");
+		}
+	}
 	void OnTriggerEnter (Collider other){
 		if (other.tag == "Player") {
-			print ("hi");
 			gameObject.SetActive (false);
+			GameManager.mothsCurrentlyCollected++;
+			GameManager.UpdateUI ();
 		}
 	}
 }
