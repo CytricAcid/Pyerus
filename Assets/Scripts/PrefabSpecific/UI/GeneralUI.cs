@@ -20,11 +20,13 @@ public class GeneralUI : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		foreach (MothEntry Moth in ListOfMoths)
-		//for (int i = 0; i < MothSpawns.Length; i++)
 		{
+			int b = 0;
+			//Moth.isCollected = GlobalVariables.Instance.TownMoths [b];
+			
 			if (Moth.isCollected == false && Moth.spawnOnLevelStart == true) {
 				Moth.Moth.SetActive (true);
-			} else {
+			} else { // atm it considers moths that don't spawn on level start t obe collected. fix dat
 				Moth.Moth.SetActive (false);
 				mothsCurrentlyCollected++;
 			}
@@ -32,7 +34,18 @@ public class GeneralUI : MonoBehaviour {
 		UpdateUI ();
 	}
 
+
+	public void AddToCollection (){
+		int i = 0;
+		foreach (MothEntry Moth in ListOfMoths)
+		{
+			GlobalVariables.Instance.TownMoths.Insert (i,Moth.isCollected);
+			i++;
+		}
+	}
+		
 	public void UpdateUI (){
 		MothCount.text = mothsCurrentlyCollected + "/" + ListOfMoths.Length;
+		//AddToCollection ();
 	}
 }
