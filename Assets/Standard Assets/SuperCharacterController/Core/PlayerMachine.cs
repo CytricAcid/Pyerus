@@ -9,6 +9,7 @@ using System.Collections;
 public class PlayerMachine : SuperStateMachine {
 
 	public Transform AnimatedMesh;
+	public ParticleSystem FireOrigin;
 
 	public float WalkSpeed = 4.0f;
 	public float WalkAcceleration = 30.0f;
@@ -41,6 +42,8 @@ public class PlayerMachine : SuperStateMachine {
 	private PlayerInputController input;
 
 	void Start () {
+
+		FireOrigin.Stop ();
 		// Put any code here you want to run ONCE, when the object is initialized
 		inputDecay = 0f;
 
@@ -100,6 +103,8 @@ public class PlayerMachine : SuperStateMachine {
 		}
 			
 		animator.SetFloat ("Speed", trueVelocity);
+
+		FireBreath ();
 	}
 
 	private bool AcquiringGround()
@@ -161,6 +166,21 @@ public class PlayerMachine : SuperStateMachine {
      * called SuperUpdate. SuperUpdate is recieved by the SuperStateMachine, and then fires
      * further callbacks depending on the state
 	}*/
+
+	void FireBreath () {
+		if (input.Current.SecondHeldInput) {
+			FireOrigin.Play ();
+		} else {
+			FireOrigin.Stop ();
+		}
+	}
+
+
+
+
+
+
+
 
 	// Below are the three state functions. Each one is called based on the name of the state,
 	// so when currentState = Idle, we call Idle_EnterState. If currentState = Jump, we call
