@@ -1,9 +1,9 @@
 fileFormatVersion: 2
 guid: b76dba016fdfc00409e724eb0d8fdb1f
-timeCreated: 1494005876
+timeCreated: 1495149734
 licenseType: Free
 ShaderImporter:
   defaultTextures: []
-  userData: USER,FBUMP,FBUMP_SCALE,FRIM_VERTEX,FOCCLUSION,FRIM,KSHADER_TARGET:3.0,chCE89F7DB,cSM:30,cCF:TCP2_ShaderTemplate_Default
+  userData: USER,FBUMP,FBUMP_SCALE,FRIM_VERTEX,FRIM,FEMISSION,FMASK1,FEMISSION_COLOR,KSHADER_TARGET:3.0,KEMISSION_MASK:mask1,KEMISSION_MASK_CHANNEL:.a,ch3711803C,cSM:30,cCF:TCP2_ShaderTemplate_Default
   assetBundleName: 
   assetBundleVariant: 

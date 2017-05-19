@@ -143,6 +143,58 @@ Shader "Toony Colors Pro 2/User/Glass"
 		}
 		
 		ENDCG
+		
+		//Dithered Shadows
+		Pass
+		{
+			Name "ShadowCaster"
+			Tags{ "LightMode" = "ShadowCaster" }
+
+			CGPROGRAM
+
+			#include "UnityCG.cginc"
+			#pragma vertex vertShadowCaster
+			#pragma fragment fragShadowCaster
+			#pragma multi_compile_shadowcaster
+
+			half4		_Color;
+			half		_Cutoff;
+			sampler2D	_MainTex;
+			float4		_MainTex_ST;
+			sampler3D	_DitherMaskLOD;
+
+			struct VertexInput
+			{
+				float4 vertex	: POSITION;
+				float3 normal	: NORMAL;
+				float2 uv0		: TEXCOORD0;
+			};
+
+			struct VertexOutputShadowCaster
+			{
+				V2F_SHADOW_CASTER_NOPOS
+				float2 tex : TEXCOORD1;
+			};
+
+			void vertShadowCaster(VertexInput v, out VertexOutputShadowCaster o, out float4 opos : SV_POSITION)
+			{
+				TRANSFER_SHADOW_CASTER_NOPOS(o,opos)
+				o.tex = TRANSFORM_TEX(v.uv0, _MainTex);
+			}
+
+			half4 fragShadowCaster(VertexOutputShadowCaster i, UNITY_VPOS_TYPE vpos : VPOS) : SV_Target
+			{
+				half alpha = tex2D(_MainTex, i.tex).a * _Color.a;
+				// Use dither mask for alpha blended shadows, based on pixel position xy
+				// and alpha level. Our dither texture is 4x4x16.
+				half alphaRef = tex3D(_DitherMaskLOD, float3(vpos.xy*0.25,alpha*0.9375)).a;
+				clip (alphaRef - 0.01);
+
+				SHADOW_CASTER_FRAGMENT(i)
+			}
+
+			ENDCG
+		}
 	}
 	
 	Fallback "Diffuse"

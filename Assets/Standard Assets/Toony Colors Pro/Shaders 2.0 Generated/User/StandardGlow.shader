@@ -20,15 +20,19 @@ Shader "Toony Colors Pro 2/User/StandardGlow"
 		_RampSmooth ("Ramp Smoothing", Range(0.001,1)) = 0.1
 	[TCP2Separator]
 	
+	[Header(Masks)]
+		[NoScaleOffset]
+		_Mask1 ("Mask 1 (Emission)", 2D) = "black" {}
+	[TCP2Separator]
+	
+	[TCP2HeaderHelp(EMISSION, Emission)]
+		_EmissionColor ("Emission Color", Color) = (1,1,1,1.0)
+	[TCP2Separator]
+	
 	[TCP2HeaderHelp(NORMAL MAPPING, Normal Bump Map)]
 		//BUMP
 		_BumpMap ("Normal map (RGB)", 2D) = "bump" {}
 		_BumpScale ("Scale", Float) = 1.0
-	[TCP2Separator]
-	
-	[TCP2HeaderHelp(AMBIENT OCCLUSION, Ambient Occlusion)]
-		//AMBIENT OCCLUSION
-		_OcclusionMap ("Occlusion (Alpha)", 2D) = "white" {}
 	[TCP2Separator]
 	
 	[TCP2HeaderHelp(RIM, Rim)]
@@ -48,7 +52,7 @@ Shader "Toony Colors Pro 2/User/StandardGlow"
 		
 		CGPROGRAM
 		
-		#pragma surface surf ToonyColorsCustom noambient vertex:vert
+		#pragma surface surf ToonyColorsCustom vertex:vert
 		#pragma target 3.0
 		
 		//================================================================
@@ -56,9 +60,10 @@ Shader "Toony Colors Pro 2/User/StandardGlow"
 		
 		fixed4 _Color;
 		sampler2D _MainTex;
+		sampler2D _Mask1;
+		fixed4 _EmissionColor;
 		sampler2D _BumpMap;
 		half _BumpScale;
-		sampler2D _OcclusionMap;
 		fixed4 _RimColor;
 		fixed _RimMin;
 		fixed _RimMax;
@@ -69,7 +74,6 @@ Shader "Toony Colors Pro 2/User/StandardGlow"
 			half2 uv_MainTex;
 			half2 uv_BumpMap;
 			fixed3 rim;
-			fixed3 ambient;
 		};
 		
 		//================================================================
@@ -130,8 +134,6 @@ Shader "Toony Colors Pro 2/User/StandardGlow"
 			float3 viewDir = normalize(ObjSpaceViewDir(v.vertex));
 			half rim = 1.0f - saturate( dot(viewDir, v.normal) );
 			o.rim = smoothstep(_RimMin, _RimMax, rim) * _RimColor.rgb * _RimColor.a;
-			float3 worldN = mul((float3x3)unity_ObjectToWorld, SCALED_NORMAL);
-			o.ambient = ShadeSH9(float4(worldN,1.0));
 		}
 
 		//================================================================
@@ -140,6 +142,9 @@ Shader "Toony Colors Pro 2/User/StandardGlow"
 		void surf(Input IN, inout SurfaceOutputCustom o)
 		{
 			fixed4 mainTex = tex2D(_MainTex, IN.uv_MainTex);
+			
+			//Masks
+			fixed4 mask1 = tex2D(_Mask1, IN.uv_MainTex);
 			
 			o.Albedo = mainTex.rgb * _Color.rgb;
 			o.Alpha = mainTex.a * _Color.a;
@@ -151,12 +156,8 @@ Shader "Toony Colors Pro 2/User/StandardGlow"
 			//Rim
 			o.Emission += IN.rim;
 			
-			//Custom Ambient
-			half3 customAmbient = IN.ambient;	//either Dir_Ambient or regular Unity SH ambient
-			//Occlusion Map
-			fixed occlusion = tex2D(_OcclusionMap, IN.uv_MainTex).a;
-			customAmbient *= occlusion;
-			o.Emission += customAmbient * o.Albedo;
+			//Emission
+			o.Emission += mainTex.rgb * (mask1.a * _EmissionColor.a) * _EmissionColor.rgb;
 		}
 		
 		ENDCG
