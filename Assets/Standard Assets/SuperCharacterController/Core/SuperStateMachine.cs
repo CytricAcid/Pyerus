@@ -8,6 +8,7 @@ using System.Collections.Generic;
 public class SuperStateMachine : MonoBehaviour {
 
     protected float timeEnteredState;
+	private int playerState;
 
     public class State
     {
@@ -18,24 +19,42 @@ public class SuperStateMachine : MonoBehaviour {
         public Enum currentState;
     }
 
-    public State state = new State();
 
-    public Enum currentState
-    {
-        get
-        {
-            return state.currentState;
-        }
-        set
-        {
-            if (state.currentState == value)
-                return;
+	public Enum currentState
+	{
+		get
+		{
+			return state.currentState;
+		}
+		set
+		{
+			if (state.currentState == value)
+				return;
 
-            ChangingState();
-            state.currentState = value;
-            ConfigureCurrentState();
-        }
-    }
+			ChangingState();
+			state.currentState = value;
+			ConfigureCurrentState();
+		}
+	}
+
+//	public int currentState
+//	{
+//		get
+//		{
+//			return playerState;
+//		}
+//		set
+//		{
+//			if (playerState == value)
+//				return;
+//
+//			ChangingState();
+//			playerState = value;
+//			ConfigureCurrentState();
+//		}
+//	}
+
+	public State state = new State();
 
     [HideInInspector]
     public Enum lastState;

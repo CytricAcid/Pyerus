@@ -22,6 +22,12 @@ Shader "Toony Colors Pro 2/User/TransparentOneSided"
 		_RampSmoothOtherLights ("Smoothing (Other Lights)", Range(0.001,1)) = 0.5
 	[TCP2Separator]
 	
+	[TCP2HeaderHelp(SUBSURFACE SCATTERING, Subsurface Scattering)]
+		_SSDistortion ("Distortion", Range(0,2)) = 0.2
+		_SSPower ("Power", Range(0.1,16)) = 3.0
+		_SSScale ("Scale", Float) = 1.0
+	[TCP2Separator]
+	
 	[TCP2HeaderHelp(TRANSPARENCY)]
 		//Blending
 		[Enum(UnityEngine.Rendering.BlendMode)] _SrcBlendTCP2 ("Blending Source", Float) = 5
@@ -48,6 +54,9 @@ Shader "Toony Colors Pro 2/User/TransparentOneSided"
 		
 		fixed4 _Color;
 		sampler2D _MainTex;
+		half _SSDistortion;
+		half _SSPower;
+		half _SSScale;
 		fixed _Cutoff;
 		
 		struct Input
@@ -100,6 +109,16 @@ Shader "Toony Colors Pro 2/User/TransparentOneSided"
 		#if (POINT || SPOT)
 			c.rgb *= atten;
 		#endif
+			//Subsurface Scattering
+			half3 ssLight = lightDir + s.Normal * _SSDistortion;
+			half ssDot = pow(saturate(dot(viewDir, -ssLight)), _SSPower) * _SSScale;
+		  #if (POINT || SPOT)
+			half ssAtten = atten * 2;
+		  #else
+			half ssAtten = 1;
+		  #endif
+			half3 ssColor = ssAtten * ssDot;
+			c.rgb += s.Albedo * ssColor;
 			return c;
 		}
 

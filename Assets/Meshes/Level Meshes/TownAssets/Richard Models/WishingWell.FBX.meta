@@ -8,15 +8,24 @@ ModelImporter:
     100000: Well
     100002: Well_Roof
     100004: //RootNode
+    100006: SIDE
+    100008: Well 1
     400000: Well
     400002: Well_Roof
     400004: //RootNode
+    400006: SIDE
+    400008: Well 1
     2300000: Well
     2300002: Well_Roof
+    2300004: SIDE
+    2300006: Well 1
     3300000: Well
     3300002: Well_Roof
+    3300004: SIDE
+    3300006: Well 1
     4300000: Well
     4300002: Well_Roof
+    4300004: SIDE
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -25,9 +34,11 @@ ModelImporter:
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
-    resampleRotations: 1
+    resampleCurves: 1
     optimizeGameObjects: 0
     motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
     animationImportErrors: 
     animationImportWarnings: 
     animationRetargetingWarnings: 
@@ -64,6 +75,7 @@ ModelImporter:
   importAnimation: 1
   copyAvatar: 0
   humanDescription:
+    serializedVersion: 2
     human: []
     skeleton: []
     armTwist: 0.5
@@ -74,7 +86,10 @@ ModelImporter:
     legStretch: 0.05
     feetSpacing: 0
     rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   animationType: 2
   humanoidOversampling: 1

@@ -23,6 +23,7 @@ public class PlayerMachine : SuperStateMachine {
 	public float inputDecay { get; private set; }
 	private bool doubleJump;
 	public Vector3 addedForce;
+	private int integerState;
 
 
 	Animator animator;
@@ -31,8 +32,10 @@ public class PlayerMachine : SuperStateMachine {
 
 	// Add more states by comma separating them
 	enum PlayerStates { Idle, Walk, Jump, Fall, DoubleJump, Glide }
+	PlayerStates playerStates;
 
 	private SuperCharacterController controller;
+
 
 	// current velocity
 	public Vector3 moveDirection; //{ get; private set; }
@@ -88,8 +91,8 @@ public class PlayerMachine : SuperStateMachine {
 	protected override void LateGlobalSuperUpdate()
 	{
 		// Put any code in here you want to run AFTER the state's update function.
-		// This is run regardless of what state you're in
-		animator.SetInteger ("State", System.Convert.ToInt32(currentState));
+		integerState = System.Convert.ToInt32(currentState);
+		animator.SetInteger ("State", integerState);
 
 		// Move the player by our velocity every frame
 		transform.position += moveDirection * controller.deltaTime;
@@ -168,7 +171,7 @@ public class PlayerMachine : SuperStateMachine {
 	}*/
 
 	void FireBreath () {
-		if (input.Current.SecondHeldInput) {
+		if ((input.Current.SecondHeldInput) && ((integerState == (int)PlayerStates.Walk) || (integerState == (int)PlayerStates.Idle) || (integerState == (int)PlayerStates.Jump) || (integerState == (int)PlayerStates.DoubleJump))) {
 			FireOrigin.Play ();
 		} else {
 			FireOrigin.Stop ();

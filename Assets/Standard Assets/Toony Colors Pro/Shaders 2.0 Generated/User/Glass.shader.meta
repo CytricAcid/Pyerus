@@ -1,9 +1,9 @@
 fileFormatVersion: 2
 guid: 00f77e6b7fc359745bc96723b89a14d4
-timeCreated: 1495150270
+timeCreated: 1495200245
 licenseType: Free
 ShaderImporter:
   defaultTextures: []
-  userData: USER,FSPECULAR_TOON,FRIM,FALPHA,FSPECULAR,FIGNORE_SHADOW_2ND_LIGHTS,FDITHERED_SHADOWS,KSHADER_TARGET:3.0,chE4A068C,cSM:30,cCF:TCP2_ShaderTemplate_Default
+  userData: USER,FRIM,FALPHA,FIGNORE_SHADOW_2ND_LIGHTS,FDITHERED_SHADOWS,FSPECULAR,FSPECULAR_TOON,KSHADER_TARGET:3.0,chE4A068C,cSM:30,cCF:TCP2_ShaderTemplate_Default
   assetBundleName: 
   assetBundleVariant: 
