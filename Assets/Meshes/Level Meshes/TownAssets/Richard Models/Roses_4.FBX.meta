@@ -1,35 +1,15 @@
 fileFormatVersion: 2
-guid: b36df33dde903f948b6de8dc304e7674
-timeCreated: 1488570704
+guid: 9362c9dc92e492e429ca2558e57d4af9
+timeCreated: 1495580019
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
-    100000: BackDoor
-    100002: Barn
-    100004: Barn_Windows&Doors
-    100006: //RootNode
-    100008: FrontDoor
-    100010: Window
-    400000: BackDoor
-    400002: Barn
-    400004: Barn_Windows&Doors
-    400006: //RootNode
-    400008: FrontDoor
-    400010: Window
-    2300000: BackDoor
-    2300002: Barn
-    2300004: FrontDoor
-    2300006: Window
-    3300000: BackDoor
-    3300002: Barn
-    3300004: FrontDoor
-    3300006: Window
-    4300000: Window
-    4300002: BackDoor
-    4300004: FrontDoor
-    4300006: Barn
-    9500000: //RootNode
+    100000: //RootNode
+    400000: //RootNode
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: Object009
   materials:
     importMaterials: 1
     materialName: 0
@@ -56,7 +36,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 0.5
+    globalScale: 1
     meshCompression: 0
     addColliders: 0
     importBlendShapes: 1
@@ -75,7 +55,7 @@ ModelImporter:
     normalSmoothAngle: 60
     normalImportMode: 0
     tangentImportMode: 3
-  importAnimation: 0
+  importAnimation: 1
   copyAvatar: 0
   humanDescription:
     serializedVersion: 2
@@ -92,7 +72,7 @@ ModelImporter:
     rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
     hasExtraRoot: 0
-    skeletonHasParents: 0
+    skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   animationType: 0
   humanoidOversampling: 1
