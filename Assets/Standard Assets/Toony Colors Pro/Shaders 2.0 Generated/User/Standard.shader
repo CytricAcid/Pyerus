@@ -62,7 +62,7 @@ Shader "Toony Colors Pro 2/User/Standard"
 		{
 			half2 uv_MainTex;
 			half2 uv_BumpMap;
-			fixed3 rim;
+			fixed rim;
 		};
 		
 		//================================================================
@@ -121,7 +121,7 @@ Shader "Toony Colors Pro 2/User/Standard"
 			UNITY_INITIALIZE_OUTPUT(Input, o);
 			float3 viewDir = normalize(ObjSpaceViewDir(v.vertex));
 			half rim = 1.0f - saturate( dot(viewDir, v.normal) );
-			o.rim = smoothstep(_RimMin, _RimMax, rim) * _RimColor.rgb * _RimColor.a;
+			o.rim = smoothstep(_RimMin, _RimMax, rim) * _RimColor.a;
 		}
 
 		//================================================================
@@ -139,7 +139,7 @@ Shader "Toony Colors Pro 2/User/Standard"
 			o.Normal = UnpackScaleNormal(normalMap, _BumpScale);
 			
 			//Rim
-			o.Emission += IN.rim;
+			o.Albedo = lerp(o.Albedo.rgb, _RimColor.rgb, IN.rim);
 		}
 		
 		ENDCG
