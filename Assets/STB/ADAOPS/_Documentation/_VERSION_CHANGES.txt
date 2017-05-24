@@ -1,0 +1,168 @@
+======================================
+[1.9.2.6]
+======================================
+
+- Adding links to video tutorials
+- Some minor fixes
+
+
+======================================
+[1.9.1.7]
+======================================
+
+- Backwards compatibility to Unity 5.0.1f1
+
+
+======================================
+[1.9.0.8]
+======================================
+
+- Adapted to last Unity versions
+- Fixed some issues
+
+
+======================================
+[1.8.9.9]
+======================================
+
+- Added new decals
+
+- Some optimizations
+
+- Fixed some bugs
+
+
+======================================
+[1.8.9.0]
+======================================
+
+- Added extra options (waypoint follower)
+
+- Fixed some UI bugs
+
+
+======================================
+[1.8.8.1]
+======================================
+
+- Added new runtime scripts
+
+- Fixed some UI bugs
+
+
+======================================
+[1.8.7.2]
+======================================
+
+- Added 3 zombies an 12 zombie textures
+
+- Increased gameobject painter options
+
+- Improved the way gameobject painter insert objects
+
+
+======================================
+[1.8.6.3]
+======================================
+
+- Added 24 extended primitives
+
+- Added general options
+
+- Improved UI distribution
+
+- Fixed some UI bugs
+
+
+======================================
+[1.8.5.4]
+======================================
+
+- Added example of bullet decals generating
+
+- Added "Merge Decals" advanced option
+
+- Tabs renamed adding "Tools" sufix
+
+- Fixed some UI bugs
+
+
+======================================
+[1.8.4.5]
+======================================
+
+- New objects: animated audience (2 "black+iluminated hands" and 7 realistic)
+
+- Fixed some UI bugs
+
+
+======================================
+[1.8.3.6]
+======================================
+
+- New objects: 54 signs
+
+- Added options to lock mesh decals shape
+
+- Added an offset and two different modes to positionate prefabs
+
+- Now saves basic configuration
+
+- Improved "insert mode"
+
+- Fixed some UI and decal creation bugs
+
+
+======================================
+[1.8.2.7]
+======================================
+
+- Added more in editor help
+
+- Added "insert mode" to select control skema
+
+- Added options foldout and other improvements
+
+- Fixed some UI bugs
+
+
+======================================
+[1.8.1.8]
+======================================
+
+- More decals (3 ashes, 2 newspaper, 3 cigars)
+
+- Added in editor help everywhere
+
+- Changed the way created decals and objects are named
+
+- Fixed some UI bugs (delete and path exceptions, non editable created mesh materials, ...)
+
+- Added forum in documentation
+
+
+======================================
+[1.8.0.9]
+======================================
+
+- More decals (airvents, snow, sewers and cigarettes)
+
+- "Create New Decal" advanced action
+
+- "Clean all scripts" advanced action
+
+- Added extra protections
+
+- Fixed some UI bugs
+
+
+
+======================================
+[1.8.0.0]
+======================================
+
+- Increased scale range for decals and prefabs
+
+- Fixed some UI bugs
+
+- Added projected decals (experimental)
