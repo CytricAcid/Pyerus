@@ -42,7 +42,7 @@ Shader "Toony Colors Pro 2/User/Standard"
 		
 		CGPROGRAM
 		
-		#pragma surface surf ToonyColorsCustom vertex:vert
+		#pragma surface surf ToonyColorsCustom 
 		#pragma target 3.0
 		#pragma multi_compile TCP2_RAMPTEXT
 		
@@ -62,7 +62,7 @@ Shader "Toony Colors Pro 2/User/Standard"
 		{
 			half2 uv_MainTex;
 			half2 uv_BumpMap;
-			fixed rim;
+			float3 viewDir;
 		};
 		
 		//================================================================
@@ -102,27 +102,6 @@ Shader "Toony Colors Pro 2/User/Standard"
 		#endif
 			return c;
 		}
-		
-		//================================================================
-		// VERTEX FUNCTION
-		
-		struct appdata_tcp2
-		{
-			float4 vertex : POSITION;
-			float3 normal : NORMAL;
-			float4 texcoord : TEXCOORD0;
-			float4 texcoord1 : TEXCOORD1;
-			float4 texcoord2 : TEXCOORD2;
-			float4 tangent : TANGENT;
-		};
-		
-		void vert(inout appdata_tcp2 v, out Input o)
-		{
-			UNITY_INITIALIZE_OUTPUT(Input, o);
-			float3 viewDir = normalize(ObjSpaceViewDir(v.vertex));
-			half rim = 1.0f - saturate( dot(viewDir, v.normal) );
-			o.rim = smoothstep(_RimMin, _RimMax, rim) * _RimColor.a;
-		}
 
 		//================================================================
 		// SURFACE FUNCTION
@@ -139,7 +118,10 @@ Shader "Toony Colors Pro 2/User/Standard"
 			o.Normal = UnpackScaleNormal(normalMap, _BumpScale);
 			
 			//Rim
-			o.Albedo = lerp(o.Albedo.rgb, _RimColor.rgb, IN.rim);
+			float3 viewDir = normalize(IN.viewDir);
+			half rim = 1.0f - saturate( dot(viewDir, o.Normal) );
+			rim = smoothstep(_RimMin, _RimMax, rim);
+			o.Albedo = lerp(o.Albedo.rgb, _RimColor.rgb, rim * _RimColor.a);
 		}
 		
 		ENDCG

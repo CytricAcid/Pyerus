@@ -54,7 +54,7 @@ namespace STB.ADAOPS
 				{
 					if (timeBewteenDecals <= 0)
 					{
-						timeBewteenDecals = 0.1f;
+						timeBewteenDecals = .5f;
 
                         //print ("Create decal");
 #if UNITY_5_0
