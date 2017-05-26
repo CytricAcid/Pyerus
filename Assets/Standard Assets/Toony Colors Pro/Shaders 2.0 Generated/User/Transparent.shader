@@ -16,8 +16,7 @@ Shader "Toony Colors Pro 2/User/Transparent"
 	[TCP2Separator]
 		
 		//TOONY COLORS RAMP
-		_RampThreshold ("Ramp Threshold", Range(0,1)) = 0.5
-		_RampSmooth ("Ramp Smoothing", Range(0.001,1)) = 0.1
+		[TCP2Gradient] _Ramp ("Toon Ramp (RGB)", 2D) = "gray" {}
 	[TCP2Separator]
 	
 	[TCP2HeaderHelp(TRANSPARENCY)]
@@ -41,6 +40,7 @@ Shader "Toony Colors Pro 2/User/Transparent"
 		
 		#pragma surface surf ToonyColorsCustom addshadow keepalpha
 		#pragma target 3.0
+		#pragma multi_compile TCP2_RAMPTEXT
 		
 		//================================================================
 		// VARIABLES
@@ -61,8 +61,7 @@ Shader "Toony Colors Pro 2/User/Transparent"
 		//Lighting-related variables
 		fixed4 _HColor;
 		fixed4 _SColor;
-		float _RampThreshold;
-		float _RampSmooth;
+		sampler2D _Ramp;
 		
 		//Custom SurfaceOutput
 		struct SurfaceOutputCustom
@@ -81,7 +80,7 @@ Shader "Toony Colors Pro 2/User/Transparent"
 			s.Normal = normalize(s.Normal);
 			s.Normal.z *= s.vFace;
 			fixed ndl = max(0, dot(s.Normal, lightDir));
-			fixed3 ramp = smoothstep(_RampThreshold-_RampSmooth*0.5, _RampThreshold+_RampSmooth*0.5, ndl);
+			fixed3 ramp = tex2D(_Ramp, fixed2(ndl,ndl));
 		#if !(POINT) && !(SPOT)
 			ramp *= atten;
 		#endif
