@@ -12,6 +12,6 @@ public class RockJumpCollision : MonoBehaviour {
 
 	void OnTriggerEnter () {
 		print ("hi");
-		RockJumpScript.ColorChange (gameObject);
+		RockJumpScript.JumpOnRock (gameObject);
 	}
 }

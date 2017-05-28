@@ -22,18 +22,43 @@ public class GeneralUI : MonoBehaviour {
 		foreach (MothEntry Moth in ListOfMoths)
 		{
 			int b = 0;
-			//Moth.isCollected = GlobalVariables.Instance.TownMoths [b];
 			
 			if (Moth.isCollected == false && Moth.spawnOnLevelStart == true) {
 				Moth.Moth.SetActive (true);
-			} else { // atm it considers moths that don't spawn on level start t obe collected. fix dat
+			}
+			else {
 				Moth.Moth.SetActive (false);
-				mothsCurrentlyCollected++;
+				if (Moth.isCollected == true) {
+					mothsCurrentlyCollected++;
+				}
 			}
 		}
 		UpdateUI ();
 	}
 
+	public void EnableMoth (GameObject Moth) {
+		if (Moth.CompareTag ("Moth")){
+			for (int i = 0; i < ListOfMoths.Length; i++) { //Compares Moth collected with the list of Moths and enables it
+				if (ListOfMoths [i].Moth == Moth) {
+					ListOfMoths [i].Moth.SetActive (true);
+					break;
+				} 
+			}
+		}
+	}
+
+
+	public void MothCollection (GameObject Moth){
+		for (int i = 0; i < ListOfMoths.Length; i++) { //Compares Moth collected with the list of Moths and marks the one collected as collected
+			if (ListOfMoths [i].Moth == Moth) {
+				ListOfMoths [i].isCollected = true;
+				break;
+			}
+		}
+		Moth.SetActive (false);
+		mothsCurrentlyCollected++;
+		UpdateUI ();
+	}
 
 	public void AddToCollection (){
 		int i = 0;
@@ -46,6 +71,5 @@ public class GeneralUI : MonoBehaviour {
 		
 	public void UpdateUI (){
 		MothCount.text = mothsCurrentlyCollected + "/" + ListOfMoths.Length;
-		//AddToCollection ();
 	}
 }

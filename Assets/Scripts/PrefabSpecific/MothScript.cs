@@ -9,14 +9,12 @@ public class MothScript : MonoBehaviour {
 		if ((GameManager == null) && (GameObject.Find ("GameManager") != null)) {
 			GameManager = GameObject.Find ("GameManager").GetComponent<GeneralUI> ();
 		} else {
-			print ("There is no Game Manager in the scene!");
+			Debug.LogWarning ("There is no Game Manager in the scene!");
 		}
 	}
 	void OnTriggerEnter (Collider other){
 		if (other.tag == "Player") {
-			gameObject.SetActive (false);
-			GameManager.mothsCurrentlyCollected++;
-			GameManager.UpdateUI ();
+			GameManager.MothCollection (gameObject);
 		}
 	}
 }
