@@ -1,9 +1,9 @@
 fileFormatVersion: 2
 guid: cca47de74504c5a438acb8b756a2f480
-timeCreated: 1495201004
+timeCreated: 1496359278
 licenseType: Free
 ShaderImporter:
   defaultTextures: []
-  userData: USER,FCUTOUT,FALPHA,FUSE_VFACE,FSEPARATE_RAMPS,FSUBSURFACE_SCATTERING,FSS_ALL_LIGHTS,faddshadow,KSHADER_TARGET:3.0,ch8CA8341D,cSM:30,cCF:TCP2_ShaderTemplate_Default
+  userData: USER,FCUTOUT,FALPHA,FUSE_VFACE,FSEPARATE_RAMPS,FSS_ALL_LIGHTS,FTEXTURE_RAMP,faddshadow,KSHADER_TARGET:3.0,ch6B4593B9,cSM:30,cCF:TCP2_ShaderTemplate_Default
   assetBundleName: 
   assetBundleVariant: 

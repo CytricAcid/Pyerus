@@ -16,16 +16,7 @@ Shader "Toony Colors Pro 2/User/TransparentOneSided"
 	[TCP2Separator]
 		
 		//TOONY COLORS RAMP
-		_RampThreshold ("Ramp Threshold", Range(0,1)) = 0.5
-		_RampSmooth ("Ramp Smoothing", Range(0.001,1)) = 0.1
-		_RampThresholdOtherLights ("Threshold (Other Lights)", Range(0,1)) = 0.5
-		_RampSmoothOtherLights ("Smoothing (Other Lights)", Range(0.001,1)) = 0.5
-	[TCP2Separator]
-	
-	[TCP2HeaderHelp(SUBSURFACE SCATTERING, Subsurface Scattering)]
-		_SSDistortion ("Distortion", Range(0,2)) = 0.2
-		_SSPower ("Power", Range(0.1,16)) = 3.0
-		_SSScale ("Scale", Float) = 1.0
+		[TCP2Gradient] _Ramp ("Toon Ramp (RGB)", 2D) = "gray" {}
 	[TCP2Separator]
 	
 	[TCP2HeaderHelp(TRANSPARENCY)]
@@ -48,15 +39,13 @@ Shader "Toony Colors Pro 2/User/TransparentOneSided"
 		
 		#pragma surface surf ToonyColorsCustom addshadow keepalpha
 		#pragma target 3.0
+		#pragma multi_compile TCP2_RAMPTEXT
 		
 		//================================================================
 		// VARIABLES
 		
 		fixed4 _Color;
 		sampler2D _MainTex;
-		half _SSDistortion;
-		half _SSPower;
-		half _SSScale;
 		fixed _Cutoff;
 		
 		struct Input
@@ -71,10 +60,7 @@ Shader "Toony Colors Pro 2/User/TransparentOneSided"
 		//Lighting-related variables
 		fixed4 _HColor;
 		fixed4 _SColor;
-		float _RampThreshold;
-		float _RampSmooth;
-		float _RampThresholdOtherLights;
-		float _RampSmoothOtherLights;
+		sampler2D _Ramp;
 		
 		//Custom SurfaceOutput
 		struct SurfaceOutputCustom
@@ -93,11 +79,7 @@ Shader "Toony Colors Pro 2/User/TransparentOneSided"
 			s.Normal = normalize(s.Normal);
 			s.Normal.z *= s.vFace;
 			fixed ndl = max(0, dot(s.Normal, lightDir));
-		#if defined(UNITY_PASS_FORWARDBASE)
-			fixed3 ramp = smoothstep(_RampThreshold-_RampSmooth*0.5, _RampThreshold+_RampSmooth*0.5, ndl);
-		#else
-			fixed3 ramp = smoothstep(_RampThresholdOtherLights-_RampSmoothOtherLights*0.5, _RampThresholdOtherLights+_RampSmoothOtherLights*0.5, ndl);
-		#endif
+			fixed3 ramp = tex2D(_Ramp, fixed2(ndl,ndl));
 		#if !(POINT) && !(SPOT)
 			ramp *= atten;
 		#endif
@@ -109,16 +91,6 @@ Shader "Toony Colors Pro 2/User/TransparentOneSided"
 		#if (POINT || SPOT)
 			c.rgb *= atten;
 		#endif
-			//Subsurface Scattering
-			half3 ssLight = lightDir + s.Normal * _SSDistortion;
-			half ssDot = pow(saturate(dot(viewDir, -ssLight)), _SSPower) * _SSScale;
-		  #if (POINT || SPOT)
-			half ssAtten = atten * 2;
-		  #else
-			half ssAtten = 1;
-		  #endif
-			half3 ssColor = ssAtten * ssDot;
-			c.rgb += s.Albedo * ssColor;
 			return c;
 		}
 
