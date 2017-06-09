@@ -1,0 +1,10 @@
+fileFormatVersion: 2
+guid: edeb8d62a4eacd24ea5c66fef2ba7f85
+timeCreated: 1497017151
+licenseType: Free
+ShaderImporter:
+  defaultTextures: []
+  userData: USER,FWORLDSPACE_UV,FDEPTH_BUFFER_COLOR,FSMOOTH_FOAM,FDEPTH_VIEW_CORRECTION,FVSW_2,FUSW_SECOND_TEX,FUV_SIN_WAVES,FVERTEX_USW,FALPHA,FDEPTH_BUFFER_ALPHA,fnolightmap,ffullforwardshadows,KCOLORMASK_CHANNEL:.a,KUV_mask1:Main
+    Tex UV,KSHADER_TARGET:3.0,chB68D6490,cSM:30,cCT:water,cCF:TCP2_ShaderTemplate_Water
+  assetBundleName: 
+  assetBundleVariant: 

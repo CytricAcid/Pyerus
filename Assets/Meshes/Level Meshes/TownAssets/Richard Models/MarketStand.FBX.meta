@@ -6,10 +6,30 @@ ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
     100000: //RootNode
+    100002: MarketDoor
+    100004: Stand
+    100006: Tarp
+    100008: TarpNormal
     400000: //RootNode
+    400002: MarketDoor
+    400004: Stand
+    400006: Tarp
+    400008: TarpNormal
     2300000: //RootNode
+    2300002: MarketDoor
+    2300004: Stand
+    2300006: Tarp
+    2300008: TarpNormal
     3300000: //RootNode
+    3300002: MarketDoor
+    3300004: Stand
+    3300006: Tarp
+    3300008: TarpNormal
     4300000: MarketStand
+    4300002: MarketDoor
+    4300004: Stand
+    4300006: Tarp
+    4300008: TarpNormal
     9500000: //RootNode
   materials:
     importMaterials: 1

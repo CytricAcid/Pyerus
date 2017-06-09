@@ -25,18 +25,21 @@ ModelImporter:
     2300006: slants001
     2300008: slants002
     2300010: top002
+    2300012: //RootNode
     3300000: block002
     3300002: corners002
     3300004: Object002
     3300006: slants001
     3300008: slants002
     3300010: top002
+    3300012: //RootNode
     4300000: corners002
     4300002: top002
     4300004: Object002
     4300006: slants001
     4300008: slants002
     4300010: block002
+    4300012: HouseBlock2
   materials:
     importMaterials: 1
     materialName: 0

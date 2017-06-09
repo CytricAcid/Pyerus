@@ -1,0 +1,139 @@
+fileFormatVersion: 2
+guid: 0345910b874da0b4ea1a650df3875fd4
+timeCreated: 1497016275
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Chimney
+    100002: Door002
+    100004: Door003
+    100006: HouseBlock003
+    100008: //RootNode
+    100010: Roof003
+    100012: SellerDoor
+    100014: Steps001
+    100016: Door
+    100018: Door006
+    100020: HouseBlock1
+    100022: Roof1
+    100024: Steps
+    400000: Chimney
+    400002: Door002
+    400004: Door003
+    400006: HouseBlock003
+    400008: //RootNode
+    400010: Roof003
+    400012: SellerDoor
+    400014: Steps001
+    400016: Door
+    400018: Door006
+    400020: HouseBlock1
+    400022: Roof1
+    400024: Steps
+    2300000: Chimney
+    2300002: Door002
+    2300004: Door003
+    2300006: HouseBlock003
+    2300008: Roof003
+    2300010: SellerDoor
+    2300012: Steps001
+    2300014: Door
+    2300016: Door006
+    2300018: HouseBlock1
+    2300020: Roof1
+    2300022: Steps
+    3300000: Chimney
+    3300002: Door002
+    3300004: Door003
+    3300006: HouseBlock003
+    3300008: Roof003
+    3300010: SellerDoor
+    3300012: Steps001
+    3300014: Door
+    3300016: Door006
+    3300018: HouseBlock1
+    3300020: Roof1
+    3300022: Steps
+    4300000: HouseBlock003
+    4300002: SellerDoor
+    4300004: Door002
+    4300006: Steps001
+    4300008: Door003
+    4300010: Chimney
+    4300012: Roof003
+    4300014: HouseBlock1
+    4300016: Door
+    4300018: Steps
+    4300020: Roof1
+    4300022: Door006
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.5
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
