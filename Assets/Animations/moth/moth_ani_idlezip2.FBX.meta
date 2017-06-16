@@ -119,7 +119,7 @@ ModelImporter:
     400108: moth_tail01
     400110: moth_tail02
     400112: moth_tail03
-    7400000: Take 001
+    7400000: MothIdle
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -143,7 +143,150 @@ ModelImporter:
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: MothIdle
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 90
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: CT_moth_chest
+        weight: 1
+      - path: CT_moth_chest/moth_chest
+        weight: 1
+      - path: CT_moth_chest/moth_chest/CT_moth_body1
+        weight: 1
+      - path: CT_moth_chest/moth_chest/CT_moth_body1/moth_body01
+        weight: 1
+      - path: CT_moth_chest/moth_chest/CT_moth_body1/moth_body01/CT_moth_body02
+        weight: 1
+      - path: CT_moth_chest/moth_chest/CT_moth_body1/moth_body01/CT_moth_body02/moth_body02
+        weight: 1
+      - path: CT_moth_chest/moth_chest/CT_moth_body1/moth_body01/CT_moth_body02/moth_body02/CT_moth_tail01
+        weight: 1
+      - path: CT_moth_chest/moth_chest/CT_moth_body1/moth_body01/CT_moth_body02/moth_body02/CT_moth_tail01/moth_tail01
+        weight: 1
+      - path: CT_moth_chest/moth_chest/CT_moth_body1/moth_body01/CT_moth_body02/moth_body02/CT_moth_tail01/moth_tail01/CT_moth_tail02
+        weight: 1
+      - path: CT_moth_chest/moth_chest/CT_moth_body1/moth_body01/CT_moth_body02/moth_body02/CT_moth_tail01/moth_tail01/CT_moth_tail02/moth_tail02
+        weight: 1
+      - path: CT_moth_chest/moth_chest/CT_moth_body1/moth_body01/CT_moth_body02/moth_body02/CT_moth_tail01/moth_tail01/CT_moth_tail02/moth_tail02/CT_moth_tail03
+        weight: 1
+      - path: CT_moth_chest/moth_chest/CT_moth_body1/moth_body01/CT_moth_body02/moth_body02/CT_moth_tail01/moth_tail01/CT_moth_tail02/moth_tail02/CT_moth_tail03/moth_tail03
+        weight: 1
+      - path: CT_moth_chest/moth_chest/CT_moth_body1/moth_body01/CT_moth_body02/moth_body02/moth_LT_3leg01
+        weight: 1
+      - path: CT_moth_chest/moth_chest/CT_moth_body1/moth_body01/CT_moth_body02/moth_body02/moth_LT_3leg01/moth_LT_3leg02
+        weight: 1
+      - path: CT_moth_chest/moth_chest/CT_moth_body1/moth_body01/CT_moth_body02/moth_body02/moth_LT_3leg01/moth_LT_3leg02/moth_LT_3leg03
+        weight: 1
+      - path: CT_moth_chest/moth_chest/CT_moth_body1/moth_body01/CT_moth_body02/moth_body02/moth_RT_3leg01
+        weight: 1
+      - path: CT_moth_chest/moth_chest/CT_moth_body1/moth_body01/CT_moth_body02/moth_body02/moth_RT_3leg01/moth_RT_3leg02
+        weight: 1
+      - path: CT_moth_chest/moth_chest/CT_moth_body1/moth_body01/CT_moth_body02/moth_body02/moth_RT_3leg01/moth_RT_3leg02/moth_RT_2leg03
+          1
+        weight: 1
+      - path: CT_moth_chest/moth_chest/CT_moth_body1/moth_body01/moth_LT_2leg01
+        weight: 1
+      - path: CT_moth_chest/moth_chest/CT_moth_body1/moth_body01/moth_LT_2leg01/moth_LT_2leg02
+        weight: 1
+      - path: CT_moth_chest/moth_chest/CT_moth_body1/moth_body01/moth_LT_2leg01/moth_LT_2leg02/moth_LT_2leg03
+        weight: 1
+      - path: CT_moth_chest/moth_chest/CT_moth_body1/moth_body01/moth_RT_2leg01
+        weight: 1
+      - path: CT_moth_chest/moth_chest/CT_moth_body1/moth_body01/moth_RT_2leg01/moth_RT_2leg02
+        weight: 1
+      - path: CT_moth_chest/moth_chest/CT_moth_body1/moth_body01/moth_RT_2leg01/moth_RT_2leg02/moth_RT_2leg03
+        weight: 1
+      - path: CT_moth_chest/moth_chest/CT_moth_LT_wing01
+        weight: 1
+      - path: CT_moth_chest/moth_chest/CT_moth_LT_wing01/moth_LT_wing01
+        weight: 1
+      - path: CT_moth_chest/moth_chest/CT_moth_LT_wing01/moth_LT_wing01/CT_moth_LT_wing02
+        weight: 1
+      - path: CT_moth_chest/moth_chest/CT_moth_LT_wing01/moth_LT_wing01/CT_moth_LT_wing02/moth_LT_wing02
+        weight: 1
+      - path: CT_moth_chest/moth_chest/CT_moth_neck
+        weight: 1
+      - path: CT_moth_chest/moth_chest/CT_moth_neck/moth_neck
+        weight: 1
+      - path: CT_moth_chest/moth_chest/CT_moth_neck/moth_neck/CT_moth_head
+        weight: 1
+      - path: CT_moth_chest/moth_chest/CT_moth_neck/moth_neck/CT_moth_head/moth_head
+        weight: 1
+      - path: CT_moth_chest/moth_chest/CT_moth_neck/moth_neck/CT_moth_head/moth_head/CT_moth_jaw
+        weight: 1
+      - path: CT_moth_chest/moth_chest/CT_moth_neck/moth_neck/CT_moth_head/moth_head/CT_moth_jaw/moth_jaw
+        weight: 1
+      - path: CT_moth_chest/moth_chest/CT_moth_neck/moth_neck/CT_moth_head/moth_head/CT_moth_LT_ear01
+        weight: 1
+      - path: CT_moth_chest/moth_chest/CT_moth_neck/moth_neck/CT_moth_head/moth_head/CT_moth_LT_ear01/moth_LT_Ear01
+        weight: 1
+      - path: CT_moth_chest/moth_chest/CT_moth_neck/moth_neck/CT_moth_head/moth_head/CT_moth_LT_ear01/moth_LT_Ear01/CT_moth_LT_ear02
+        weight: 1
+      - path: CT_moth_chest/moth_chest/CT_moth_neck/moth_neck/CT_moth_head/moth_head/CT_moth_LT_ear01/moth_LT_Ear01/CT_moth_LT_ear02/moth_LT_Ear02
+        weight: 1
+      - path: CT_moth_chest/moth_chest/CT_moth_neck/moth_neck/CT_moth_head/moth_head/CT_moth_LT_ear01/moth_LT_Ear01/CT_moth_LT_ear02/moth_LT_Ear02/moth_LT_Ear03
+        weight: 1
+      - path: CT_moth_chest/moth_chest/CT_moth_neck/moth_neck/CT_moth_head/moth_head/CT_moth_LT_ear01/moth_LT_Ear01/CT_moth_LT_ear02/moth_LT_Ear02/moth_LT_Ear03/moth_LT_Ear04
+        weight: 1
+      - path: CT_moth_chest/moth_chest/CT_moth_neck/moth_neck/CT_moth_head/moth_head/CT_moth_RT_ear01
+        weight: 1
+      - path: CT_moth_chest/moth_chest/CT_moth_neck/moth_neck/CT_moth_head/moth_head/CT_moth_RT_ear01/moth_RT_Ear01
+        weight: 1
+      - path: CT_moth_chest/moth_chest/CT_moth_neck/moth_neck/CT_moth_head/moth_head/CT_moth_RT_ear01/moth_RT_Ear01/CT_moth_RT_ear02
+        weight: 1
+      - path: CT_moth_chest/moth_chest/CT_moth_neck/moth_neck/CT_moth_head/moth_head/CT_moth_RT_ear01/moth_RT_Ear01/CT_moth_RT_ear02/moth_RT_Ear02
+        weight: 1
+      - path: CT_moth_chest/moth_chest/CT_moth_neck/moth_neck/CT_moth_head/moth_head/CT_moth_RT_ear01/moth_RT_Ear01/CT_moth_RT_ear02/moth_RT_Ear02/moth_RT_Ear03
+        weight: 1
+      - path: CT_moth_chest/moth_chest/CT_moth_neck/moth_neck/CT_moth_head/moth_head/CT_moth_RT_ear01/moth_RT_Ear01/CT_moth_RT_ear02/moth_RT_Ear02/moth_RT_Ear03/moth_RT_Ear04
+        weight: 1
+      - path: CT_moth_chest/moth_chest/CT_moth_RT_wing01
+        weight: 1
+      - path: CT_moth_chest/moth_chest/CT_moth_RT_wing01/CT_moth_RT_wing02
+        weight: 1
+      - path: CT_moth_chest/moth_chest/CT_moth_RT_wing01/CT_moth_RT_wing02/moth_RT_wing02
+        weight: 1
+      - path: CT_moth_chest/moth_chest/CT_moth_RT_wing01/moth_RT_wing01
+        weight: 1
+      - path: CT_moth_chest/moth_chest/moth_LT_1leg01
+        weight: 1
+      - path: CT_moth_chest/moth_chest/moth_LT_1leg01/moth_LT_1leg02
+        weight: 1
+      - path: CT_moth_chest/moth_chest/moth_LT_1leg01/moth_LT_1leg02/moth_LT_1leg03
+        weight: 1
+      - path: CT_moth_chest/moth_chest/moth_RT_1leg01
+        weight: 1
+      - path: CT_moth_chest/moth_chest/moth_RT_1leg01/moth_RT_1leg02
+        weight: 1
+      - path: CT_moth_chest/moth_chest/moth_RT_1leg01/moth_RT_1leg02/moth_RT_1leg03
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 1
   meshes:
     lODScreenPercentages: []
@@ -184,7 +327,8 @@ ModelImporter:
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
-  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: f9eef48fbcbc0f34195406bbcf0bfbb0,
+    type: 3}
   animationType: 2
   humanoidOversampling: 1
   additionalBone: 0
