@@ -1,0 +1,193 @@
+fileFormatVersion: 2
+guid: c777b4d39f948424fb9e5d84b7f51d5f
+timeCreated: 1497629529
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: CT_moth_body02
+    100002: CT_moth_body1
+    100004: CT_moth_chest
+    100006: CT_moth_head
+    100008: CT_moth_jaw
+    100010: CT_moth_LT_ear01
+    100012: CT_moth_LT_ear02
+    100014: CT_moth_LT_wing01
+    100016: CT_moth_LT_wing02
+    100018: CT_moth_neck
+    100020: CT_moth_RT_ear01
+    100022: CT_moth_RT_ear02
+    100024: CT_moth_RT_wing01
+    100026: CT_moth_RT_wing02
+    100028: CT_moth_tail01
+    100030: CT_moth_tail02
+    100032: CT_moth_tail03
+    100034: //RootNode
+    100036: moth_body01
+    100038: moth_body02
+    100040: moth_chest
+    100042: moth_head
+    100044: moth_jaw
+    100046: moth_LT_1leg01
+    100048: moth_LT_1leg02
+    100050: moth_LT_1leg03
+    100052: moth_LT_2leg01
+    100054: moth_LT_2leg02
+    100056: moth_LT_2leg03
+    100058: moth_LT_3leg01
+    100060: moth_LT_3leg02
+    100062: moth_LT_3leg03
+    100064: moth_LT_Ear01
+    100066: moth_LT_Ear02
+    100068: moth_LT_Ear03
+    100070: moth_LT_Ear04
+    100072: moth_LT_wing01
+    100074: moth_LT_wing02
+    100076: moth_neck
+    100078: moth_RT_1leg01
+    100080: moth_RT_1leg02
+    100082: moth_RT_1leg03
+    100084: moth_RT_2leg01
+    100086: moth_RT_2leg02
+    100088: moth_RT_2leg03
+    100090: moth_RT_2leg03 1
+    100092: moth_RT_3leg01
+    100094: moth_RT_3leg02
+    100096: moth_RT_Ear01
+    100098: moth_RT_Ear02
+    100100: moth_RT_Ear03
+    100102: moth_RT_Ear04
+    100104: moth_RT_wing01
+    100106: moth_RT_wing02
+    100108: moth_tail01
+    100110: moth_tail02
+    100112: moth_tail03
+    400000: CT_moth_body02
+    400002: CT_moth_body1
+    400004: CT_moth_chest
+    400006: CT_moth_head
+    400008: CT_moth_jaw
+    400010: CT_moth_LT_ear01
+    400012: CT_moth_LT_ear02
+    400014: CT_moth_LT_wing01
+    400016: CT_moth_LT_wing02
+    400018: CT_moth_neck
+    400020: CT_moth_RT_ear01
+    400022: CT_moth_RT_ear02
+    400024: CT_moth_RT_wing01
+    400026: CT_moth_RT_wing02
+    400028: CT_moth_tail01
+    400030: CT_moth_tail02
+    400032: CT_moth_tail03
+    400034: //RootNode
+    400036: moth_body01
+    400038: moth_body02
+    400040: moth_chest
+    400042: moth_head
+    400044: moth_jaw
+    400046: moth_LT_1leg01
+    400048: moth_LT_1leg02
+    400050: moth_LT_1leg03
+    400052: moth_LT_2leg01
+    400054: moth_LT_2leg02
+    400056: moth_LT_2leg03
+    400058: moth_LT_3leg01
+    400060: moth_LT_3leg02
+    400062: moth_LT_3leg03
+    400064: moth_LT_Ear01
+    400066: moth_LT_Ear02
+    400068: moth_LT_Ear03
+    400070: moth_LT_Ear04
+    400072: moth_LT_wing01
+    400074: moth_LT_wing02
+    400076: moth_neck
+    400078: moth_RT_1leg01
+    400080: moth_RT_1leg02
+    400082: moth_RT_1leg03
+    400084: moth_RT_2leg01
+    400086: moth_RT_2leg02
+    400088: moth_RT_2leg03
+    400090: moth_RT_2leg03 1
+    400092: moth_RT_3leg01
+    400094: moth_RT_3leg02
+    400096: moth_RT_Ear01
+    400098: moth_RT_Ear02
+    400100: moth_RT_Ear03
+    400102: moth_RT_Ear04
+    400104: moth_RT_wing01
+    400106: moth_RT_wing02
+    400108: moth_tail01
+    400110: moth_tail02
+    400112: moth_tail03
+    7400000: Take 001
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
