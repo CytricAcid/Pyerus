@@ -42,7 +42,8 @@ Shader "Toony Colors Pro 2/User/Standard"
 		
 		CGPROGRAM
 		
-		#pragma surface surf ToonyColorsCustom 
+		#include "../../Shaders 2.0/Include/TCP2_Include.cginc"
+		#pragma surface surf ToonyColors 
 		#pragma target 3.0
 		#pragma multi_compile TCP2_RAMPTEXT
 		
@@ -64,49 +65,11 @@ Shader "Toony Colors Pro 2/User/Standard"
 			half2 uv_BumpMap;
 			float3 viewDir;
 		};
-		
-		//================================================================
-		// CUSTOM LIGHTING
-		
-		//Lighting-related variables
-		fixed4 _HColor;
-		fixed4 _SColor;
-		sampler2D _Ramp;
-		
-		//Custom SurfaceOutput
-		struct SurfaceOutputCustom
-		{
-			fixed3 Albedo;
-			fixed3 Normal;
-			fixed3 Emission;
-			half Specular;
-			fixed Gloss;
-			fixed Alpha;
-		};
-		
-		inline half4 LightingToonyColorsCustom (inout SurfaceOutputCustom s, half3 lightDir, half3 viewDir, half atten)
-		{
-			s.Normal = normalize(s.Normal);
-			fixed ndl = max(0, dot(s.Normal, lightDir));
-			fixed3 ramp = tex2D(_Ramp, fixed2(ndl,ndl));
-		#if !(POINT) && !(SPOT)
-			ramp *= atten;
-		#endif
-			_SColor = lerp(_HColor, _SColor, _SColor.a);	//Shadows intensity through alpha
-			ramp = lerp(_SColor.rgb, _HColor.rgb, ramp);
-			fixed4 c;
-			c.rgb = s.Albedo * _LightColor0.rgb * ramp;
-			c.a = s.Alpha;
-		#if (POINT || SPOT)
-			c.rgb *= atten;
-		#endif
-			return c;
-		}
 
 		//================================================================
 		// SURFACE FUNCTION
 
-		void surf(Input IN, inout SurfaceOutputCustom o)
+		void surf(Input IN, inout SurfaceOutput o)
 		{
 			fixed4 mainTex = tex2D(_MainTex, IN.uv_MainTex);
 			
